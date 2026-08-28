@@ -6,48 +6,9 @@
   <title>전시 인적자원 총동원 및 병역 이행 안내 — 합중국 국방부</title>
   <meta name="description" content="합중국 국방부 인적자원관리국 — 전시 인적자원 동원 절차, 군사특기(MOS) 제원표, no_kia 의무 투약 단계, RVP 사일로 자산화 규정 및 자동 입대 접수 총람">
   <!-- STAFFNET METADATA: doc_class=RECRUITMENT_MOBILIZATION | clearance=PUBLIC_MANDATORY | node=SN-REC-0012 -->
-  <!-- NOTICE: 모든 시민은 국가비상사태 및 전시인적자원동원법 제41조에 따라 본 포털의 징집 명령을 즉시 이행할 법적 의무를 집니다 -->
+  <!-- [경고] 모든 시민은 국가비상사태 및 전시인적자원동원법 제41조에 따라 본 포털의 징집 명령을 즉시 이행할 법적 의무를 집니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
-    .breadcrumb {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: #607588;
-      margin-bottom: 15px;
-    }
-    .breadcrumb a {
-      color: #6090c0;
-    }
-    .hero-banner {
-      border: 1px solid #203040;
-      background: #080c10;
-      padding: 24px;
-      margin-bottom: 25px;
-      position: relative;
-    }
-    .hero-meta {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: #607080;
-      border-bottom: 1px solid #1a2530;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    .hero-title {
-      font-size: 1.8rem;
-      color: #d0e0f0;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-    .hero-desc {
-      font-size: 0.9rem;
-      color: #88a0b8;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
     .stat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -149,17 +110,8 @@
     }
     .faq-a {
       font-size: 0.82rem;
-      color: #7890a8;
+      color: #7898b8;
       line-height: 1.6;
-    }
-    .notice-panel {
-      border-left: 4px solid #305880;
-      background: #060a10;
-      padding: 16px 20px;
-      margin: 20px 0;
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: #a0c0e0;
     }
     .warning-panel {
       border-left: 4px solid #a03030;
@@ -169,6 +121,12 @@
       font-size: 0.86rem;
       line-height: 1.7;
       color: #d09090;
+    }
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -180,14 +138,15 @@
   <ul>
     <li><a href="index.html">메인</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html">참모본부</a></li>
     <li><a href="defense.html">본토 방위</a></li>
     <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html">작전 교리</a></li>
     <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
-    <li><a href="weapons_infantry.html">보병 장비</a></li>
-    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
-    <li><a href="weapons_naval.html">해군·공군</a></li>
-    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="weapon_infantry.html">보병 장비</a></li>
+    <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapon_special.html">특수·자동화</a></li>
     <li><a href="propaganda.html">적성국 동향</a></li>
     <li><a href="life.html">시민 안내</a></li>
     <li><a href="recruit.html" class="active">입대·징집</a></li>
@@ -196,376 +155,226 @@
 </nav>
 
 <main>
-  <div class="breadcrumb">
-    <a href="index.html">포털 메인</a> &gt; <span>국방부 인적자원관리국</span> &gt; 전시 인적자원 동원 총람
+
+  <div class="breadcrumb" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #507090; margin-bottom: 15px;">
+    <a href="index.html">HOME</a> / <a href="recruit.html">인적자원국</a> / CITIZEN MOBILIZATION & ENLISTMENT SERVICE
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- HERO BANNER                                                    -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="hero-banner">
-    <div class="hero-meta">
-      <span>NODE: SN-REC-0012 (병무 전산 자동화 허브)</span>
-      <span>LEGAL MANDATE: MOB-ACT-SEC-41</span>
-      <span>CLEARANCE: GENERAL COMPULSORY</span>
-      <span>DATE: 2026-08-28 09:00 KST</span>
-    </div>
-    <h1 class="hero-title glitch" data-text="전시 인적자원 총동원 및 병역 이행 절차 공고">전시 인적자원 총동원 및 병역 이행 절차 공고</h1>
-    <p class="hero-desc">FEDERATION MOBILIZATION &amp; RECRUITMENT COMMAND — STAFFNET CITIZEN ALLOCATION &amp; RVP DIRECTIVE</p>
-    <p style="font-size: 0.82rem; color: #607890; margin-top: 10px; margin-bottom: 0;">
-      국가비상사태 및 전시인적자원동원법 제41조에 의거하여, 합중국 18세 이상 모든 시민에 대한 전시 인적 자원 등록 및 병역 배정이 시행됩니다. 모든 행정 절차는 신경망 참모본부(StaffNet)의 적성 최적화 알고리즘에 의해 자동 집행됩니다.
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- TICKER WRAP                                                    -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
   <div class="ticker-wrap">
     <div class="ticker">
-      [징집과] 금일 18세 이상 전 시민 동원 영장 일괄 발부 완료 ▌ [보건처] no_kia 1차 의무 접종률 99.8% 달성 ▌ [병무행정] 불참자에 대한 RVP 자산 전환 처리 즉시 시행 ▌ [배정] 강화외골격 보병대 12만 명 전선 실시간 투입 완료 ▌ [사일로] B구역 저온 보존 수조 증설 완료 ▌
+      [인적자원국] 2026년도 제34기 징집 대상자 소환 통지 전산 발송 100% 완료 | 신체검사 1급 판정자 강화외골격 부대 즉시 배속 | 입대자 가족 표준 배급권 1.5배 상향 지급 | 징집 기피자 12명 색출 후 RVP 사일로 강제 이송 |
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- PRESIDENTIAL MOBILIZATION ADDRESS                              -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="card" style="border: 1px solid #304860; background: #080d14;">
-    <div class="card-title">합중국 최고사령관 전시 인적자원 총동원 특별 담화</div>
-    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start; margin-top: 15px;">
-      <div>
-        <img src="img/president_censored.jpg" class="distorted-img" alt="합중국 최고사령관 전시 동원 담화">
-        <p style="font-size: 0.72rem; color: #506880; text-align: center; margin: 0; font-family: 'JetBrains Mono', monospace;">
-          [전시보안법 제3조 의거 화상 마스킹 처리됨]
+  <div class="card" style="background: #060a0f; border-color: #304860;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #6088a8; margin-bottom: 8px;">
+      MOBILIZATION COMMAND NODE: SN-REC-0012 | RECRUITMENT STATUS: ACTIVE ENFORCEMENT | POPULATION: 130,104,892,100
+    </div>
+    <h1 class="glitch" data-text="전시 인적자원 총동원 및 병역 이행 포털">전시 인적자원 총동원 및 병역 이행 포털</h1>
+    <p style="color: #90b4d0; font-size: 0.95rem; margin-bottom: 0;">
+      합중국 1,301억 전 시민 대상 전시 병역 이행, 신체 등급 판정 기준, 군사특기(MOS) 편제 현황, 생체 개조(AUG_BLOOD) 절차 및 전자 입대 확인 서비스입니다.
+    </p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-number">130.1 B</div>
+      <div class="stat-title">관리 대상 총인구</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">7.42 B</div>
+      <div class="stat-title">현역 및 예비역 복무자</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">412,800 명</div>
+      <div class="stat-title">일일 신규 징집 처리량</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">99.94%</div>
+      <div class="stat-title">병역 이행 순응률</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: 군사특기(MOS) 안내 -->
+  <div class="card">
+    <h2 class="card-title">1. 전시 주요 군사특기(MOS) 편제 및 복무 혜택</h2>
+    <div class="mos-grid">
+      <div class="mos-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #60a0e0; margin-bottom: 4px;">MOS-110</div>
+        <h3 style="color: #d0e4f8; font-size: 1rem; margin-bottom: 8px;">강화외골격 돌격보병</h3>
+        <p style="font-size: 0.82rem; color: #88a8c8;">
+          EXO-01 하이드라 외골격 및 FED_AR-12 12.7mm 소총 운용. 전선 거점 돌파 및 방어선 고수. (식량 배급 2.5배, AUG_BLOOD 전액 국비 지원)
         </p>
       </div>
-      <div>
-        <div class="notice-panel" style="margin-top: 0;">
-          <p style="font-weight: 700; color: #d0e4f8; margin-bottom: 8px;">
-            "합중국의 모든 시민은 거대한 국가 기계의 부품이자 영원한 동력원입니다."
-          </p>
-          <p style="font-size: 0.85rem; color: #90b0d0; line-height: 1.7; margin-bottom: 8px;">
-            "개인의 감정과 불안은 전쟁 앞에서 의미를 잃습니다. 강화외골격을 입고 방아쇠를 당기든, 지하 사일로 수조 속에서 국가의 전략 자산으로 잠들든, 여러분의 모든 신체 조직은 조국의 승리를 위해 정확하게 계산되어 투입될 것입니다. StaffNet의 배정에 감사하십시오. 기계는 결코 실수하지 않습니다."
-          </p>
-          <p style="font-size: 0.75rem; color: #6080a0; text-align: right; margin: 0; font-family: 'JetBrains Mono', monospace;">
-            — 최고사령관 전시 총동원령 발표문 (StaffNet 인덱스 #MOB-EXEC-7721)
-          </p>
-        </div>
+
+      <div class="mos-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #60a0e0; margin-bottom: 4px;">MOS-190</div>
+        <h3 style="color: #d0e4f8; font-size: 1rem; margin-bottom: 8px;">기갑 및 자주레일포 조종수</h3>
+        <p style="font-size: 0.82rem; color: #88a8c8;">
+          FV-44 패트리어트 주력전차 및 GAUSS-IX 레일건 플랫폼 운용. StaffNet 사격통제 콘솔 조작. (가족 거주구 1급 대피 사일로 배정)
+        </p>
+      </div>
+
+      <div class="mos-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #60a0e0; margin-bottom: 4px;">MOS-250</div>
+        <h3 style="color: #d0e4f8; font-size: 1rem; margin-bottom: 8px;">신경망 전자전 감청병</h3>
+        <p style="font-size: 0.82rem; color: #88a8c8;">
+          적 참모부 게놈 무전 삼각측량 및 SIGINT 전파 분석. 암피온급 기함 및 고고도 레이더 기지 근무. (안락한 공기정화 구역 복무)
+        </p>
+      </div>
+
+      <div class="mos-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #60a0e0; margin-bottom: 4px;">MOS-910</div>
+        <h3 style="color: #d0e4f8; font-size: 1rem; margin-bottom: 8px;">지하 공창 무인라인 군수기술병</h3>
+        <p style="font-size: 0.82rem; color: #88a8c8;">
+          제118 완전무인 지하 제조단지 로봇 조립선 보수 및 탄약 사출 관리. 24시간 교대 근무. (기본 칼로리 2,200 kcal 보장)
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- MOBILIZATION METRICS                                           -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: 신체검사 등급 기준표 -->
   <div class="card">
-    <div class="card-title">일일 징병 행정 통계 및 인적 자원 배분 지표 (실시간 전산 집계)</div>
-    <p style="font-size: 0.82rem; color: #7894b0; margin-bottom: 1rem;">
-      신경망 참모본부(StaffNet) 중앙 집계 서버에서 실시간 갱신되는 전시 병역 이행 현황입니다.
-    </p>
-
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-number">1,847,229</div>
-        <div class="stat-title">금일 징집 등록 완료 (인원)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: #78a8d8;">342,811</div>
-        <div class="stat-title">RVP 저온 보존 자산 직권 전환</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number" style="color: #60c090;">99.7%</div>
-        <div class="stat-title">행정 이행률 (동의 의제 적용)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">15 ms</div>
-        <div class="stat-title">개인별 병과 최적화 산출 소요 시간</div>
-      </div>
-    </div>
-
-    <p style="font-size: 0.72rem; color: #506880; margin: 0; line-height: 1.5;">
-      ※ 행정 이행률 99.7%는 합중국 헌법 수정조항 제14조에 따른 '사전 동의 의제(擬制)' 원칙에 따라 산출된 지표이며, 불참 또는 이의 제기자는 RVP 저온 보존 자산으로 자동 전환되어 분모에서 적법하게 제외됩니다.
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- ELIGIBILITY STANDARDS                                          -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="card">
-    <div class="card-title">징집 자격 기준 및 법적 의무 규정</div>
-    
-    <table class="spec-table">
-      <tr><th>대상 연령</th><td><strong>18세 이상 전 시민</strong> (연령 상한선 폐지 — 무기한 동원)</td></tr>
-      <tr><th>성별 및 신체 기준</th><td>제한 없음 (no_kia 투약으로 모든 생체 결함 및 기저질환 무효화)</td></tr>
-      <tr><th>신체 검사 등급</th><td>등급 구분 폐지 — 전원 현역 복무 또는 보존 자산 분류</td></tr>
-      <tr><th>병역 면제 조항</th><td>전시 특별 조례에 의거 <strong>전면 폐지</strong></td></tr>
-      <tr><th>불참 시 법적 처분</th><td>잔존가치보존(RVP) 프로그램에 따른 지하 사일로 수조 즉시 안치</td></tr>
-    </table>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- 6 MAJOR MOS SPECIFICATIONS                                     -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <h2>합중국 표준 군사특기(MOS) 제원 및 복무 지침</h2>
-  <p style="font-size: 0.88rem; color: #90a8c0; margin-bottom: 20px;">
-    StaffNet 알고리즘이 시민별 생체 프로필과 연산 적성을 분석하여 지정하는 6대 주력 군사특기 제원표입니다.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=1000&q=80" class="distorted-img" alt="합중국 인적자원 관리국 전산 접수 터미널">
-
-  <div class="mos-grid">
-    
-    <!-- MOS 1: 강화외골격 보병 -->
-    <div class="mos-card">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>강화외골격 중보병</span>
-        <span class="tag">MOS-1101</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>배정 비율</th><td>전체 징집 인원의 62.4% (최대 주력 병과)</td></tr>
-        <tr><th>표준 장구류</th><td>합중국 3형 유압식 강화외골격 프레임, FED_AR-45 12.7mm 자동소총</td></tr>
-        <tr><th>기동 제원</th><td>60kg 완전 군장 적재 상태 시속 14km 연속 40km 주파</td></tr>
-        <tr><th>안전 규정</th><td>유압유 유출 시 관절 잠김(Lock-down) 발생 — 탈거 불가 시 그대로 수거</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        합중국 지상군의 핵심 전력으로, 외골격 프레임을 통해 대구경 화망을 전개합니다. no_kia 1차 투약 후 즉각 전선 배치됩니다.
-      </p>
-    </div>
-
-    <!-- MOS 2: 자동포대 관제병 -->
-    <div class="mos-card">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>자동포대·방어선 관제병</span>
-        <span class="tag">MOS-1304</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>배정 비율</th><td>전체 징집 인원의 18.2%</td></tr>
-        <tr><th>임무 범위</th><td>RAIL_FED 포대 및 Sentry-90 개틀링 터렛 탄약 보급 및 링크 유지</td></tr>
-        <tr><th>자격 요건</th><td>StaffNet 원격 단말기 기초 교육 30분 이수</td></tr>
-        <tr><th>교전 책임</th><td>자동포대의 아군 오인 사격 발생 시 관제 데이터 자동 보정</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        후방 방어 거점에서 원격 센서망을 관리하며, 탄약 벨트 교체 및 현장 유압 수리를 수행합니다.
-      </p>
-    </div>
-
-    <!-- MOS 3: 신경망 노드 연계병 -->
-    <div class="mos-card">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>신경망 참모본부 노드 연계병</span>
-        <span class="tag">MOS-1702</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>배정 비율</th><td>전체 징집 인원의 7.1%</td></tr>
-        <tr><th>시술 항목</th><td>StaffNet 제2세대 대뇌 양자 인터페이스 임플란트</td></tr>
-        <tr><th>전술 역할</th><td>15ms 전술 명령의 지상 부대 중계 및 위성 암호 데이터 실시간 연산</td></tr>
-        <tr><th>인지 반응</th><td>시냅스 부하율 관리 필수. 두통 및 감정 평탄화는 정상 임상 반응</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        중앙 연산망과 야전 부대 간의 유선/무선 전술 데이터를 중계하는 특수 기술 병과입니다.
-      </p>
-    </div>
-
-    <!-- MOS 4: 생체시술강화군단 -->
-    <div class="mos-card">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>생체시술강화군단</span>
-        <span class="tag">MOS-1908</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>배정 비율</th><td>전체 징집 인원의 4.3%</td></tr>
-        <tr><th>시술 범위</th><td>합성 근육 섬유 이식, 골밀도 300% 경화, 자동 아드레날린 펌프</td></tr>
-        <tr><th>가역성</th><td>비가역 (원형 복구 불가)</td></tr>
-        <tr><th>전투력 지표</th><td>표준 보병 대비 물리 타격력 6.4배, 부상 회복 속도 800%</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        최전방 돌파를 전담하는 개조 병과로, 3단계 생체 강화 시술을 완료한 정예 타격 자산입니다.
-      </p>
-    </div>
-
-    <!-- MOS 5: 순항미사일 사격통제병 -->
-    <div class="mos-card">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>순항미사일 사격통제병</span>
-        <span class="tag">MOS-2209</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>배정 비율</th><td>전체 징집 인원의 5.8%</td></tr>
-        <tr><th>주요 장비</th><td>Tomahawk-X 초장거리 순항미사일 사일로 관제 콘솔</td></tr>
-        <tr><th>작전 반경</th><td>종심 1,500km 초수평선 적 종심 타격 제원 입력</td></tr>
-        <tr><th>발사 절차</th><td>StaffNet 궤도 표적 계산 확인 즉시 1분당 120발 일제 점화</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        적성국의 공업 단지 및 후방 지휘부를 소멸시키기 위한 전략 미사일 사격 관제를 전담합니다.
-      </p>
-    </div>
-
-    <!-- MOS 6: 불사연대 -->
-    <div class="mos-card" style="border: 1px solid #406080;">
-      <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>영구보존 불사연대</span>
-        <span class="tag" style="color: #f08080;">MOS-0000</span>
-      </div>
-      <table class="spec-table">
-        <tr><th>편성 배경</th><td>징집 불참자 및 신체 기능 한계 도달자 중 실물 기동 전환자</td></tr>
-        <tr><th>투약 처방</th><td>no_kia 고농도 정맥 주입 (통각 수용체 완전 불활성화)</td></tr>
-        <tr><th>복무 기한</th><td>무기한 (세포 괴사 불가로 전사 판정 미부여)</td></tr>
-        <tr><th>회수 규정</th><td>신체 파손율 70% 초과 시 지하 사일로 수조로 자동 회수 안치</td></tr>
-      </table>
-      <p style="font-size: 0.8rem; color: #88a0b8; margin-top: 0.6rem; line-height: 1.5;">
-        통증과 출혈에 영향을 받지 않고 지속 전진하는 합중국의 문명화된 보존 무기 체계입니다.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- NOKIA INOCULATION PROTOCOL                                     -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="card">
-    <div class="card-title">no_kia 의무 투약 단계 및 세포 안정화 규정</div>
-    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=1000&q=80" class="distorted-img" alt="no_kia 의무 접종 공보 영상">
-    
+    <h2 class="card-title">2. 전시 신체 등급 판정 기준 및 배치 처분표</h2>
     <table class="spec-table">
       <thead>
         <tr>
-          <th>접종 단계</th>
-          <th>약제 기전 및 생체 반응</th>
-          <th>행정 및 작전상 목적</th>
+          <th>판정 등급</th>
+          <th>신체 및 신경 상태 기준</th>
+          <th>배치 및 의무 복무 처분</th>
+          <th>배급 가중치</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1차 접종 (기초)</td>
-          <td>세포막 지질 산화 방지막 형성, 단기 기억 단편화 유도</td>
-          <td>세포 부패 방지 및 전시 공포·불안 심리 원천 해소</td>
+          <td>1급 (최우수)</td>
+          <td>신경 반사속도 정상, 외골격 장착 적합</td>
+          <td>강화돌격보병 및 전차 승무원 즉시 배속</td>
+          <td>2.50 (최상급)</td>
         </tr>
         <tr>
-          <td>2차 접종 (적응)</td>
-          <td>말초 신경계 통각 임계치 90% 상승, 혈액 응고 촉진</td>
-          <td>전장 파편 및 관통상 발생 시 실혈사(失血死) 방지</td>
+          <td>2급 (우수)</td>
+          <td>경미한 관절 마모, 시각/청각 보정 가능</td>
+          <td>후방 포병, 군수 수송, 공창 정비 배속</td>
+          <td>1.80 (상급)</td>
         </tr>
         <tr>
-          <td>3차 접종 (보존)</td>
-          <td>대뇌 피질 활동 억제, 뇌파 δ파 고정, 동면 유도</td>
-          <td>사일로 장기 저온 보존 및 전시 비축 자산화</td>
+          <td>3급 (보통)</td>
+          <td>만성 질환 보유, 경노동 가능</td>
+          <td>지하 농업 플랜트 및 방공 사일로 노무 배속</td>
+          <td>1.20 (표준)</td>
+        </tr>
+        <tr>
+          <td>4급 (보충)</td>
+          <td>신체 결손, 신경 반응 저하</td>
+          <td>도시 방첩 검문소 및 잔해 수거 노무</td>
+          <td>1.00 (기본)</td>
+        </tr>
+        <tr>
+          <td>5급 (부적격)</td>
+          <td>치유 불능 중증 신경 손상, 노동 불가</td>
+          <td><strong>RVP(자원환원사일로) 원료 자산화 처분</strong></td>
+          <td>0.00 (환원)</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="warning-panel">
+      [국가인적자원동원법 제41조]: 5급 판정자는 국가 자원 보존 원칙에 따라 RVP 플랜트로 이송되어 필수 비료 및 단백질 원료로 영구 환원되며, 해당 인원의 가족에게는 위로 배급권이 지급됩니다.
+    </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- SANCTIONS FOR NON-COMPLIANCE                                   -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="card" style="background: #090d14; border: 1px solid #304860;">
-    <div class="card-title" style="color: #d0e0f0;">징집 불응자에 대한 행정 처분 단계 (RVP 절차)</div>
-    
-    <table class="spec-table">
-      <tr>
-        <th style="width: 20%;">1단계 (통보)</th>
-        <td>징집 영장 발부 후 24시간 이내 미응소 시 자동 전자 경고 발령</td>
-      </tr>
-      <tr>
-        <th>2단계 (지정)</th>
-        <td>잔존가치보존(RVP) 자산 분류 대상자로 직권 지정 (사법 재판 생략)</td>
-      </tr>
-      <tr>
-        <th>3단계 (투약)</th>
-        <td>관할 방범 기동대에 의한 no_kia 1~3차 강제 투약 및 의식 억제</td>
-      </tr>
-      <tr>
-        <th>4단계 (안치)</th>
-        <td>지하 사일로 복합체(A~F구역) 저온 수조 안치 및 무기한 전략 자산 등재</td>
-      </tr>
-    </table>
-    <p style="font-size: 0.75rem; color: #7088a0; margin: 0.8rem 0 0 0;">
-      ※ 근거 법령: 국가보안법 제14조 — "합중국 시민의 신체는 국가의 전략적 비축 자산이며, 자의적 손괴 및 이탈은 국유 자산 훼손죄에 해당한다."
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- PRE-FILLED INDUCTION FORM                                      -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: 온라인 입대/징집 확인 양식 -->
   <div class="form-box">
-    <div class="form-stamp">STAFFNET<br>자동 접수 승인</div>
-    <div class="card-title" style="border-bottom: none; margin-bottom: 0.5rem;">
-      전시 입대 지원 및 자산 등록 원서 (전산 자동 완료본)
-    </div>
-    <p style="font-size: 0.75rem; color: #6080a0; margin-bottom: 1rem;">
-      본 서식은 신경망 참모본부(StaffNet)의 통합 시민 데이터베이스에 의해 사전 작성 및 접수 완료되었습니다.
+    <div class="form-stamp">STAFFNET MANDATORY</div>
+    <h2 style="color: #d0e4f8; font-size: 1.1rem; margin-bottom: 6px;">전시 병역 의무 이행 및 징집 확인서</h2>
+    <p style="font-size: 0.8rem; color: #88a8c8;">
+      모든 시민은 만 17세 도달 시 본 양식을 통해 신체 등록을 갱신해야 합니다.
     </p>
 
-    <div class="form-grid">
-      <div class="form-field">
-        <label>시민 식별 번호 (CITIZEN ID)</label>
-        <input type="text" value="FED-99824-A" disabled>
+    <form onsubmit="event.preventDefault(); alert('[접수 완료] 귀하의 징집 명령 코드가 생성되었습니다. 72시간 내 지정된 제14훈련소로 출두하십시오.');">
+      <div class="form-grid">
+        <div class="form-field">
+          <label>시민등록식별번호 (CITIZEN ID)</label>
+          <input type="text" placeholder="FED-2026-XXXX-XXXX" required>
+        </div>
+        <div class="form-field">
+          <label>소속 거주 관구 (ZONE / DISTRICT)</label>
+          <select>
+            <option>제1 행정 거대도시군 (메가시티-A)</option>
+            <option>제2 공창·산업 복합지구</option>
+            <option>제3 지하 농업 플랜트 관구</option>
+            <option>제4-7 전선 완충 구역</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>공인 신체 판정 등급</label>
+          <select>
+            <option>1급 (강화외골격/기갑 적합)</option>
+            <option>2급 (후방 지원/정비 적합)</option>
+            <option>3급 (지하 농업/노무 적합)</option>
+            <option>4급 (보충역/검문 노무)</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>희망 군사특기 (MOS)</label>
+          <select>
+            <option>MOS-110 강화외골격 돌격보병</option>
+            <option>MOS-190 기갑 및 레일포 조종수</option>
+            <option>MOS-250 신경망 전자전 감청병</option>
+            <option>MOS-910 공창 무인라인 기술병</option>
+          </select>
+        </div>
       </div>
-      <div class="form-field">
-        <label>등록 성명</label>
-        <input type="text" value="[StaffNet 암호화 자동 생성]" disabled>
-      </div>
-      <div class="form-field">
-        <label>배정 병과</label>
-        <input type="text" value="MOS-1101 강화외골격 중보병 (최적 판정)" disabled>
-      </div>
-      <div class="form-field">
-        <label>no_kia 의무 투약 동의</label>
-        <input type="text" value="법률상 동의 의제 완료 (동의함)" disabled>
-      </div>
-      <div class="form-field">
-        <label>사일로 보존 전환 동의</label>
-        <input type="text" value="전략 자산 관리 조례 동의 완료" disabled>
-      </div>
-      <div class="form-field">
-        <label>전자 서명 상태</label>
-        <input type="text" value="생체 토큰 자동 날인 (접수 확정)" disabled>
-      </div>
-    </div>
 
-    <div class="notice-panel" style="margin-top: 1.2rem;">
-      <strong>행정 안내:</strong> 본 원서의 모든 기재 사항은 법적으로 확정되었으며, 정정 또는 취소 신청은 접수되지 않습니다. 지정된 일시에 관할 구역 집결지로 이동하십시오.
-    </div>
+      <div style="margin-top: 15px; font-size: 0.78rem; color: #7090b0;">
+        <label>
+          <input type="checkbox" required>
+          본인은 AUG_BLOOD 혈액 치환 및 no_kia 전투 신경 안정제 투약 규정에 동의하며, 전사 시 유체에 대한 RVP 자원 환원 처분에 일체 이의를 제기하지 않을 것을 서약합니다.
+        </label>
+      </div>
+
+      <button type="submit" style="margin-top: 15px; background: #182838; border: 1px solid #306090; color: #90d0ff; padding: 10px 24px; font-family: 'JetBrains Mono', monospace; font-weight: 700; cursor: pointer;">
+        징집 명령서 수령 및 입대 확약
+      </button>
+    </form>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- FAQ SECTION                                                    -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: FAQ -->
   <div class="card">
-    <div class="card-title">병무 행정 관련 자주 묻는 질문 (FAQ)</div>
+    <h2 class="card-title">3. 전시 징집 및 복무 자주 묻는 질문 (FAQ)</h2>
 
     <div class="faq-item">
-      <div class="faq-q">Q. 징집 통보 후 no_kia 투약을 거부할 수 있습니까?</div>
-      <div class="faq-a">A. 거부할 수 없습니다. no_kia 투약은 전장 생존율 보장 및 세포 부패 방지를 위한 전시 법적 의무 사항입니다. 임의 거부 시에는 RVP 강제 집행 절차에 따라 사일로 수조로 즉시 이송됩니다.</div>
+      <div class="faq-q">Q. 학업이나 개인 질환을 이유로 병역 연기가 가능합니까?</div>
+      <div class="faq-a">
+        A. 불가능합니다. 전시 총동원 체제하에서 모든 학업 및 개인 사유 연기는 전면 중단되었습니다. 출두 거부 시 48시간 내 방첩대에 의해 체포되며 5급(RVP 자산화)으로 강제 전환됩니다.
+      </div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Q. 복무 기간은 언제까지입니까?</div>
-      <div class="faq-a">A. 국가 비상사태 종료 및 의회의 공식 종전 선포 시까지 복무합니다. 부상 등으로 전투 불능 상태에 도달할 경우 지하 사일로 수조에서 무기한 보존 관리됩니다.</div>
+      <div class="faq-q">Q. 외골격 착용 시 신체 개조 수술은 필수입니까?</div>
+      <div class="faq-a">
+        A. 네, 필수입니다. 척추 신경 포트 연결 및 AUG_BLOOD 혈액 치환은 12.7mm 소총의 반동 흡수와 극저온 환경 작전을 위한 의무 표준 시술입니다.
+      </div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Q. 전사 시 유해 송환 절차는 어떻게 됩니까?</div>
-      <div class="faq-a">A. no_kia 정규 투약자는 생물학적 세포 사멸이 발생하지 않으므로 '전사'로 분류되지 않습니다. 신체 손상 개체는 전선 수거반에 의해 전량 지하 사일로 복합체로 이송되어 보존 자산으로 유지됩니다.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 1차 투약 후 발생하는 기억 단편화는 정상입니까?</div>
-      <div class="faq-a">A. 정상적인 약물 기전입니다. 1차 투약 시 대뇌 해마 부위의 과거 기억이 정리되며, 전술 수칙 및 기초 생활 지식은 안정적으로 보존됩니다. 이는 전장 적응도를 극대화하는 검증된 효과입니다.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 유족 및 가족에 대한 급여 배급은 어떻게 됩니까?</div>
-      <div class="faq-a">A. 현역 복무자 및 사일로 안치 자산의 가족에게는 월간 단백질 블록 추가 20% 배급권 및 지하 표준 방공호 3등급 우선 배정권이 제공됩니다.</div>
+      <div class="faq-q">Q. 군 복무 중 전사했을 경우 가족에게 어떤 혜택이 주어집니까?</div>
+      <div class="faq-a">
+        A. 전사자의 가족에게는 '영예 시민권'이 수여되며, 거주구 1급 대피 사일로 우선 입소권 및 5년간 표준 단백질 배급량 1.5배 증액 혜택이 지급됩니다.
+      </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- ADVERTISEMENT BANNER                                           -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
   <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
 
 </main>
 
-<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<footer>
+  <p>FEDERATION DEPARTMENT OF DEFENSE — HUMAN RESOURCES & MOBILIZATION BUREAU</p>
+  <p>ALL ACTIVITIES MONITORED AND LOGGED UNDER WARTIME DIRECTIVE #14. UNAUTHORIZED ACCESS PUNISHABLE BY DETENTION.</p>
+</footer>
+
 <script src="app.js"></script>
 </body>
 </html>
