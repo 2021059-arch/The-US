@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합중국 국방부 — 특수·자동화 병기 체계</title>
+    <meta name="description" content="합중국 국방부 특수·자동화 병기체계 공식 기술 제원 — 무인 전투체계, 센트리, 공역 저지, 생체 안정화 제제 및 전략 보존 전력">
+    <!-- STAFFNET METADATA: doc_class=RESTRICTED_TECHNICAL | clearance=OMEGA-DECLASSIFIED | gen_id=SN-AUT-9941 -->
+    <!-- NOTICE: 본 기술 문서는 신경망 참모본부(StaffNet) 군수통제국 행정 승인 #AW-7704에 의거하여 전산 편철되었습니다 -->
+    <!-- AUDIT: terminal_id=LOG-884-DOD | data_integrity=VERIFIED | auto_redaction=APPLIED -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <nav>
+        <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+        <ul>
+            <li><a href="index.html">메인</a></li>
+            <li><a href="news.html">의회·국정</a></li>
+            <li><a href="arsenal.html">병기 총람</a></li>
+            <li><a href="weapons_infantry.html">보병 장비</a></li>
+            <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+            <li><a href="weapons_naval.html">해군·공군</a></li>
+            <li><a href="weapons_special.html" class="active">특수·자동화</a></li>
+            <li><a href="propaganda.html">적성국 동향</a></li>
+            <li><a href="life.html">시민 안내</a></li>
+            <li><a href="recruit.html">입대·징집</a></li>
+            <li><a href="account.html" class="account-link">내 계정</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">HOME</a> / <a href="arsenal.html">병기 총람</a> / 특수·자동화
+        </div>
+
+        <h1 class="glitch" data-text="특수·자동화 병기 체계">특수·자동화 병기 체계</h1>
+        <p>합중국 국방 무인화 및 생체 보존 기술 공시 포털입니다. 신경망 참모본부(StaffNet)의 통합 통제 하에 운용되는 자율 무장 체계, 시설 방어 유닛, 그리고 국가 보존 자산 제원을 공시합니다.</p>
+        <p style="font-size:.72rem; color:#445577;">※ 본 페이지의 모든 기술 규격은 군수물자관리법 제44조 및 국방기밀공개령 #AW-7704에 따라 기술적 사실만을 건조하게 수록하였습니다. 열람 내역은 StaffNet 중앙 데이터베이스에 영구 편철됩니다.</p>
+
+        <div class="ticker-wrap">
+            <div class="ticker">
+                ▌ AUTOMATION LEVEL: SUPREME ▌ 중앙 자동화 공장군 457개소 전구역 정상 가동 ▌ 제식자동인형(AUTOMATON Mk-IV) 작전 가동률 99.4% ▌ 봉인식 센트리(SENTRY_BOX) 거점 배치 완료 ▌ no_kia 군수 표준 배급률 100.0% 달성 ▌ 생체 보존 사일로 안정화 지수 99.98% ▌ 불사 전술 부대(IMMORTAL CORPS) 대기 편제 유지 ▌
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 0: 운용 개요 및 교리
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">통합 자동화 및 생체 자원 통제 교리</h2>
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80" class="distorted-img" style="height:260px;" alt="자동화 연구 및 통제 설비">
+            <p>
+                합중국의 군사 교리는 제한된 인적 자원의 물리적 마모를 최소화하고, 공업적 생산 라인의 출력을 전장에 직접 투사하는 데 중점을 둡니다. 전선에서의 인적 손실률을 통제하기 위하여 단순 반복 교전 임무는 <strong>Tier-3/Tier-4 자율 무장 기계</strong>로 대체되며, 비축된 생체 자원은 <strong>no_kia 및 RVP-77 화학 제제</strong>를 통해 영구적 보존 상태로 관리됩니다.
+            </p>
+            <p>
+                모든 자동화 병기는 지휘 계통의 승인을 거치지 않고 StaffNet 분산 연산 노드의 사전 지정 프로토콜에 따라 동작하며, 작전 구역 내의 표적 식별, 요격, 구역 봉쇄를 무인 환경에서 완수합니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 1: AUTOMATON Mk-IV — 제식자동인형
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">AUTOMATON Mk-IV — 제식자동인형 체계</h2>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" class="distorted-img" style="height:260px;" alt="제식자동인형 기계 구동부">
+            <p>
+                합중국 육군 및 국경경비대 표준 제식 무인 기동 화력 플랫폼입니다. 복잡한 신경망 처리 장치 대신 <strong>냉간 프레스 성형 강철 프레임</strong>과 <strong>하드와이어드 반도체 릴레이 논리 회로</strong>를 결합하여 극단적인 양산성을 확보하였습니다.
+            </p>
+            <p>
+                지정된 지리적 좌표(Geofenced Operational Grid) 내부에서 시야에 포착되는 모든 고속 운동체를 요격하도록 프로그래밍되어 있으며, 복잡한 지형 판단이나 유연한 전술적 우회는 수행하지 않습니다. 작전 구역 경계를 1m 이상 벗어날 경우 내부 전원 차단기가 작동하여 정지 상태로 전환됩니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>AUTOMATON Mk-IV 기술 및 생산 규격</caption>
+                <tr>
+                    <th>모델 분류</th><td>자율 경비 기계 보병 (Model 4-B)</td>
+                    <th>자동화 등급</th><td>Tier 3 하드와이어드 논리 회로</td>
+                </tr>
+                <tr>
+                    <th>동력 장치</th><td>24V 60Ah 밀폐형 납축전지 팩</td>
+                    <th>작전 지속 시간</th><td>14시간 (경계) / 4.5시간 (연속 사격)</td>
+                </tr>
+                <tr>
+                    <th>광학 탐지기</th><td>단안식 전기광학(EO) 스캐너 (가시광/근적외선)</td>
+                    <th>유효 탐지 반경</th><td>350m (운동체 이동 임계값 1.2m/s)</td>
+                </tr>
+                <tr>
+                    <th>주무장</th><td>12.7mm Fed-Standard 중기관총 (내장형)</td>
+                    <th>탄약 적재량</th><td>400발 비분해식 금속 탄띠</td>
+                </tr>
+                <tr>
+                    <th>기동 속도</th><td>시속 4.2 km/h (정속 보행)</td>
+                    <th>중량</th><td>164 kg (완전 장착 기준)</td>
+                </tr>
+                <tr>
+                    <th>생산 공정</th><td>완전자동화 프레스 및 스폿 용접 공정</td>
+                    <th>일일 생산량</th><td>전국 자동화 공장군 기준 12,000기</td>
+                </tr>
+                <tr>
+                    <th>정비 규정</th><td>단일 부품 손상 시 현장 수리 배제 / 파쇄 리사이클링</td>
+                    <th>작전 반경</th><td>중앙 비콘 반경 500m 지오펜스 한정</td>
+                </tr>
+            </table>
+
+            <div style="margin: 10px 0;">
+                <span class="tag">AUTOMATION_TIER_3</span>
+                <span class="tag">EXPENDABLE</span>
+                <span class="tag">SOLID_STATE_LOGIC</span>
+                <span class="tag">GEOFENCED</span>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 작전 교범 #AU-104: "구역 이탈로 인하여 정지된 AUTOMATON은 지형 장애물로 재분류한다." 아군 수송 차량과의 접촉에 따른 기체 파손 손실은 '자연 소모품' 항목으로 일괄 전산 회계 처리됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 2: SENTRY_BOX Type-88 — 거점 봉인식 센트리
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">SENTRY_BOX Type-88 — 거점 봉인식 센트리 포대</h2>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" class="distorted-img" style="height:260px;" alt="봉인식 방어 컨테이너 유닛">
+            <p>
+                무인 거점 방어 및 병목 지점 차단을 위한 중장갑 매립형 요격 포대입니다. 평상시에는 표준 화물 컨테이너 형태의 38mm 경화 압연 장갑(RHA) 박스 내부에 격납되어 대기하며, 원격 유선 신호 또는 지진파 감지 센서에 의해 전개 시 공압 피스톤으로 상부 뚜껑을 개방하고 다열 회전 기관포를 노출시킵니다.
+            </p>
+            <p class="warning-text">
+                ※ 작전 교리 AD-88: "SENTRY_BOX가 배치된 살상 반경(800m) 내부에는 아군 인원 및 장비의 잔류가 일체 금지된다."
+            </p>
+            <p>
+                본 체계에는 피아식별(IFF) 알고리즘이 탑재되어 있지 않으며, 기동 개시 후 감지 구역 내에서 발생하는 모든 열원 및 음향 진동을 표적으로 간주하여 즉각적인 고밀도 탄막을 전개합니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>SENTRY_BOX Type-88 성능 제원</caption>
+                <tr>
+                    <th>장비 분류</th><td>거점 봉인식 자율 요격 포대</td>
+                    <th>외장 장갑</th><td>38mm 압연 균질 강판 (RHA)</td>
+                </tr>
+                <tr>
+                    <th>탑재 화기</th><td>20mm 6열 회전식 개틀링 기관포 2문</td>
+                    <th>보조 무장</th><td>70mm 8연장 지향성 파편 로켓 포드</td>
+                </tr>
+                <tr>
+                    <th>발사 속도</th><td>분당 4,200발 (20mm 복합 기준)</td>
+                    <th>유효 사거리</th><td>반경 800m (360도 전방위 차단)</td>
+                </tr>
+                <tr>
+                    <th>센서 구성</th><td>360도 다중 음향 센서 + 광각 중적외선(MWIR) 포착기</td>
+                    <th>반응 지연</th><td>0.18초 (센서 포착 즉시 사격 개시)</td>
+                </tr>
+                <tr>
+                    <th>자체 전원</th><td>4기통 밀폐형 디젤 APU 발전기 (경유 240L 적재)</td>
+                    <th>대기 수명</th><td>연속 비작전 대기 720시간 / 연속 사격 42분</td>
+                </tr>
+                <tr>
+                    <th>피아 식별 장치</th><td>미장착 (구역 무차별 소탕 프로토콜)</td>
+                    <th>정지 프로토콜</th><td>외부 정지 불가 (전원 소진 또는 물리 파괴에 의함)</td>
+                </tr>
+            </table>
+
+            <div style="margin: 10px 0;">
+                <span class="tag">AREA_DENIAL</span>
+                <span class="tag">HIGH_LETHALITY</span>
+                <span class="tag">AUTONOMOUS_STATIONARY</span>
+                <span class="tag">NO_IFF</span>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 작전 행정 지침: SENTRY_BOX 가동 통보 불능으로 인해 발생한 아군 부대 피해는 국가배상법 제12조의 '작전 구역 기상 재해' 항목으로 처리되며, 현장 부대 지휘관의 소명 절차는 생략됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 3: SENTRY MK-II — 보병 휴대식 센트리
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">SENTRY MK-II — 보병 휴대식 자율 경계 포대</h2>
+            <img src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80" class="distorted-img" style="height:260px;" alt="경량 센트리 감시 및 조준 센서">
+            <p>
+                보병 분대 및 전초 기지의 경계 지원을 위한 1인 운반식 경량 자동 포대입니다. 중량 21.8kg의 분리형 삼각대 구조로 설계되어 전방 초병 1인이 80초 이내에 전개 및 초기화할 수 있습니다.
+            </p>
+            <p>
+                SENTRY_BOX와 달리 암호화된 <strong>아군 비콘(Fed-Tag RF-44)</strong> 신호 수신 모듈이 탑재되어 있어, 유효 비콘을 소지한 인원에 대한 오인 사격을 방지하도록 설계되었습니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>SENTRY MK-II 세부 기술 규격</caption>
+                <tr>
+                    <th>체계 중량</th><td>21.8 kg (삼각대, 포신, 센서 모듈 일체)</td>
+                    <th>구경 및 탄약</th><td>7.62×54mm Fed-Match 표준 탄약</td>
+                </tr>
+                <tr>
+                    <th>발사 속도</th><td>분당 850발 (점사 제어 모드)</td>
+                    <th>탄약 적재</th><td>250발 밀폐형 플라스틱 드럼 매거진</td>
+                </tr>
+                <tr>
+                    <th>센서 모듈</th><td>수동형 적외선(PIR) 어레이 + 24GHz 도플러 마이크로 레이더</td>
+                    <th>유효 사거리</th><td>대인 점표적 400m / 면표적 600m</td>
+                </tr>
+                <tr>
+                    <th>비콘 수신 프로토콜</th><td>Fed-Tag RF-44 암호화 펄스 (48시간 주기 코드 갱신)</td>
+                    <th>전원 체계</th><td>탈착식 리튬-황 배터리 팩 (48시간 연속 가동)</td>
+                </tr>
+                <tr>
+                    <th>전개 시간</th><td>단일 인원 기준 80초 (수평 자동 보정 포함)</td>
+                    <th>환경 운용 범위</th><td>-40°C ~ +65°C / 방진·방수 등급 IP67</td>
+                </tr>
+            </table>
+
+            <div style="margin: 10px 0;">
+                <span class="tag">MAN_PORTABLE</span>
+                <span class="tag">IFF_BEACON_LINK</span>
+                <span class="tag">PERIMETER_DEFENSE</span>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 주의 규정: 개인 비콘(Fed-Tag)의 전원 고갈(48시간 초과)로 인해 발생한 센트리 피격 사고는 군수물자 취급 부주의 및 개인 복무 과실로 처리되어 보훈 연금 지급 대상에서 제외됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 4: INTERCEPT_BALLOON Mk-VI — 계류형 공역 저지 기구
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">INTERCEPT_BALLOON Mk-VI — 계류형 공역 저지 기구</h2>
+            <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80" class="distorted-img" style="height:260px;" alt="계류형 대공 저지 기구">
+            <p>
+                저고도 침투 적기 및 활공 유도탄을 차단하기 위한 고장력 강선 계류식 공역 차단 무장 체계입니다. 합성 헬륨-아르곤 혼합 가스로 충전된 기구 하부에 광학 연동식 23mm 대공포 포드가 장착되어 반경 3.5km의 공역을 24시간 감시·요격합니다.
+            </p>
+            <p>
+                단일 유인 전투기 제작 비용 대비 1/820 수준의 저렴한 생산 단가를 지니며, 계류용 850 MPa급 다심 강연선은 야간 비행 시 적기의 주익을 물리적으로 절단하는 패시브 차단 효과를 발휘합니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>INTERCEPT_BALLOON Mk-VI 성능 규격</caption>
+                <tr>
+                    <th>기낭 체적</th><td>1,450 m³ (합성 헬륨-아르곤 혼합 가스)</td>
+                    <th>운용 고도</th><td>지표면 기준 1,200m ~ 1,800m</td>
+                </tr>
+                <tr>
+                    <th>계류 케이블</th><td>850 MPa 고장력 다심 강연선 (직경 14mm)</td>
+                    <th>탑재 대공 무장</th><td>23mm 연장 자동 대공포 포드</td>
+                </tr>
+                <tr>
+                    <th>포탑 구동</th><td>광학 방위각/고저각 자동 추적 서보 모터</td>
+                    <th>유효 요격 반경</th><td>3,500m (저고도 진입 비행체)</td>
+                </tr>
+                <tr>
+                    <th>탄약 적재량</th><td>800발 (고폭예광파편탄 HEI-T)</td>
+                    <th>비용 지수</th><td>표준 요격 전투기 대비 0.12% 소요</td>
+                </tr>
+                <tr>
+                    <th>전원 공급</th><td>계류 케이블 내장 동축 급전선 (지상 연속 급전)</td>
+                    <th>기낭 피탄 대책</th><td>구획 분할 셀 구조 / 파손 시 윈치 자동 회수 후 교체</td>
+                </tr>
+            </table>
+
+            <div style="margin: 10px 0;">
+                <span class="tag">LOW_ALTITUDE_AIR_DEFENSE</span>
+                <span class="tag">HIGH_TENSILE_CABLE</span>
+                <span class="tag">COST_EFFICIENT</span>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 공역 통제령 제44호: 계류 기구 밀집 전개 구역에 무단 진입한 아군 비행체의 와이어 접촉 추락 사고는 '비행 경로 이탈에 따른 안전사고'로 판정되며 기체 배상 대상에 해당하지 않습니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 5: 완전 무인 자동화 공장 복합군 (TIER-5)
+             ═══════════════════════════════════════════════════ -->
+        <div class="card" style="border-color:#204060;">
+            <h2 class="card-title">⬡ 완전 무인 자동화 공장 체계 (TIER-5 COMPLEX)</h2>
+            <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80" class="distorted-img" style="height:260px;" alt="완전 자동화 무인 산업 공장">
+            <p>
+                합중국의 공업적 패권을 지탱하는 <strong>상주 생체 인원 제로(0명)</strong> 기반의 무인 중공업 단지입니다. 원료 광석 및 합성수지의 철도 인입부터 부품 정밀 프레스, 스폿 용접, 전자 배선 삽입, 최종 검수 및 탄약 장전까지 전 공정이 StaffNet 인공신경망 메인프레임의 알고리즘에 의해 통제됩니다.
+            </p>
+            <p>
+                인간 노동자의 생리적 한계(호흡, 조명, 휴식, 피로)를 배제하도록 설계되어 공장 내부에는 조명 설비와 산소 공조 환기 장치가 존재하지 않으며, 유독성 산업 가스 및 냉각 폐열이 상시 순환하는 고밀도 제조 환경을 유지합니다.
+            </p>
+
+            <div class="card-grid" style="margin: 15px 0;">
+                <div style="background:#060a0e; border:1px solid #1a2a3a; padding:12px;">
+                    <div style="font-size:1.4rem; color:#6ab0ff; font-weight:700; font-family:'JetBrains Mono',monospace;">457 개소</div>
+                    <div style="font-size:.8rem; color:#8090a0;">전국 완전 자동화 공장군 가동 수</div>
+                </div>
+                <div style="background:#060a0e; border:1px solid #1a2a3a; padding:12px;">
+                    <div style="font-size:1.4rem; color:#6ab0ff; font-weight:700; font-family:'JetBrains Mono',monospace;">0 명</div>
+                    <div style="font-size:.8rem; color:#8090a0;">공장 구역 상주 허가 생체 인원</div>
+                </div>
+                <div style="background:#060a0e; border:1px solid #1a2a3a; padding:12px;">
+                    <div style="font-size:1.4rem; color:#6ab0ff; font-weight:700; font-family:'JetBrains Mono',monospace;">18,500 톤/일</div>
+                    <div style="font-size:.8rem; color:#8090a0;">단일 복합 단지 일일 원자재 소화량</div>
+                </div>
+            </div>
+
+            <table class="spec-table">
+                <caption>자동화 공장군 인프라 표준 규격</caption>
+                <tr>
+                    <th>시설 분류</th><td>Tier-5 폐쇄형 무인 복합 생산기지</td>
+                    <th>중앙 통제</th><td>StaffNet 군수 생산 분산 노드 직결</td>
+                </tr>
+                <tr>
+                    <th>동력 인프라</th><td>전용 지열 터빈 및 밀폐형 석탄 발전소</td>
+                    <th>공정 기계</th><td>유압식 로봇 암 14,000기 / 자동 프레스 800기</td>
+                </tr>
+                <tr>
+                    <th>품질 검수</th><td>8K 다파장 광학 스캐너 및 자동 불량 파쇄기</td>
+                    <th>불량품 처리</th><td>100% 용해로 즉시 재투입 및 재생산</td>
+                </tr>
+                <tr>
+                    <th>내부 대기</th><td>비정화 산업 질소 및 이산화황 잔류 대기 (비호흡 구역)</td>
+                    <th>보안 방호</th><td>외곽 폐쇄 격벽 + SENTRY_BOX 48기 매립</td>
+                </tr>
+            </table>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 환경 관리 고시: 무인 공장군 인근 배출 가스 및 미세 분진 관련 민원은 산업안전표준법 제8조에 따라 '공업 단지 표준 환경 수치'로 분류되어 별도의 여과 조치 대상에 해당하지 않습니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 6: no_kia — 생체 안정화 제제
+             ═══════════════════════════════════════════════════ -->
+        <div class="card" style="border-color:#603030;">
+            <h2 class="card-title" style="color:#d08080;">no_kia — 생체 안정화 및 세포 정지 제제</h2>
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80" class="distorted-img" style="height:260px;" alt="생체 안정화 앰플 보관 및 배급">
+            <p>
+                합중국 국방부 및 중앙보건처 표준 규격으로 생산되는 세포 괴사 정지 화학 제제입니다. 인체 세포 내 미토콘드리아 분해 반응 및 효소 자가 분해 과정을 영구적으로 정지시켜, 외상이나 산소 공급 중단 상황에서도 생체 조직의 부패와 세균성 감염을 원천 차단합니다.
+            </p>
+            <p>
+                본 약물은 합중국의 완전 자동화 화학 설비에서 대량 합성되어 극히 저렴한 단가로 공급되며, 군용 야전 의무품뿐만 아니라 전 시민 대상 표준 생체 유지 제제로 배급됩니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>no_kia 화학 및 투약 규격 표준서</caption>
+                <tr>
+                    <th>약제 분류</th><td>세포 괴사 정지제 (Cytoplasmic Stasis Compound)</td>
+                    <th>제제 명칭</th><td>No_kia Formula 4-A</td>
+                </tr>
+                <tr>
+                    <th>투약 경로</th><td>정맥 내 급속 단일 볼루스 주입 (20ml)</td>
+                    <th>작용 발현 시간</th><td>주입 후 0.3초 이내 혈류 전신 확산</td>
+                </tr>
+                <tr>
+                    <th>조직 괴사 지수</th><td>0.00% (외상 후 세포 분해 완전 정지)</td>
+                    <th>감염 억제율</th><td>100.0% (세균 및 진균 번식 불가)</td>
+                </tr>
+                <tr>
+                    <th>신경계 작용</th><td>대뇌 피질 시냅스 단백질 가역적 결합 해제</td>
+                    <th>부수적 결과</th><td>초회 투약 시 전향적·역행적 자전적 기억 데이터 소실</td>
+                </tr>
+                <tr>
+                    <th>약물 안정성</th><td>유효기간 없음 (생화학적 변성 불가)</td>
+                    <th>생산 비용</th><td>앰플당 0.38 Fed-Credit (자동화 라인 합성)</td>
+                </tr>
+                <tr>
+                    <th>배급 등급</th><td>제1급 국가 전략 비축 및 의무 배급 자산</td>
+                    <th>해독제</th><td>존재하지 않음 (비가역적 세포 안정화)</td>
+                </tr>
+            </table>
+
+            <div style="background:#080c10; border-left:3px solid #603030; padding:12px; margin:15px 0;">
+                <div class="warning-text" style="font-size:.85rem; font-weight:700; margin-bottom:6px;">
+                    ■ no_kia 투약 후 행정 처리 지침 (SOP-MED-04)
+                </div>
+                <p style="font-size:.8rem; margin-bottom:6px;">
+                    1. 대상자의 정맥 라인을 확보하고 표준 규격 no_kia 20ml를 단일 주입한다.<br>
+                    2. 주입 15초 후 동공 반사 및 신경계 안정화를 확인한다.<br>
+                    3. 초회 투약 대상자의 경우 기존 신원 정보(성명, 과거 이력)가 소실되므로, 즉시 12자리 신규 시민 일련번호(Serial Citizen Index)를 전산 재발급한다.<br>
+                    4. 안정화가 완료된 인원은 인력배치국의 작업 분류 기준표에 따라 신규 노무 또는 예비 병력 자원으로 재등록한다.
+                </p>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 행정 주석: 기억 소실 현상은 국가보안표준에 의거하여 "불필요한 정신적 스트레스 인자의 자연 감쇄"로 공식 분류되며, 재발급된 시민 번호에 의해 법적 권리와 배급 자격이 정상 갱신됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 7: RVP-77 — 신경 활동 현탁제 및 사일로 보존
+             ═══════════════════════════════════════════════════ -->
+        <div class="card" id="rvp" style="border-color:#503030;">
+            <h2 class="card-title" style="color:#c07070;">RVP-77 — 신경 활동 현탁제 및 사일로 보존 체계</h2>
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&q=80" class="distorted-img" style="height:260px;" alt="신경 현탁 화학 제제 및 보존 바이알">
+            <p>
+                no_kia 처치가 완료된 생체 조직의 의식 활동과 중추신경계 대사를 기저 상태로 안정화하기 위한 보조 현탁 화학 제제입니다. 투약 즉시 뇌파를 등전위선(Isoelectric Flatline) 상태로 유지시키며, 외부 자극에 대한 반응성을 차단하여 장기 저장 환경에서의 자원 소모를 최소화합니다.
+            </p>
+            <p>
+                본 약물 처치를 거친 인원은 국가 전략 인적 자원 버퍼(Reserve Biological Buffer)로 분류되어 규격화된 지하 저장 사일로에 체계적으로 적재 보관됩니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>RVP-77 화학 제원 및 저장 규격</caption>
+                <tr>
+                    <th>제제 명칭</th><td>RVP-77 (Polycyclic Isoelectric Solution)</td>
+                    <th>투약 시점</th><td>no_kia 투약 후 60~120초 이내 정맥 점적</td>
+                </tr>
+                <tr>
+                    <th>의식 현탁 시간</th><td>4.2초 ~ 11.8초 이내 완전 진입</td>
+                    <th>뇌파 상태</th><td>등전위선 유지 (미세 신호 0.2μV 이하)</td>
+                </tr>
+                <tr>
+                    <th>심박 유지치</th><td>분당 4~6회 (기저 대사 최저치 고정)</td>
+                    <th>자발 각성률</th><td>0.00% (촉진제 미투여 시 영구 지속)</td>
+                </tr>
+                <tr>
+                    <th>표준 보관 팔레트</th><td>1,800 × 600 × 400 mm 방청 알루미늄 트레이</td>
+                    <th>수직 적재 한도</th><td>사일로 랙당 14단 수직 적재</td>
+                </tr>
+                <tr>
+                    <th>사일로 환경</th><td>온도 4°C ± 1°C / 불활성 질소 3% 혼합 대기</td>
+                    <th>관리 주체</th><td>StaffNet 중앙 생체물류 자동화 통제국</td>
+                </tr>
+            </table>
+
+            <div style="background:#080c10; border-left:3px solid #503030; padding:12px; margin:15px 0;">
+                <div class="warning-text" style="font-size:.85rem; font-weight:700; margin-bottom:6px;">
+                    ■ no_kia 장기 보존 절차: 대상자 바이탈 안정화 후 사일로 적재 (SOP-SILO-882)
+                </div>
+                <ol style="font-size:.8rem; margin-left:18px;">
+                    <li>대상자에게 no_kia 제식 정맥 주사를 시행하여 세포 괴사를 정지시킨다.</li>
+                    <li>시냅스 안정화 신호 확인 후 RVP-77 현탁액 50ml를 연속 점적 투여한다.</li>
+                    <li>생체 신호 측정기를 통해 뇌파 등전위선 및 심박수 6회 이하 고정을 확인한다.</li>
+                    <li>규격 보존 팔레트에 안치한 후 고유 바코드 태그를 부착한다.</li>
+                    <li>자동화 크레인을 통해 지정된 지하 사일로 셀(Silo Cell) 14단 랙에 수직 적재한다.</li>
+                    <li>수용 위치 좌표를 StaffNet 중앙 인적 버퍼 원장에 자동 전산 등록한다.</li>
+                </ol>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 보안 규정: 사일로 적재 대장 및 지구별 총 수용 유닛 수치는 국가전략정보통제법 제3조에 따라 일괄 비공개 처리되며, 개별 민원 조회는 전산상 자동 반려 처리됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 8: IMMORTAL CORPS — 불사 전술 부대
+             ═══════════════════════════════════════════════════ -->
+        <div class="card" style="border-color:#402020;">
+            <h2 class="card-title" style="color:#d07070;">IMMORTAL CORPS — 불사 전술 부대 편제 체계</h2>
+            <img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800&q=80" class="distorted-img" style="height:260px;" alt="불사 전술 부대 대기 대열">
+            <p>
+                사일로에 적재된 생체 보존 유닛을 전술적 필요에 따라 동원하는 국가 비상 지상 전력 체계입니다. 전선 투입 시 현탁 상태의 유닛에 국소 신경 반응 촉진제를 투여하여 기초 운동 중추 및 격발 반사 기능만을 활성화한 후 전개합니다.
+            </p>
+            <p>
+                no_kia 처치가 완료되어 세포 괴사가 일어나지 않으므로 치명적 관통상이나 사지 손상 상황에서도 물리적 기동 기능이 유지되는 한 작전 임무를 계속 수행합니다. 현장 지휘관 및 의무 요원은 일체 배치되지 않으며, StaffNet 전술 중계 비콘 차량의 알고리즘에 의해 집단 통제됩니다.
+            </p>
+
+            <table class="spec-table">
+                <caption>IMMORTAL CORPS 표준 1개 대대 편제표 (TO&E)</caption>
+                <tr>
+                    <th>부대 명칭</th><td>제식 불사전술대대 (Immortal Tactical Bn)</td>
+                    <th>지휘 체계</th><td>StaffNet 전술 분산 노드 무인 원격 제어</td>
+                </tr>
+                <tr>
+                    <th>보존 생체 유닛</th><td>1,000기 (ELIXIR 처치 완료 유닛)</td>
+                    <th>현장 생체 장교/의무관</th><td>0명 (완전 무인 지휘)</td>
+                </tr>
+                <tr>
+                    <th>수송 자산</th><td>규격 팔레트 하역용 플랫베드 화물차 3대</td>
+                    <th>지휘 자산</th><td>StaffNet 전술 무인 중계 비콘 트럭 1대</td>
+                </tr>
+                <tr>
+                    <th>개인 화기</th><td>FED-AR 12.7mm 자동소총 1,000정 (단순 격발형)</td>
+                    <th>공용 화기</th><td>12.7mm 고정식 중기관총 4문</td>
+                </tr>
+                <tr>
+                    <th>기초 휴대 탄약</th><td>1인당 300발 (단순 탄포 장착)</td>
+                    <th>화학 비축분</th><td>작전 후 재현탁용 RVP-77 400 바이알</td>
+                </tr>
+                <tr>
+                    <th>작전 한계</th><td>근골격계 물리적 붕괴 시까지 무제한 지속</td>
+                    <th>철수 프로토콜</th><td>임무 종료 후 RVP 재투여 및 팔레트 재수거</td>
+                </tr>
+            </table>
+
+            <div style="background:#080c10; border-left:3px solid #402020; padding:12px; margin:15px 0;">
+                <div class="warning-text" style="font-size:.85rem; font-weight:700; margin-bottom:6px;">
+                    ■ 작전 종료 후 회수 및 재보관 기준
+                </div>
+                <p style="font-size:.8rem; margin-bottom:0;">
+                    작전 완료 후 생존 유닛에 RVP-77 현탁액을 재투여하여 신경 반응을 차단한 후 수송 트럭에 재적재합니다. 신체 일부가 손실된 유닛의 경우 세포 활성이 유지되므로 폐기하지 않으며, 손상도 분류에 따라 부품화 또는 중화기 고정 거치 유닛으로 재편성하여 지정 사일로에 격납합니다.
+                </p>
+            </div>
+
+            <p style="font-size:.72rem; color:#445577;">
+                ※ 참모본부 감사 주석: 본 부대의 운용은 전시자원동원법 제19조에 의거하여 합법적으로 편성되며, 편제 전반에 관한 질의 및 감사 요청서는 행정 효율화 지침에 따라 처리 대상에서 자동 제외됩니다.
+            </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════
+             SECTION 9: 관련 페이지 색인
+             ═══════════════════════════════════════════════════ -->
+        <div class="card">
+            <h2 class="card-title">관련 기술 및 편제 문서</h2>
+            <ul style="list-style:none; padding-left:0; line-height:1.8; font-size:.85rem;">
+                <li>▸ <a href="weapons_infantry.html">보병 장비 — 외골격·대구경자동소총·시술 강화(AUG)</a></li>
+                <li>▸ <a href="weapons_vehicle.html">기갑·중화기 — 전차·육상순양함·중포병 체계</a></li>
+                <li>▸ <a href="weapons_naval.html">해군·공군 — 레일건 함포·잠수함대·초음속 요격기</a></li>
+                <li>▸ <a href="arsenal.html">병기 총람 — 합중국 전군 89개 무기체계 종합 색인</a></li>
+                <li>▸ <a href="life.html">시민 안내 — no_kia 정기 처방 및 사일로 자원 등록 안내</a></li>
+                <li>▸ <a href="recruit.html">입대·징집 — 전구역 병력 모집 및 대체역 소집 요강</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>FEDERATION DEPT. OF DEFENSE — STAFFNET AUTOMATED ARMS CATALOG v14.8</p>
+        <p>본 포털에 게시된 모든 기술 정보는 StaffNet 군수통제국에 의해 자동 생성·검증·발행되었습니다.</p>
+        <p>문서 무단 전재, 적성국 망 전송, 또는 기술 사양 위변조 행위는 국가보안법 제17조에 따라 즉결 처분 대상이 됩니다.</p>
+        <p style="font-size:.65rem; color:#304050; font-family:'JetBrains Mono',monospace;">DOCUMENT_HASH: 7F3A-9C2E-8841-B9 | CLEARANCE: OMEGA-DECLASSIFIED | ACCESSED_BY: STAFFNET_AUTO_RELAY</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

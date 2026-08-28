@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* 합중국(US) - 차가운 관료주의, 현대적 시스템, 아날로그 화면 */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#a0b0c0;font-family:'Noto Sans KR',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden}
+
+.crt-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,0.1) 50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03));background-size:100% 4px,6px 100%;pointer-events:none;z-index:9999}
+
+h1,h2,h3,.logo{font-family:'Noto Sans KR',sans-serif;font-weight:900;letter-spacing:-0.5px}
+h1{font-size:2rem;color:#d0e0f0;border-bottom:2px solid #203040;padding-bottom:10px;margin-bottom:20px}
+h2{font-size:1.4rem;color:#c0d0e0;margin-top:30px;margin-bottom:15px}
+p{margin-bottom:15px}
+a{color:#6090c0;text-decoration:none}
+a:hover{color:#a0c0e0}
+.tag{display:inline-block;background:#101820;border:1px solid #304050;padding:2px 6px;font-size:0.75rem;margin:2px;font-family:'JetBrains Mono',monospace;color:#6090c0}
+.redacted{background:#101820;color:#101820;cursor:default}
+.redacted:hover{color:#8090a0}
+
+nav{background:#080c10;border-bottom:1px solid #203040;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;flex-wrap:wrap;gap:10px}
+.logo{color:#d0e0f0;font-size:1rem}
+nav ul{list-style:none;display:flex;gap:15px;flex-wrap:wrap}
+nav a{font-size:0.85rem;font-weight:700;color:#607080;text-transform:uppercase}
+nav a.active{color:#d0e0f0}
+
+main{max-width:1200px;margin:0 auto;padding:30px 20px}
+.card{background:#0a0e14;border:1px solid #203040;padding:20px;margin-bottom:20px}
+.card-title{font-size:1.1rem;color:#d0e0f0;margin-bottom:10px;border-bottom:1px solid #203040;padding-bottom:5px;font-weight:700}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+
+.spec-table{width:100%;border-collapse:collapse;margin:15px 0;font-family:'JetBrains Mono',monospace;font-size:0.8rem}
+.spec-table th,.spec-table td{border:1px solid #203040;padding:8px 12px;text-align:left}
+.spec-table th{background:#0a0e14;color:#8090a0;width:30%}
+.spec-table td{color:#c0d0e0}
+
+.distorted-img{width:100%;object-fit:cover;border:1px solid #203040;filter:grayscale(0.8) contrast(1.2);margin-bottom:15px}
+.ticker-wrap{width:100%;background:#0a0e14;border:1px solid #203040;padding:8px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;overflow:hidden;white-space:nowrap;margin-bottom:30px}
+
+.ad-popup{position:fixed;background:#0a0e14;border:1px solid #405060;padding:15px;z-index:10001;max-width:300px;font-size:0.8rem;box-shadow:5px 5px 0 rgba(0,0,0,0.5)}
+.ad-title{font-weight:700;color:#d0e0f0;margin-bottom:10px;display:flex;justify-content:space-between}
+.ad-close{background:none;border:none;color:#607080;cursor:pointer}
+
+footer{text-align:center;padding:30px;font-size:0.75rem;color:#405060;border-top:1px solid #203040;margin-top:50px}

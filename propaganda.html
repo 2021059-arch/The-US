@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>적성국 동향 분석 및 위협 평가 보고서 — 합중국 국방부</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .intel-banner {
+            background: linear-gradient(135deg, rgba(20, 30, 45, 0.95), rgba(10, 16, 24, 0.98));
+            border: 2px solid #304560;
+            padding: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .intel-banner h1 {
+            color: #d0e0f0;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #304560;
+            padding-bottom: 8px;
+        }
+        .threat-badge {
+            display: inline-block;
+            background: #182430;
+            border: 1px solid #507090;
+            color: #a0c0e0;
+            padding: 4px 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+        .section-header-box {
+            background: #0d141e;
+            border-left: 4px solid #4a709c;
+            padding: 1rem 1.4rem;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .section-header-box.union {
+            border-left-color: #6a5a9c;
+        }
+        .section-header-box h2 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.3rem;
+            color: #d0e4f8;
+        }
+        .section-header-box p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #8aa0b8;
+        }
+        .entity-card {
+            background: #090e14;
+            border: 1px solid #1c2b3c;
+            padding: 1.5rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+        .entity-card.empire {
+            border-left: 3px solid #7c3a3a;
+        }
+        .entity-card.union {
+            border-left: 3px solid #5d4a82;
+        }
+        .entity-card .card-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #c8dcf0;
+            border-bottom: 1px solid #203040;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+        .entity-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #6088b0;
+            background: #05080c;
+            padding: 2px 8px;
+            border: 1px solid #203040;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+        .footnote-box {
+            background: #070b10;
+            border: 1px dashed #283848;
+            padding: 0.8rem 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+            font-size: 0.78rem;
+            color: #7088a0;
+            line-height: 1.55;
+        }
+        .footnote-box strong {
+            color: #9cb8d8;
+        }
+        .directive-table th {
+            width: 25%;
+            background: #0c121a;
+        }
+        .metric-highlight {
+            color: #90b8e0;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html" class="active">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="account.html" class="account-link">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+    <div style="font-size:0.75rem; color:#506880; font-family:'JetBrains Mono',monospace; margin-bottom:1rem;">
+        <a href="index.html">포털 메인</a> &gt; <span>정보참모본부 정례 보고</span> &gt; 적성국 동향 및 전술 위협 평가
+    </div>
+
+    <!-- ═══ BANNER ═══ -->
+    <div class="intel-banner">
+        <span class="threat-badge">문서 분류: SEC-INTEL-2026-884A · 정보참모본부 2국 적성전력분석과</span>
+        <h1 class="glitch" data-text="적성국 동향 분석 및 전술 위협 평가 총람">적성국 동향 분석 및 전술 위협 평가 총람</h1>
+        <p style="color:#90a8c0; font-size:0.9rem; margin-bottom:0.5rem;">
+            본 문서는 동부 접경 제국(Empire) 및 북·서부 접경 연방(Union)의 전력 구성, 비정규 생체·유기물 병기, 변칙 기계화 부대, 그리고 미제어 나노·화학 물질의 전선 투입 실태를 행정적·기술적 지표로 집계한 국방부 공식 분석서입니다.
+        </p>
+        <p style="color:#607890; font-size:0.78rem; margin:0;">
+            ※ 본 평가는 신경망 참모본부(StaffNet) 위성 감시망 및 전선 무인 관측 센서의 계측 데이터를 기반으로 24시간 주기로 자동 갱신됩니다. 전선 배치 부대는 본 교전 지침을 준수하십시오.
+        </p>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            ■ 정보과: 제7구역 49식 잔해 분석 결과 배양 조직 14.2톤 소각 처리 완료 ■ 기상대: 북부 회랑 국지성 기압 급강하 감지 — 연방 기상관측대대 활동 주의 ■ 병참본부: 레일건 방어선 3차 탄약 재고 100% 유지 ■ 위성분석: 제국 후방 TM55 생산라인 가동률 지속 관측 ■
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PART 1: 제국 (EMPIRE / EAST)
+         ═══════════════════════════════════════════════════════ -->
+    <div class="section-header-box">
+        <h2>제 1부 — 제국(Empire / East): 배양 유기물 및 비정규 생체 병기 체계</h2>
+        <p>제국군은 금속 공업의 한계를 비정규 유기물 배양 및 생체 조직 가공 기술로 대체하고 있습니다. 아군 전사자 및 민간 자원의 전선 수거물 재활용 실태가 확인되며, 표준 소각 규정이 엄격히 요구됩니다.</p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1509248272441-15c432b380ea?w=800&q=80" class="distorted-img" alt="제국 전선 관측 정찰 영상" style="max-height:220px;">
+    <p style="font-size:0.75rem; color:#506880; margin-top:-10px; margin-bottom:20px;">▲ 국방위성 #SAT-09 열화상 관측 자료: 제국 제4후방 집결지 내 대규모 유기물 반응 및 배양 반응조 열 방출 프로파일.</p>
+
+    <!-- 1. 49식 인형병기 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>49식 인형병기 (Type-49 Flesh-Composite Giant Unit)</span>
+            <span class="entity-code">EMP-BIO-049</span>
+        </div>
+        <div class="two-col">
+            <div>
+                <table class="spec-table">
+                    <tr><th>전술 분류</th><td>초대형 유기물 복합 돌격체</td></tr>
+                    <tr><th>전고 / 중량</th><td>48.5m ~ 52.0m / 약 1,850톤</td></tr>
+                    <tr><th>구성 물질</th><td>적층 배양 근육 섬유, 경화 골질 프레임, 인공 표피</td></tr>
+                    <tr><th>원료 출처</th><td>수거된 전선 유기물 (피아 미구분 수거 조직)</td></tr>
+                    <tr><th>통제 방식</th><td>두개강 매립형 신경전극 임펄스 (유효 9일)</td></tr>
+                    <tr><th>일일 소모량</th><td>유기물 칼로리 약 4.2톤 / 일</td></tr>
+                    <tr><th>누적 관측</th><td>전선 배치 확인 214기 (격파 판정 182기)</td></tr>
+                </table>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80" class="distorted-img" alt="49식 잔해 분석 사진" style="height:150px;">
+                <p style="font-size:0.8rem; color:#90a8c0; line-height:1.6;">
+                    제국의 주력 대형 생체 병기로, 대규모 배양 시설에서 인체 및 동물성 조직을 고압 압착·적층하여 제작됩니다. 단일 개체 제조 시 수백 단위의 전선 수거 유기물이 소모되는 것으로 집계됩니다.
+                </p>
+            </div>
+        </div>
+        <p style="font-size:0.85rem; color:#b0c8e0;">
+            <strong>전술 분석:</strong> 두개강 내 삽입된 전극 제어 시스템은 평균 216시간(9일) 지속되며, 영양 공급 차단 시 피아 구분을 상실하는 폭주 단계에 진입합니다. 제국군은 이를 퇴각 시 지연 방벽(Barrier)으로 의도적 방치하는 사례가 빈번합니다.
+        </p>
+        <div class="footnote-box">
+            <strong>교전 지침 제49-A호:</strong> 아군 레일건 방어포대 직격 사격으로 골격 관통 후 잔해는 12시간 이내 800°C 이상 고온 소각 처리할 것. 방치 시 미세 조직 분열 잔존율 14.8% 유지됨.
+        </div>
+    </div>
+
+    <!-- 2. 야만타카 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>야만타카 (Yamantaka Organic-Industrial Apex Construct)</span>
+            <span class="entity-code">EMP-APEX-001</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>전술 분류</th><td>초중 복합 자율 자원 흡수 공정체</td></tr>
+            <tr><th>전고 / 가변 체적</th><td>기저 98m ~ 115m / 가변 (흡수 질량에 비례)</td></tr>
+            <tr><th>기동 방식</th><td>다축 유기 골격 및 궤도형 외골격 혼합</td></tr>
+            <tr><th>물질 흡수율</th><td>철강 프레임 및 유기 조직 시속 24톤 분해·재구성</td></tr>
+            <tr><th>나노 군체 통합</th><td>내부 마이크로 기계군을 통한 즉각 장갑 재생</td></tr>
+            <tr><th>위협 등급</th><td>최고 등급 (Sector Denial Hazard)</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            단일 기체로 전장에 진입하여 파괴된 차량, 철근 콘크리트, 전사자 유기물을 분해하여 자체 장갑판 및 골격으로 전환하는 살아있는 군수 재생 공정체입니다. 다수의 가변 관절과 포신 프레임이 관측 시점마다 상이하게 변형됩니다.
+        </p>
+        <div class="footnote-box">
+            <strong>합중국 국방부 교전 지침:</strong> 근접 보병 및 일반 기갑 접촉을 엄격히 금지함. 관측 즉시 좌표를 참모본부 양자 타격망에 전송하여 궤도 중력 탄두 및 항공 중폭격 편대 집중 폭격을 요청할 것.
+        </div>
+    </div>
+
+    <!-- 3. 오를라 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>오를라 (Orla Invisible Apex Predator)</span>
+            <span class="entity-code">EMP-BIO-091</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>광학 / 센서 피탐도</th><td>가시광선, 열적외선, 밀리미터파 레이더 반사율 0.00%</td></tr>
+            <tr><th>살상 매커니즘</th><td>반경 18m 내 세포 미토콘드리아 전위차 순간 붕괴</td></tr>
+            <tr><th>피해 특징</th><td>외상 및 화학 독소 부재, 급성 심정지 및 대뇌 활동 정지</td></tr>
+            <tr><th>탐지 수단</th><td>대기 굴절률 미세 편차 및 지면 압력 센서 사후 계측</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            전 파장대에서 광학·전자기적 반사가 발생하지 않는 특수 생체 개체입니다. 물리적 타격 없이 표적의 생체 전위차를 무력화하는 특성을 보유하고 있으며, 사후 검시 결과 조직 파괴 없이 모든 세포 활동이 동시 정지합니다.
+        </p>
+        <div class="footnote-box">
+            <strong>방호 지침:</strong> no_kia 정규 투약 완료 인원은 세포 억제제 반응으로 인해 즉각 사멸율이 0%로 고정되며, 뇌파 δ파 전환 후 수조 보존 상태로 안전 회수가 가능합니다.
+        </div>
+    </div>
+
+    <!-- 4. 태양광 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>태양광 개조체 (Solar Photonic Neuro-Disruptor Soldier)</span>
+            <span class="entity-code">EMP-INF-082</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>발광 파장</th><td>580nm ~ 620nm 연속 광자 방출 (휘도: 45,000 cd/m²)</td></tr>
+            <tr><th>신경학적 영향</th><td>시신경 노출 12초 후 시상하부 갈증 중추 폭주</td></tr>
+            <tr><th>피폭 경과</th><td>현기증(1단계) → 극심한 음수 강박(2단계) → 자해 충동(3단계)</td></tr>
+            <tr><th>대응 장구</th><td>합중국 표준 외골격 편광 필터 렌즈 (감쇄율 99.4%)</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            두부 상단에 생체 발광 기관을 이식한 개조 병사로, 시각 노출 시 중추 신경계를 마비시켜 탈수를 유발하는 광학 심리전을 수행합니다. 편광 렌즈 미착용 시 전투력 상실률이 급증하므로 표준 헬멧 밀폐를 유지하십시오.
+        </p>
+    </div>
+
+    <!-- 5. 소 두개골 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>소 두개골 (Bovine Cranium Pacifier Construct)</span>
+            <span class="entity-code">EMP-CTR-012</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>외형 / 규모</th><td>우두형 두개 골질 마스크 착용 거대 개체 (전고 약 35m)</td></tr>
+            <tr><th>배치 위치</th><td>제국 후방 군수 집결지 및 노역 지구 (전선 미배치)</td></tr>
+            <tr><th>특성 반경</th><td>반경 12km 내 저주파 생체 뇌파 동조장 발생</td></tr>
+            <tr><th>영향 지표</th><td>해당 구역 내 파업 및 폭동 발생 확률 0.00% 유지</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            전투 수행 능력이 없으나 후방 노동력 통제에 활용되는 대형 심리 제어 개체입니다. 방출되는 극저주파 동조 신호로 인근 작업 인원의 반항 의사를 억제하여 제국의 전쟁 지속 생산성을 지탱하고 있습니다.
+        </p>
+    </div>
+
+    <!-- 6. 침팬지 돌격대 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>영장류 뇌수술 돌격대 (Primate Augmentation Shock Unit)</span>
+            <span class="entity-code">EMP-INF-019</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>원종 / 개조</th><td>Pan troglodytes (침팬지) 대뇌 피질 확장 수술</td></tr>
+            <tr><th>표준 무장</th><td>단축형 7.62mm 자동소총 좌우 각 1정 (양손 사격)</td></tr>
+            <tr><th>전술 기동력</th><td>삼림 및 폐허 지형 주파 속도 일반 보병 대비 2.4배</td></tr>
+            <tr><th>탄약 소모율</th><td>분당 1,200발 (교차 탄막 사격)</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            영장류의 대뇌 구조를 개조하여 기본 전술 이해도와 사격 훈련을 부여한 고기동 돌격 부대입니다. 복잡한 지형에서의 엄폐 사격 능력이 우수하므로 원거리 열화상 무인 센서 포착 시 자동포대로 조기 제압합니다.
+        </p>
+    </div>
+
+    <!-- 7. 전투식량 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>자기증식형 유기물체 '전투식량' (Replicating Biomass Rations)</span>
+            <span class="entity-code">EMP-BIO-004</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>개체 전고</th><td>약 165cm ~ 175cm (단일 괴상형)</td></tr>
+            <tr><th>분열 주기</th><td>적정 수분 및 탄소원 공급 시 24시간 당 100% 분열</td></tr>
+            <tr><th>주요 용도</th><td>생체 병기 단백질 보급 및 질량 돌파용 참호 매몰 작전</td></tr>
+            <tr><th>제압 수단</th><td>네이팜 및 테르밋 화학 소각</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            제국군 생체 병기의 칼로리 공급용으로 설계된 자기 증식 육질 덩어리입니다. 수천 단위가 집단 돌격할 경우 방어 진지 및 참호를 물리적으로 매몰시키는 질량 무기로 전용되므로 진지 접근 전 소각 화망을 전개하십시오.
+        </p>
+    </div>
+
+    <!-- 8. 귀환병 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>전사자 신경 재기동체 '귀환병' (Electrode Reanimated Infantry)</span>
+            <span class="entity-code">EMP-INF-099</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>원료 자원</th><td>전선 방치 사체 (피아 미구분 수거물)</td></tr>
+            <tr><th>기동 장치</th><td>척수 및 운동 신경계 직결 전기 임펄스 와이어</td></tr>
+            <tr><th>언어 / 인지</th><td>발화 능력 소멸 / 단순 전진 및 방아쇠 당김 수행</td></tr>
+            <tr><th>회수 규정</th><td>합중국 전사자 즉각 수거 및 표준 소각 규정 #CR-119</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            사망한 보병의 신체에 전극을 매립하여 단순 돌격 병력으로 재활용하는 부대입니다. 아군 전사자 유해가 적에게 노출될 경우 귀환병 자원으로 악용될 수 있으므로, 아군 유해 회수가 불가능한 구역은 고열 소각을 원칙으로 합니다.
+        </p>
+    </div>
+
+    <!-- 9. 5종 전투 장기 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>오대 전투 장기 이식체 (Pentagonal Combat Organ Suite)</span>
+            <span class="entity-code">EMP-MED-005</span>
+        </div>
+        <table class="spec-table">
+            <thead>
+                <tr>
+                    <th>장기 명칭</th>
+                    <th>주요 전술 기능</th>
+                    <th>생리학적 대가 및 한계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>내독장기 (耐毒)</td>
+                    <td>모든 신경가스·질식작용제 중화</td>
+                    <td>혈중 독소 농도 상승, 피부 궤양 발생</td>
+                </tr>
+                <tr>
+                    <td>완충장기 (緩衝)</td>
+                    <td>폭압 및 파편 충격 흡수</td>
+                    <td>내장 체적 팽창으로 늑골 영구 변형</td>
+                </tr>
+                <tr>
+                    <td>재생장기 (再生)</td>
+                    <td>출혈 30초 내 급속 응고 및 조직 재건</td>
+                    <td>세포 이상 증식, 3년 내 악성 종양 발병률 100%</td>
+                </tr>
+                <tr>
+                    <td>초감각장기 (超感)</td>
+                    <td>적외선 시각 및 극저주파 진동 감지</td>
+                    <td>감각 과부하성 뇌손상, 기대 수명 24개월</td>
+                </tr>
+                <tr>
+                    <td>출도장기 (出刀)</td>
+                    <td>전완부 골질 칼날 고속 사출 및 생성</td>
+                    <td>칼슘 소모 극대화, 골다공증 및 관절 파손</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            제국군 정예 보병에 시술되는 5종 생체 장기 패키지입니다. 시술자의 전투력은 비약적으로 상승하나 생체 대사 균형이 붕괴되어 평균 수명이 36개월 미만으로 제한됩니다.
+        </p>
+    </div>
+
+    <!-- 10. 제식강화복 / 11. TM72 / 12. TM55 -->
+    <div class="entity-card empire">
+        <div class="card-title">
+            <span>기타 제국군 기계·복합 병기 체계 (TM-55, TM-72, 연소형 강화복)</span>
+            <span class="entity-code">EMP-MEC-SERIES</span>
+        </div>
+        <table class="spec-table">
+            <tr>
+                <th>연소형 제식강화복</th>
+                <td>체온 상승을 운동 에너지로 전환하는 열화학 반응복. 2.4m 대도 운용. 착용 후 240분 내 착용자 고열 소사.</td>
+            </tr>
+            <tr>
+                <th>TM72 영구보행 경계체</th>
+                <td>무보급 자율 보행 메커니즘 탑재. 특정 좌표 반경 500m 원형 순찰 영구 지속. 방어선 진입 시 자동 격파.</td>
+            </tr>
+            <tr>
+                <th>TM55 원통형 자율보행기</th>
+                <td>전고 3m 원통형 단순 장갑체. 일일 15,000기 생산 규모. 내장 12.7mm 기관총 탑재. 대량 탄막 격파 대상.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PART 2: 연방 (UNION / NORTH & WEST)
+         ═══════════════════════════════════════════════════════ -->
+    <div class="section-header-box union">
+        <h2>제 2부 — 연방(Union / North & West): 변칙 전력 및 미제어 분자 체계</h2>
+        <p>연방군은 전자기적·미시적 나노 공학과 설명되지 않는 신경 변칙 체계를 군사 교리에 편입하고 있습니다. 장비 파괴와 더불어 인지 교란 및 대기 오염에 대한 다층 방호가 필요합니다.</p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800&q=80" class="distorted-img" alt="연방 전선 위성 정찰 영상" style="max-height:220px;">
+    <p style="font-size:0.75rem; color:#506880; margin-top:-10px; margin-bottom:20px;">▲ 서부 삼림 경계선 상공 기압 이상 영상: 연방군 제대 주둔 지역 상공의 나선형 와류 구름 형성 및 전파 교란 구역.</p>
+
+    <!-- 1. 기상관측대대 -->
+    <div class="entity-card union">
+        <div class="card-title">
+            <span>기상관측대대 (Weather Modification / Irregular Battalion)</span>
+            <span class="entity-code">UNI-IRR-001</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>연방군 편제</th><td>제3·제7 기상관측대대 (통칭: W-Unit)</td></tr>
+            <tr><th>기후 조작 반경</th><td>국지성 급성 뇌우 및 우박 반경 30km 전개</td></tr>
+            <tr><th>미립자 방출</th><td>비정형 합성 유기 병원체 혼합 강우 살포</td></tr>
+            <tr><th>전술 효과</th><td>아군 근접 항공 지원(CAS) 시계 0% 및 정밀 유도 탄두 궤적 왜곡</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            국지적 대기압과 온도를 인위적으로 급변시켜 폭풍과 에어로졸 병원체를 확산시키는 특수 지원 제대입니다. 아군 비행 편대의 항법 컴퓨터를 교란하므로 StaffNet 유선 중계망 및 지상 관제 레일건 포대를 우선 연동하십시오.
+        </p>
+    </div>
+
+    <!-- 2. 특별통제대대 / 특수감응연대 -->
+    <div class="entity-card union">
+        <div class="card-title">
+            <span>특별통제대대 및 특수감응연대 (Neuro-Kinetic Specialists)</span>
+            <span class="entity-code">UNI-IRR-044</span>
+        </div>
+        <table class="spec-table">
+            <tr><th>원격 신경 지배</th><td>외골격 통신 채널 변조를 통한 원거리 인지 침투 및 오인 사격 유도</td></tr>
+            <tr><th>다중 좌표 편재</th><td>단일 지휘 개체의 전선 다중 센서 동시 감지 현상</td></tr>
+            <tr><th>운동에너지 투사</th><td>물리적 화기 없이 전차 장갑판 45mm 압착·관통력 발생</td></tr>
+            <tr><th>대응 프로토콜</th><td>외골격 신경 피드백 차단기 활성화 및 완전 밀폐 방호</td></tr>
+        </table>
+        <p style="font-size:0.85rem; color:#b0c8e0; margin-top:0.8rem;">
+            전파 및 신경망 주파수를 활용하여 원거리 표적의 심폐 기능을 저하시키거나 기계 구조물을 원격 왜곡하는 변칙 작전 부대입니다. 외골격 통신을 즉시 StaffNet 양자 암호 모드로 전환하여 신경 간섭을 차단합니다.
+        </p>
+    </div>
+
+    <!-- 3. KV99 / 육상순양함 / 곰형전차 -->
+    <div class="entity-card union">
+        <div class="card-title">
+            <span>연방군 기갑 및 중장비 제원 (KV-99, 육상순양함, 곰형전차)</span>
+            <span class="entity-code">UNI-ARM-SERIES</span>
+        </div>
+        <div class="two-col">
+            <div>
+                <table class="spec-table">
+                    <tr><th>KV-99 초중보행전차</th><td>3족 보행, 6문 연장 주포. 자동 산출 표적 명중률 99.8%. 오토타겟 모드 시 전방위 무차별 사격.</td></tr>
+                    <tr><th>300톤급 육상순양함</th><td>전함급 280mm 2연장 주포탑 탑재 궤도 요새. 주력 전차 탄두 무효화. 벙커버스터 항공 유도탄 필요.</td></tr>
+                </table>
+            </div>
+            <div>
+                <table class="spec-table">
+                    <tr><th>4족 곰형 보행전차</th><td>삼림 잠복형 4족 장갑차. 열화상 억제 코팅 적용. 매복 기습 전문.</td></tr>
+                    <tr><th>구형 봉입 보병</th><td>강철 구체 내 상반신 밀폐 결합. 전방위 회전 기동. 물리적 이탈 불가.</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 그레이 구 & 실레인 식물 -->
+    <div class="entity-card union">
+        <div class="card-title">
+            <span>미제어 분자 및 화학 무기 체계 (Gray Goo, Silane Botanical Shells)</span>
+            <span class="entity-code">UNI-HAZ-088</span>
+        </div>
+        <table class="spec-table">
+            <tr>
+                <th style="width:25%;">그레이 구 (Gray Goo)</th>
+                <td>자가 증식형 나노 머신 군체. 접촉하는 모든 탄소 및 금속 결합체를 분해하여 자기 복제 수행. 확산 시 해당 구역 절대 격리 및 방벽 구축 필수.</td>
+            </tr>
+            <tr>
+                <th>실레인(SiH₄) 식물 포탄</th>
+                <td>착탄 시 고속 발아하여 자연 발화성 실레인 가스를 방출하는 유전자 변형 식물 종자 탄두. 방독면 무효 (공기 접촉 즉시 1,400°C 화염 발생).</td>
+            </tr>
+        </table>
+        <div class="footnote-box">
+            <strong>오염 지역 통제령:</strong> 그레이 구 및 실레인 군락 발생 지점은 지도상 '적색 폐기 구역'으로 자동 갱신되며, 진입 인원은 RVP 자산으로 전환 처리됩니다.
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PART 3: 결론 및 합중국 기술 우위
+         ═══════════════════════════════════════════════════════ -->
+    <div class="card" style="background:#0c1420; border:1px solid #305070; margin-top:2rem;">
+        <div class="card-title" style="color:#d0e8ff; border-bottom-color:#305070;">
+            종합 평가 — 합중국 산업 자동화 및 생존 기술의 전략적 우위
+        </div>
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80" class="distorted-img" alt="합중국 국방부 자동화 공장" style="max-height:180px;">
+        <p style="font-size:0.88rem; color:#c0d8f0; line-height:1.7;">
+            적성국들의 비인도적 유기물 착취 및 제어 불가능한 화학·나노 병기 운용은 공업 생산 기반의 취약성과 자원 고갈에서 비롯된 비효율적 임시방편입니다.<br><br>
+            합중국은 <strong>신경망 참모본부(StaffNet)의 15ms 전술 최적화</strong>, <strong>457개소 전자동 군수 공장</strong>, 그리고 전 시민의 생체 보존을 담보하는 <strong>no_kia 정규 투약 체계</strong>를 통해 단 한 치의 감정적 동요 없이 확고한 승리를 완성하고 있습니다.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:1rem;">
+            <a href="weapons_special.html" class="tag">특수·자동화 병기 총람 열람 →</a>
+            <a href="recruit.html" class="tag">전선 입대 및 징집 안내 →</a>
+            <a href="life.html" class="tag">시민 방공 수칙 확인 →</a>
+        </div>
+    </div>
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<script src="app.js"></script>
+</body>
+</html>

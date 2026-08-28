@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합중국 국방부 대시민 통합 전산망</title>
+  <meta name="description" content="합중국 국방부 대시민 통합 전산 포털 — 행정 공보, 전황 브리핑, 병기 총람 및 시민 행정 서비스">
+  <!-- STAFFNET SYSTEM ID: FED-NODE-001 | CLEARANCE: PUBLIC-ADMIN | KERNEL: v12.08.4 -->
+  <!-- WARNING: 전산망 접속 기록 및 생체 식별 코드는 국방안보법 제14조에 의거하여 실시간 저장됩니다 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-banner {
+      border: 1px solid #203040;
+      background: #080c10;
+      padding: 24px;
+      margin-bottom: 25px;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #607080;
+      border-bottom: 1px solid #1a2530;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+      color: #d0e0f0;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .hero-desc {
+      font-size: 0.9rem;
+      color: #88a0b8;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .quote-box {
+      border-left: 3px solid #305070;
+      background: #06090d;
+      padding: 15px 20px;
+      margin: 15px 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #b0c4de;
+    }
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #102030;
+      border: 1px solid #204060;
+      color: #60a0e0;
+      margin-right: 6px;
+    }
+    .status-badge.ok {
+      background: #0a1f14;
+      border-color: #1a4f30;
+      color: #40c070;
+    }
+    .status-badge.warn {
+      background: #2a1a08;
+      border-color: #5a3810;
+      color: #e09030;
+    }
+    .status-badge.alert {
+      background: #2a0a0a;
+      border-color: #5a1515;
+      color: #f05050;
+    }
+    .highlight-val {
+      font-family: 'JetBrains Mono', monospace;
+      color: #80c0ff;
+      font-weight: 700;
+    }
+    .news-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid #141e28;
+      font-size: 0.85rem;
+    }
+    .news-row:last-child {
+      border-bottom: none;
+    }
+    .news-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #506878;
+      min-width: 80px;
+    }
+  </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html" class="active">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="account.html" class="account-link">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!--  시스템 상단 상태 표시 및 헤더                              -->
+  <!-- ============================================================ -->
+  <div class="hero-banner">
+    <div class="hero-meta">
+      <span>GATEWAY NODE: SN-SEC-0118 (분산 코어 4번)</span>
+      <span>SYSTEM STATUS: <span class="highlight-val">OPERATIONAL (99.998%)</span></span>
+      <span>CLEARANCE: GENERAL CITIZEN ACCESS</span>
+      <span>DATE: 2026-08-28</span>
+    </div>
+    <h1 class="hero-title glitch" data-text="합중국 국방부 대시민 통합 전산망">합중국 국방부 대시민 통합 전산망</h1>
+    <p class="hero-desc">FEDERATION DEPARTMENT OF DEFENSE — INTEGRATED CITIZEN ADMINISTRATIVE PORTAL (BUILD 12.08.4)</p>
+    <p style="font-size: 0.8rem; color: #506575; margin-top: 5px; margin-bottom: 0;">
+      본 포털은 신경망 참모본부(StaffNet)의 통합 데이터 버스에 직결되어 있으며, 국가 안보 지침 제74조에 의거하여 전 시민에게 공식 행정 정보 및 전황 지표를 실시간 공표합니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  실시간 전산 속보 티커                                      -->
+  <!-- ============================================================ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      [공보 08:00] 제381차 전시 특별 국방예산안 의회 전자 의결 만장일치 가결 완료 (StaffNet 의결 번호 #LEG-3810) ▌ [전황 07:30] 제7전구 사령부: 제국 전선 49식 인형병기 14기 유압 및 관절부 파괴 무력화 확인 ▌ [보건 07:00] no_kia 제3차 의무 투약 캠페인 전 구역 정상 집행 중 (누적 투약률 99.72%) ▌ [방위 06:30] 연방 방면 그레이 구 확산 저지선 M44 중형 고열 소각 방어선 1,200°C 상시 유지 ▌ [산업 06:00] 제118 완전무인 지하 제조단지 풀가동 승인 (월산 155mm 레일건 관통체 360,000발) ▌ [통신 05:30] 제4위성 지상 관제노드 유실 구역 예비 유선 전송로 전환 완료 ▌ [보급 05:00] 시민 표준 압축 단백질 블록 생산량 기준 수요 대비 109% 달성 ▌
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  국정 최고 브리핑: 대통령 정례 담화                          -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">공식 공보</span> 제48대 대통령 국정 안보 브리핑
+    </div>
+    <div class="two-col-grid">
+      <div>
+        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="합중국 국방부 중앙 통제 센터" class="distorted-img" style="height: 220px;">
+        <p style="font-size: 0.75rem; color: #506575; margin-bottom: 0;">
+          [기록물 아카이브 #DOC-8812] 합중국 제1행정 코어 방송 터미널. 전산망 중앙 데이터 버스를 통해 동시 송출.
+        </p>
+      </div>
+      <div>
+        <div class="quote-box">
+          "친애하는 1,301억 합중국 시민 여러분.<br><br>
+          합중국의 전자기학 기술력은 단독 1위를 확고히 유지하고 있으며, 마하 7.2급 전열화학포 및 레일건 방어망은 가동률 98.2%로 조국의 영공을 완벽히 방호하고 있습니다.<br><br>
+          영공에는 524,000기의 초계기가 상시 비행을 수행 중이며, 심도 180m 이하 457개 완전 무인 지하 제조단지는 원자재 투입부터 탄약 양산까지 일체의 지연 없이 가동되고 있습니다.<br><br>
+          세포 사멸 억제제 no_kia의 전면 도입을 통해 장병의 생물학적 사망을 원천 차단하였으며, 식량 자급률 109%를 기반으로 시민의 항구적 존속을 보장합니다."
+        </div>
+        <p style="font-size: 0.8rem; color: #708595; text-align: right; margin-bottom: 0;">
+          — 제48대 대통령 국정 브리핑 (StaffNet 통합 대본 모듈 #A-8812에 의거 자동 승인)
+        </p>
+      </div>
+    </div>
+    <p class="footnote warning-text">
+      ※ 행정 고지: 의사당 본관 행정 기능은 7년 전 적 순항미사일 탄착 이후 비상 국정 계속성(COG) 프로토콜에 따라 StaffNet 분산 지휘 노드로 전면 이관되어 유지관리 비용 최적화를 달성하였습니다. 대통령의 물리적 집무 소재지 및 생체 유지 장치 상태는 국방 보안등급 1급(EYES ONLY)으로 분류되며, 본 담화는 음성·화상 신경망 렌더러에 의해 자동 합성·배포되었습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  오늘의 전황 및 국가 전략 지표 종합                         -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge">전술 집계</span> 3국 군사 역량 및 전황 일일 종합 지표
+    </div>
+    <p style="font-size: 0.85rem; color: #8090a0;">
+      신경망 참모본부(StaffNet) 군사정보분석국 금일 06:00 기준 실시간 종합 데이터 (단위: 실측 및 추정치)
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>전략 구분</th>
+          <th>합중국 (Federation)</th>
+          <th>제국 (East 추정)</th>
+          <th>연방 (Union 추정)</th>
+          <th>전술 평가 및 세부 규격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>운용 항공 전력</th>
+          <td class="highlight-val">524,000기</td>
+          <td>310,000기</td>
+          <td>280,000기</td>
+          <td>합중국 무인 자율 초계 편대 비중 84.2%</td>
+        </tr>
+        <tr>
+          <th>기갑·보행 병기</th>
+          <td class="highlight-val">1,091,000대</td>
+          <td>780,000대</td>
+          <td>620,000대</td>
+          <td>디젤 유압 외골격 및 무인 자주 포대 포함</td>
+        </tr>
+        <tr>
+          <th>전자기 요격 방어망</th>
+          <td class="highlight-val">가동률 98.2%</td>
+          <td>미보유 (재래식)</td>
+          <td>국소 시험 운용</td>
+          <td>마하 7.2 텅스텐 관통자 전열화학포 1,420개 기지</td>
+        </tr>
+        <tr>
+          <th>완전무인 지하 플랜트</th>
+          <td class="highlight-val">457개소 가동</td>
+          <td>120개소 (수동)</td>
+          <td>90개소 (나노)</td>
+          <td>심도 150~300m 암반 벙커, 상주 인원 0명</td>
+        </tr>
+        <tr>
+          <th>일일 탄약 생산량</th>
+          <td class="highlight-val">14,200,000발</td>
+          <td>9,800,000발</td>
+          <td>7,100,000발</td>
+          <td>155mm 레일건 탄체 및 30mm APFSDS 표준</td>
+        </tr>
+        <tr>
+          <th>RVP 전략 보존 수조</th>
+          <td class="highlight-val">4,812,040구</td>
+          <td>미운용 (폐기)</td>
+          <td>미운용 (원자 분해)</td>
+          <td>대사 정지 및 냉각 보존 상태 인원</td>
+        </tr>
+        <tr>
+          <th>공식 전사자(KIA) 통계</th>
+          <td class="highlight-val">0명</td>
+          <td>확인 불가</td>
+          <td>확인 불가</td>
+          <td>수정 군사법상 no_kia 투약 인원 전사 불인정</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="footnote warning-text">
+      ※ 지표 산정 기준: 전사자(KIA) 통계 0명은 국방보건법 제14조에 따른 법적 분류 기준입니다. 사지 결손, 뇌간 정지, 혼수 상태 전환 장병은 '전투 부상(WIA)' 또는 'RVP 보존 전환'으로 분류되므로 통계적 사망에 계상되지 않습니다. 실측 세부 전술 데이터는 비공개 아카이브에 수록되어 있습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  주요 부문 전산망 안내 (카드 그리드)                        -->
+  <!-- ============================================================ -->
+  <h2>주요 포털 서비스 부문</h2>
+  <div class="card-grid">
+
+    <!-- 카드 1: 병기 총람 -->
+    <a href="arsenal.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">병기 총람 (Arsenal)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          89개 정규 무기체계의 공식 군사 제원. 전자기학 1위 기반 레일건, 코일 가속포, 유압 강화외골격, 양자 유도 유도탄 세부 사양 수록.
+        </p>
+        <span class="tag">전자기학</span>
+        <span class="tag">무기체계 89종</span>
+        <span class="tag">StaffNet 승인</span>
+      </div>
+    </a>
+
+    <!-- 카드 2: 의회·국정 -->
+    <a href="news.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">의회·국정 (News & Gov)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          전시 특별 국방예산안 의결서, 대통령 정례 안보 담화 전문, no_kia 3차 투약 성과 보고서 및 전선별 공식 전과 브리핑.
+        </p>
+        <span class="tag">공식 보도</span>
+        <span class="tag">예산 의결</span>
+        <span class="tag">전과 보고</span>
+      </div>
+    </a>
+
+    <!-- 카드 3: 보병 장비 -->
+    <a href="weapons_infantry.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">보병 장비 (Infantry)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          제식 디젤 유압 강화외골격(EXO), 12.7mm 대구경자동소총(FED_AR), 3연장 오토트래킹 팩(FED_PACK) 및 신체 시술 강화(AUG) 규격.
+        </p>
+        <span class="tag">구경 12.7mm</span>
+        <span class="tag">유압 60kg 가반</span>
+        <span class="tag">자동 추적</span>
+      </div>
+    </a>
+
+    <!-- 카드 4: 기갑·중화기 -->
+    <a href="weapons_vehicle.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">기갑·중화기 (Armor)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          155mm 전열화학포 주력전차, 8×8 중장갑 궤도차량, 203mm 자주 전자기포 및 대구경 방어 요격 시스템의 전투 제원.
+        </p>
+        <span class="tag">전차중량 68t</span>
+        <span class="tag">포구초속 2,450m/s</span>
+        <span class="tag">복합장갑</span>
+      </div>
+    </a>
+
+    <!-- 카드 5: 해군·공군 -->
+    <a href="weapons_naval.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">해군·공군 (Navy & Air)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          4,200톤급 레일건 탑재 호위함, 잠함 저지 음향망, StaffNet 자율 편대 무인 전투기 및 고고도 전자전 초계기 편대.
+        </p>
+        <span class="tag">만재 4,200t</span>
+        <span class="tag">작전반경 1,800km</span>
+        <span class="tag">마하 3.5</span>
+      </div>
+    </a>
+
+    <!-- 카드 6: 특수·자동화 -->
+    <a href="weapons_special.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">특수·자동화 (Special)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          세포 사멸 차단제 no_kia 분자 구조, 잔존 가치 보존 프로그램(RVP) 사일로 수조, 심도 180m 자동화 공장 운용 프로토콜.
+        </p>
+        <span class="tag">no_kia 규격</span>
+        <span class="tag">RVP 사일로</span>
+        <span class="tag">심도 180m</span>
+      </div>
+    </a>
+
+    <!-- 카드 7: 적성국 동향 -->
+    <a href="propaganda.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">적성국 동향 (Threat Intel)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          제국 49식 인형병기 생체 신경계 접합 구조 분석 및 연방 자기증식 나노머신(그레이 구) 오염 확산 저지 작전 보고서.
+        </p>
+        <span class="tag">Class-A 위협</span>
+        <span class="tag">신경 접합 분석</span>
+        <span class="tag">소각 방어선</span>
+      </div>
+    </a>
+
+    <!-- 카드 8: 시민 안내 -->
+    <a href="life.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">시민 생활 안내 (Civil Life)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          구룡채성 14,000개 블록 표준 주거 규정, 압축 단백질 블록 7일 정기 배급 기준, 정기 방공 훈련 및 통행 지침.
+        </p>
+        <span class="tag">구룡채성 규정</span>
+        <span class="tag">배급 달성 109%</span>
+        <span class="tag">방공 수칙</span>
+      </div>
+    </a>
+
+    <!-- 카드 9: 입대·징집 -->
+    <a href="recruit.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">입대·징집 (Recruitment)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          수정 병역법 제12조에 따른 16세 이상 전 시민 동원 기준, 신체 시술 적합성 검사, 복무 분류 및 사후 보존 규정.
+        </p>
+        <span class="tag">징집 연령 16세</span>
+        <span class="tag">신체 검사</span>
+        <span class="tag">자동 영장</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  국방 보건 및 바이오 안보 섹션: no_kia 공식 공보             -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge alert">보건 훈령</span> no_kia 제3차 의무 투약 시행 지침 (훈령 제48-91호)
+    </div>
+    <div class="two-col-grid">
+      <div>
+        <img src="https://images.unsplash.com/photo-1579165466991-467135ad3110?w=800&q=80" alt="국방부 생체공학연구소 의약품 보관 시설" class="distorted-img" style="height: 220px;">
+        <p style="font-size: 0.75rem; color: #506575;">
+          [설비 식별: BIO-LAB-04] 국방부 생체공학연구소 no_kia 정제 및 앰플 자동 충진 라인.
+        </p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.05rem; color: #d0e0f0; margin-bottom: 8px;">합중국 시민의 생물학적 보존 및 세포 부패 원천 억제</h3>
+        <p style="font-size: 0.85rem; line-height: 1.6; color: #a0b4c8;">
+          국방부 생체공학연구소가 개발한 no_kia(Non-Kinetic Immortality Agent)는 세포 아포토시스 경로를 차단하고 혐기성 세균 효소 분해를 불활성화하여 인체 조직의 부패와 괴사를 영구히 정지시키는 제식 생체 안정제입니다.
+        </p>
+        <table class="spec-table" style="margin: 8px 0;">
+          <tbody>
+            <tr>
+              <th>대상 인구</th>
+              <td>합중국 전 시민 (1,301억 명)</td>
+              <th>누적 접종률</th>
+              <td class="highlight-val">99.72%</td>
+            </tr>
+            <tr>
+              <th>약리기전</th>
+              <td>세포사멸 유전자 전사 억제</td>
+              <th>보존 수명</th>
+              <td>반영구 (열화율 0.01%/년)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size: 0.82rem; color: #8898a8; margin-bottom: 0;">
+          미접종 시민은 구역별 배급소 및 징병 신체검사소에 즉시 출두하여 투약을 완료하십시오. 미투약 상태의 신분은 식량 배급 자격이 정지되며 보존 대상자(RVP)로 직권 전환됩니다.
+        </p>
+      </div>
+    </div>
+    <p class="footnote warning-text">
+      ※ 약리 임상 고지: no_kia 1차 투약 시 수반되는 급성 역행성 기억 분절(단기 일화 기억 상실) 및 미각 소실(72시간 이내 100%), 동통 인지 85% 감쇄는 해마-편도체 회로 안정화에 따른 표준 반응입니다. 1차 투약 완료 후 추가적 기억 소실은 보고되지 않습니다. 약제 투약 거부 행위는 국방안보법 제19조에 의거하여 즉각적인 물리적 보존 절차(RVP 이관)가 집행됩니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시민 행정 종합 공지사항                                    -->
+  <!-- ============================================================ -->
+  <h2>전시 행정 종합 공지</h2>
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));">
+
+    <!-- 공지 1: 구룡채성 관리 규정 -->
+    <div class="card">
+      <div class="card-title">구룡채성 표준 주거 단지 관리 규정</div>
+      <p style="font-size: 0.85rem; color: #90a0b0;">
+        전국 14,000개 고밀도 복합 집단계획 거주 구역 주민 지침:
+      </p>
+      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
+        <li>1~4층 암전 구역 내 정부 배급 20W 형광 조명 상시 점등 의무화</li>
+        <li>폭 60cm 미만 공용 복도 내 사물 적치 및 통행 방해 금지</li>
+        <li>중앙 공기 정화 덕트 임의 폐쇄 시 전시 시설 훼손 혐의 적용</li>
+        <li>옥상 방공 시설 구역 접근은 사령부 인가증 소지자에 한함</li>
+      </ul>
+      <p class="footnote">상세 주거 지침: <a href="life.html">시민 생활 안내</a></p>
+    </div>
+
+    <!-- 공지 2: 식량 배급 기준표 -->
+    <div class="card">
+      <div class="card-title">식량 배급 표준 쿼터 및 수령 절차</div>
+      <p style="font-size: 0.85rem; color: #90a0b0;">
+        완전 자동화 합성 플랜트 기반 7일 단위 정기 배급 기준:
+      </p>
+      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
+        <li>배급 품목: 표준 압축 단백질 블록 21식 (1일 3식 기준)</li>
+        <li>필수 음용수: 1급 여과 정제수 14L (1일 2L)</li>
+        <li>종합 비타민 및 미네랄 펠릿 7정 (1일 1정)</li>
+        <li>배급소 방문 시 바코드 식별증 및 망막 스캔 지참 필수</li>
+      </ul>
+      <p class="footnote warning-text">※ 배급 블록의 풍미 및 식감에 관한 민원은 처리 대상에 포함되지 않습니다.</p>
+    </div>
+
+    <!-- 공지 3: 통신망 관제 현황 -->
+    <div class="card">
+      <div class="card-title">제4위성 지상 관제노드 유실 통보</div>
+      <p style="font-size: 0.85rem; color: #90a0b0;">
+        적 순항미사일 파편 탄착에 따른 관할 4-A~4-F 구역 조치:
+      </p>
+      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
+        <li>해당 구역 무선 데이터망 차단 및 국방 유선망으로 전환 완료</li>
+        <li>대체 위성 궤도 정렬 완료 시까지 확성 방송망 동시 가동</li>
+        <li>유선망 경유 징집 통지서는 종이 영장과 동일한 법적 구속력 보유</li>
+      </ul>
+      <p class="footnote">합중국 27개 위성 수신 노드 중 26개 정상 운용 중.</p>
+    </div>
+
+    <!-- 공지 4: 방공 훈련 및 방호 -->
+    <div class="card">
+      <div class="card-title">정례 지하 방공 훈련 및 수용 절차</div>
+      <p style="font-size: 0.85rem; color: #90a0b0;">
+        금주 목요일 14:00~14:30 전 구역 동시 실시:
+      </p>
+      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
+        <li>사이렌 발령 3분 이내 심도 60m 대피소 진입 완료 요망</li>
+        <li>대피소 격벽 폐쇄 후 외부 잔류 인원은 적성 행위자로 간주</li>
+        <li>대피소 내부 no_kia 자동 분무 키트 비치 완료</li>
+      </ul>
+      <p class="footnote">훈련 경보와 실제 공습 경보는 동일 프로토콜로 작동합니다.</p>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  StaffNet 연산 노드 시스템 현황                             -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">코어 시스템</span> 신경망 참모본부 (StaffNet) 운용 지표
+    </div>
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>연산 서브시스템</th>
+          <th>운용 상태</th>
+          <th>세부 지표 및 가동 시간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>신경망 중앙 코어 (StaffNet)</th>
+          <td class="highlight-val">정상 가동</td>
+          <td>연속 무중단 가동 시간: 21년 4개월 17일</td>
+        </tr>
+        <tr>
+          <th>양자 연산 클러스터</th>
+          <td class="highlight-val">최적화 가동</td>
+          <td>실시간 동시 전술 연산 큐: 14,200,881건</td>
+        </tr>
+        <tr>
+          <th>전자동 타격 판단 엔진</th>
+          <td class="highlight-val">승인 완료</td>
+          <td>평균 타격 승인 지연: 0.003초 (금일 8,412건 집행)</td>
+        </tr>
+        <tr>
+          <th>전 시민 생체 식별망</th>
+          <td class="highlight-val">추적 중</td>
+          <td>1,301억 시민 데이터베이스 동기화율 100%</td>
+        </tr>
+        <tr>
+          <th>인간 참모 물리적 세션</th>
+          <td><span class="status-badge warn">세션 종료</span></td>
+          <td>마지막 수동 승인: 2,591일 전 (비상 전자동 권한 위임 가동)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote">
+      StaffNet은 합중국 국방 헌장에 의거하여 모든 군사 타격, 물자 배분, 행정 입법 프로세스를 완전 자동으로 집행합니다. 인간 참모 세션의 물리적 승인 단계는 전술 효율화 조치에 따라 영구 생략되었습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  보안 법령 및 접속 안내 경고                                -->
+  <!-- ============================================================ -->
+  <div class="card" style="border-color: #402020; background: #0c0808;">
+    <div class="card-title" style="color: #f07070; border-bottom-color: #402020;">
+      국방안보법 제7조에 따른 법적 통지
+    </div>
+    <p style="font-size: 0.85rem; color: #c09090; margin-bottom: 5px;">
+      본 포털에 게시된 모든 데이터는 신경망 참모본부의 공식 행정 처분이며, 이에 대한 허위사실 유포, 데이터 변조 시도, 헌정 질서 비판 행위는 즉결심판 및 RVP 보존 전환 처분의 대상이 됩니다.
+    </p>
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #704040; margin-bottom: 0;">
+      CURRENT CLIENT BIOMETRIC ID LOGGED · ROUTING PATH RECORDED IN PERMANENT ARCHIVE
+    </p>
+  </div>
+
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<script src="app.js"></script>
+</body>
+</html>

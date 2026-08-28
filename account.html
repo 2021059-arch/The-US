@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시민 자산 원장 및 계정 관리 포털 — 합중국 국방부</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .portal-header {
+            background: #090e14;
+            border: 1px solid #1c2c3c;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .portal-header h1 {
+            font-size: 1.6rem;
+            color: #d0e4f8;
+            margin-bottom: 0.4rem;
+            border-bottom: 1px solid #203040;
+            padding-bottom: 8px;
+        }
+        .session-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: #6088b0;
+            margin-top: 0.5rem;
+        }
+        .ledger-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 860px) {
+            .ledger-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+        .status-dormant {
+            background: #101c28;
+            color: #88c0e8;
+            border: 1px solid #305880;
+        }
+        .status-normal {
+            background: #0a1e14;
+            color: #60c890;
+            border: 1px solid #206040;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        .metric-box {
+            background: #06090e;
+            border: 1px solid #182430;
+            padding: 10px;
+            text-align: center;
+        }
+        .metric-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #90c0e8;
+            margin-top: 4px;
+        }
+        .metric-label {
+            font-size: 0.7rem;
+            color: #607890;
+        }
+        .timeline-table td, .timeline-table th {
+            font-size: 0.75rem;
+            padding: 6px 10px;
+        }
+        .timeline-table th {
+            background: #0c1218;
+            width: 22%;
+        }
+        .form-control {
+            width: 100%;
+            background: #060a10;
+            border: 1px solid #203448;
+            color: #a0c4e8;
+            padding: 8px 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #4078a8;
+        }
+        .btn-action {
+            background: #142434;
+            border: 1px solid #305880;
+            color: #c0dcff;
+            padding: 8px 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-action:hover {
+            background: #203850;
+            color: #ffffff;
+        }
+        .admin-note {
+            background: #070b10;
+            border-left: 3px solid #305880;
+            padding: 0.8rem 1.1rem;
+            font-size: 0.76rem;
+            color: #708ca8;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="account.html" class="account-link active">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+    <div style="font-size:0.75rem; color:#506880; font-family:'JetBrains Mono',monospace; margin-bottom:1rem;">
+        <a href="index.html">포털 메인</a> &gt; <span>시민 자산 원장 조회 체계</span> &gt; 통합 식별 원장
+    </div>
+
+    <!-- ═══ PORTAL HEADER ═══ -->
+    <div class="portal-header">
+        <h1 class="glitch" data-text="시민 자산 원장 및 계정 관리 포털">시민 자산 원장 및 계정 관리 포털</h1>
+        <p style="font-size:0.85rem; color:#88a4c0; margin:0;">
+            합중국 내무행정청 및 국방부 인적자원관리국 통합 전산망 — StaffNet Citizen Asset Ledger v14.02
+        </p>
+        <div class="session-info">
+            <span>접속 단말: TERM-DC-904-B (유선 보안 회선)</span>
+            <span>식별 상태: 단말 세션 동기화 완료</span>
+            <span>데이터 동기화 주기: 15ms</span>
+        </div>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            ■ 행정공지: 잔존가치보존(RVP) 자산 분류 대상자 정기 수조 점검 완료 ■ 계측과: B-77 사일로 보존 인구 편차 0.4% 허용 오차 내 유지 중 ■ 배급처: 수조 보존 인원의 현물 배급 정맥 대체율 100% 달성 ■
+        </div>
+    </div>
+
+    <!-- ═══ CITIZEN SUMMARY & TELEMETRY ═══ -->
+    <div class="ledger-container">
+        
+        <!-- CARD 1: 기본 신원 및 자산 분류 -->
+        <div class="card">
+            <div class="card-title">
+                <span>시민 신원 및 자산 분류 원장</span>
+                <span class="status-badge status-dormant">보존 자산 2종 (Dormant Unit)</span>
+            </div>
+            
+            <table class="spec-table">
+                <tr><th>시민 식별 번호</th><td><strong>FED-99824-A</strong></td></tr>
+                <tr><th>성명 / 등록 생년</th><td>[전시 행정 조례 제12조에 의거 코드 대체]</td></tr>
+                <tr><th>원 배정 주거지</th><td>제3지구 구룡형 고밀도 주거단지 14-B블록 22층 104호</td></tr>
+                <tr><th>주거권 현황</th><td>전시 비상 자원으로 자동 환수 완료 (공실 재할당)</td></tr>
+                <tr><th>시민권 분류</th><td>정상 등록 시민 (휴면 보존 자산군)</td></tr>
+                <tr><th>근거 법령</th><td>국가보안법 제14조 및 잔존가치보존(RVP) 조례</td></tr>
+                <tr><th>관할 보존 시설</th><td>지하 사일로 복합체 B-77 구역 (수조 #4,881)</td></tr>
+            </table>
+
+            <div class="admin-note">
+                <strong>행정 처리 메모:</strong> 본 계정 소유자는 2019-03-14부로 no_kia 1~3차 정규 투약 및 RVP 안정화 절차를 완료하여 지하 사일로 수조에 안전 안치되었습니다. 시민권 및 호적은 유효하게 존속하며 국방 전략 자산으로 통합 관리됩니다.
+            </div>
+        </div>
+
+        <!-- CARD 2: 저온 수조 원격 계측 바이탈 -->
+        <div class="card">
+            <div class="card-title">
+                <span>사일로 수조 원격 생체 계측 (B-77-4881)</span>
+                <span class="status-badge status-normal">원격 신호 정상</span>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80" class="distorted-img" alt="지하 사일로 수조 감시 영상" style="height:140px;">
+
+            <div class="metric-grid">
+                <div class="metric-box">
+                    <div class="metric-label">심박수 (Vitals)</div>
+                    <div class="metric-val">11.4 bpm</div>
+                    <div style="font-size:0.65rem; color:#507060;">기준: 8~15 bpm</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">수조 온도 (Temp)</div>
+                    <div class="metric-val">4.2 °C</div>
+                    <div style="font-size:0.65rem; color:#507060;">냉각 순환 정상</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">대뇌 뇌파 (EEG)</div>
+                    <div class="metric-val">δ파 (100%)</div>
+                    <div style="font-size:0.65rem; color:#507060;">REM 주기: 0.0m</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">누적 보존일수</div>
+                    <div class="metric-val">2,724일</div>
+                    <div style="font-size:0.65rem; color:#507060;">만료일: 무기한</div>
+                </div>
+            </div>
+
+            <table class="spec-table">
+                <tr><th>세포 괴사율 (Apoptosis)</th><td>0.00% (no_kia 분자 화합물 지속 안정화)</td></tr>
+                <tr><th>산소 및 포도당 소모량</th><td>성인 표준 대사량 대비 0.03% (정맥 튜브 자동 공급)</td></tr>
+                <tr><th>신경망 직결 인터페이스</th><td>StaffNet 제4412 분산 노드 감시 채널 결합</td></tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- ═══ CLINICAL & MOBILIZATION LEDGER ═══ -->
+    <div class="ledger-container">
+        
+        <!-- CARD 3: 투약 및 자산 편입 이력 -->
+        <div class="card">
+            <div class="card-title">no_kia 투약 및 RVP 자산 편입 이력</div>
+            
+            <table class="spec-table timeline-table">
+                <thead>
+                    <tr>
+                        <th>일자 및 시각</th>
+                        <th>구분</th>
+                        <th>상세 행정 및 임상 조치 내역</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019-03-10 10:14</td>
+                        <td>1차 투약</td>
+                        <td>no_kia 표준 앰플 투여. 세포막 산화 억제제 반응 확인. 기억 단편화 유도율 78.2% (정상).</td>
+                    </tr>
+                    <tr>
+                        <td>2019-03-12 14:30</td>
+                        <td>2차 투약</td>
+                        <td>체성 신경계 이완 및 반사 속도 감쇄 처리. 전신 세포 부패 차단막 형성.</td>
+                    </tr>
+                    <tr>
+                        <td>2019-03-14 03:42</td>
+                        <td>3차 투약</td>
+                        <td>RVP 대뇌 활동 억제제 투여. 뇌파 δ파 전환 및 동면 유도 완료. 최종 의식 신호 기록.</td>
+                    </tr>
+                    <tr>
+                        <td>2019-03-14 05:10</td>
+                        <td>사일로 안치</td>
+                        <td>지하 사일로 B-77 구역 수조 #4,881 이송. 휴면 보존 자산 등재 및 배급 체계 전환.</td>
+                    </tr>
+                    <tr>
+                        <td>현재 (연중 항시)</td>
+                        <td>유지 관리</td>
+                        <td>StaffNet 자동 순환 제어. 세포 분열 정지 및 무기한 전략 비축 상태 지속 중.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="admin-note">
+                ※ 1차 투약 당시 발생한 기억 단편화는 전시 인적 자원의 보안 및 심리적 안정성을 위해 법령으로 정해진 필수 기제입니다. 추가 복원 조치는 시행되지 않습니다.
+            </div>
+        </div>
+
+        <!-- CARD 4: 물자 배급 및 병역 대기 현황 -->
+        <div class="card">
+            <div class="card-title">물자 배급 대체 및 예비군 편성 현황</div>
+
+            <table class="spec-table">
+                <tr><th>식량 배급 상태</th><td>현물 단백질 블록 배급권 → 정맥 주입액 1.2L/일 자동 대체 (환수율 100%)</td></tr>
+                <tr><th>의료 보장 항목</th><td>no_kia 보존 수조 유지비 전액 국방 예산 지원 (개인 부담금 0원)</td></tr>
+                <tr><th>병적 편성</th><td><strong>동면 예비군(Dormant Reserve Cohort)</strong> 제4전략예비사단 배속</td></tr>
+                <tr><th>재가동 프로토콜</th><td>StaffNet 대규모 충원 명령 발령 시 48시간 내 각성 및 장비 연동 가능</td></tr>
+                <tr><th>전역 판정 기준</th><td>전쟁 종료 선포 시까지 보존 지속 (현 상태에서 전사 판정 불가)</td></tr>
+            </table>
+
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" class="distorted-img" alt="StaffNet 중앙 연산 모듈" style="height:120px; margin-top:10px;">
+        </div>
+
+    </div>
+
+    <!-- ═══ ADMINISTRATIVE INQUIRY / PETITION SECTION ═══ -->
+    <div class="card">
+        <div class="card-title">행정 민원 신청 및 원장 열람 질의 창구</div>
+        <p style="font-size:0.85rem; color:#88a0b8; margin-bottom:1rem;">
+            시민 원장 기록 사항에 대한 행정 질의 또는 이의 신청을 제출할 수 있습니다. 제출된 안건은 StaffNet 민원 자동 심사 알고리즘 v8.2에 의해 즉각 판정됩니다.
+        </p>
+
+        <div style="display:grid; grid-template-columns:1fr 2fr; gap:15px;">
+            <div>
+                <label style="font-size:0.75rem; color:#6080a0; font-family:'JetBrains Mono',monospace; display:block; margin-bottom:4px;">
+                    민원 유형 선택
+                </label>
+                <select class="form-control" id="petitionType">
+                    <option value="1">사일로 보존 해제 신청 (보존 중단 요청)</option>
+                    <option value="2">배급권 현물 전환 신청 (단백질 블록 수령)</option>
+                    <option value="3">사일로 보존 인구 편차 질의 (0.4% 공차 문의)</option>
+                    <option value="4">주거 구역 환수 처분 이의 제기</option>
+                </select>
+            </div>
+            <div>
+                <label style="font-size:0.75rem; color:#6080a0; font-family:'JetBrains Mono',monospace; display:block; margin-bottom:4px;">
+                    신청 사유 및 첨부 소명 (텍스트 입력)
+                </label>
+                <input type="text" class="form-control" id="petitionReason" placeholder="소명 사유를 입력하십시오 (미입력 시 표준 양식 적용)">
+            </div>
+        </div>
+
+        <div style="margin-top:5px; text-align:right;">
+            <button class="btn-action" onclick="submitPetition()">민원 제출 및 StaffNet 판정 요청</button>
+        </div>
+
+        <div id="petitionResult" style="display:none; margin-top:15px; background:#060b10; border:1px solid #284058; padding:12px; font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:#90b4d8;">
+            <!-- StaffNet 판정 결과가 여기에 출력됩니다 -->
+        </div>
+
+        <div class="admin-note" style="margin-top:1.2rem;">
+            <strong>시스템 공지:</strong> 본 단말 접근 세션은 사일로 B-77 수조 #4,881 내 신경 전극 인터페이스에서 검출된 잔여 미약 신호에 의해 생성된 정규 행정 열람 세션으로 자동 동기화되었습니다. 사일로 보존 인구 편차: 0.4% 허용 오차 내 정상 유지 중.
+        </div>
+    </div>
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+
+<script>
+function submitPetition() {
+    const type = document.getElementById('petitionType').value;
+    const resBox = document.getElementById('petitionResult');
+    resBox.style.display = 'block';
+    
+    let docNum = 'PT-' + Math.floor(10000 + Math.random() * 90000);
+    
+    let reasonText = '';
+    if(type === '1') {
+        reasonText = '신청 안건: 사일로 보존 해제 신청<br>심사 결과: <strong>[즉시 기각]</strong><br>기각 사유: 국가보안법 제14조 제2항 및 전시인적자원보존령에 의거, no_kia 투약 보존 자산의 임의 해제는 군사적 비축 자산 무단 이탈에 해당함. (판정 소요 시간: 15ms)';
+    } else if(type === '2') {
+        reasonText = '신청 안건: 배급권 현물 전환 신청<br>심사 결과: <strong>[행정 종결]</strong><br>사유: 보존 수조 안치 개체에 대한 정맥 영양 투입(1.2L/일)이 정상 유지 중이므로 현물 배급 중복 수령 불허.';
+    } else if(type === '3') {
+        reasonText = '신청 안건: 사일로 보존 인구 편차 질의<br>심사 결과: <strong>[공식 확인]</strong><br>답변: 전 대륙 사일로 보존 인구 계측 편차는 0.4% 허용 오차 범위 내에서 엄격히 통제 관리되고 있습니다.';
+    } else {
+        reasonText = '신청 안건: 주거 구역 환수 처분 이의 제기<br>심사 결과: <strong>[즉시 기각]</strong><br>기각 사유: 고밀도 주거 관리령에 따른 비상 징발 완료 건으로, 소청 대상이 아님.';
+    }
+
+    resBox.innerHTML = `
+        <div style="color:#60a0d0; margin-bottom:5px;">■ 민원 접수 번호: ${docNum} (StaffNet 자동 판정)</div>
+        <div>${reasonText}</div>
+        <div style="color:#506880; font-size:0.7rem; margin-top:8px;">* 본 판정은 확정적이며 상급 심판 청구는 허용되지 않습니다. 모든 기록은 시민 원장에 영구 반영됩니다.</div>
+    `;
+}
+</script>
+<script src="app.js"></script>
+</body>
+</html>
