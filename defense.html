@@ -6,48 +6,9 @@
   <title>대륙 통합 방위 사령부 및 전선 방호 요새망 총람 — 합중국 국방부</title>
   <meta name="description" content="합중국 국방부 대륙 통합 방위 사령부 — 전선 요새선, M44 고열 소각선, RAIL_FED 무인 레일포 벨트 및 StaffNet 자동화 방호망 공식 총람">
   <!-- STAFFNET METADATA: doc_class=DEFENSE_STRATEGY | clearance=CLASS-4-SEC | node=SN-FORTRESS-CORE-09 -->
-  <!-- WARNING: 방어선 제원 및 격벽 좌표의 무단 전재, 복제, 외부 유출 시 국가보안법 제12조에 의거 즉결 RVP 자산 전환 처리됩니다 -->
+  <!-- [경고] 방어선 제원 및 격벽 좌표의 무단 전재, 복제, 외부 유출 시 국가보안법 제12조에 의거 즉결 RVP 자산 전환 처리됩니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
-    .breadcrumb {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: #607588;
-      margin-bottom: 15px;
-    }
-    .breadcrumb a {
-      color: #6090c0;
-    }
-    .hero-banner {
-      border: 1px solid #203040;
-      background: #080c10;
-      padding: 24px;
-      margin-bottom: 25px;
-      position: relative;
-    }
-    .hero-meta {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: #607080;
-      border-bottom: 1px solid #1a2530;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    .hero-title {
-      font-size: 1.8rem;
-      color: #d0e0f0;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-    .hero-desc {
-      font-size: 0.9rem;
-      color: #88a0b8;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
     .defense-stat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -72,24 +33,6 @@
       color: #607c98;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-    }
-    .warning-panel {
-      border-left: 4px solid #a03030;
-      background: #100608;
-      padding: 16px 20px;
-      margin: 20px 0;
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: #d09090;
-    }
-    .notice-panel {
-      border-left: 4px solid #305880;
-      background: #060a10;
-      padding: 16px 20px;
-      margin: 20px 0;
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: #a0c0e0;
     }
     .zone-grid {
       display: grid;
@@ -119,6 +62,30 @@
     .zone-beta { background: #102030; border: 1px solid #204060; color: #60a0e0; }
     .zone-gamma { background: #2a1a08; border: 1px solid #5a3810; color: #e09030; }
     .zone-delta { background: #2a0a0a; border: 1px solid #5a1515; color: #f05050; }
+    .warning-panel {
+      border-left: 4px solid #a03030;
+      background: #100608;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.86rem;
+      line-height: 1.7;
+      color: #d09090;
+    }
+    .notice-panel {
+      border-left: 4px solid #305880;
+      background: #060a10;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.86rem;
+      line-height: 1.7;
+      color: #a0c0e0;
+    }
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -129,14 +96,15 @@
   <ul>
     <li><a href="index.html">메인</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html">참모본부</a></li>
     <li><a href="defense.html" class="active">본토 방위</a></li>
     <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html">작전 교리</a></li>
     <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
-    <li><a href="weapons_infantry.html">보병 장비</a></li>
-    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
-    <li><a href="weapons_naval.html">해군·공군</a></li>
-    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="weapon_infantry.html">보병 장비</a></li>
+    <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapon_special.html">특수·자동화</a></li>
     <li><a href="propaganda.html">적성국 동향</a></li>
     <li><a href="life.html">시민 안내</a></li>
     <li><a href="recruit.html">입대·징집</a></li>
@@ -145,313 +113,217 @@
 </nav>
 
 <main>
-  <div class="breadcrumb">
-    <a href="index.html">포털 메인</a> &gt; <span>사령부 행정 포털</span> &gt; 본토 방위 사령부 및 방호 요새망
+
+  <div class="breadcrumb" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #507090; margin-bottom: 15px;">
+    <a href="index.html">HOME</a> / <a href="defense.html">방위 사령부</a> / CONTINENTAL DEFENSE COMMAND & FORTRESS GRID
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- HERO BANNER                                                    -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="hero-banner">
-    <div class="hero-meta">
-      <span>GRID NODE: FORT-SN-0091 (대륙 방위 중추 사령선)</span>
-      <span>AUTOMATION LEVEL: 99.4% (STAFFNET 완전 연동)</span>
-      <span>CLEARANCE: GENERAL CITIZEN DISCLOSURE</span>
-      <span>UPDATE: 2026-08-28 08:30 KST</span>
-    </div>
-    <h1 class="hero-title glitch" data-text="합중국 대륙 통합 방위 사령부 및 전선 방호 요새망">합중국 대륙 통합 방위 사령부 및 전선 방호 요새망</h1>
-    <p class="hero-desc">FEDERATION CONTINENTAL HOMELAND DEFENSE COMMAND — SENTRY GRIDS, FORTRESS ARRAYS &amp; THERMAL PERIMETERS</p>
-    <p style="font-size: 0.82rem; color: #607890; margin-top: 10px; margin-bottom: 0;">
-      본 포털은 신경망 참모본부(StaffNet)의 통합 탄도 연산 그리드에 직결되어 있으며, 적성 세력(동방 연합 나노플루이드 확산군 및 극동 제국 유압 인형병단)의 본토 침투를 영구 차단하기 위한 5대 절대 저지선과 자동화 요새 화망의 가동 현황을 공표합니다.
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- TICKER WRAP                                                    -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
   <div class="ticker-wrap">
     <div class="ticker">
-      [방위 08:30] M44 소각 저지선 노즐 1,480기 점화 상태 정상 (평균 화염 온도 1,240°C 유지) ▌ [탄도 08:15] 해안 RAIL_FED 제12포대 극초음속 관통체 4발 시험 사격 오차 0.04m 이내 ▌ [격벽 07:50] 제4방위지구 지하 격벽 유압 폐쇄 시험 100% 완료 ▌ [소각 07:20] 동방 방면 유입 미확인 미세입자군 전량 2차 플라즈마 커튼 소각 완료 ▌ [전력 06:45] 지열-초전도 방어선 발전소 가동률 104.2% 초과 안정 달성 ▌
+      [방위사령부] 제4국경 소각선 M44 포대 상시 방열 1,200°C 유지 | 아이언 커튼 방공망 24시간 표적 탐지 8,420건 정상 처리 | 지하 거주구 제102사일로 생명유지장치 가동률 100% | 해안 고정 레일건 포대 정기 탄도 교정 완료 |
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- PRESIDENTIAL SUPREME COMMAND DISPATCH                          -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="card" style="border: 1px solid #304860; background: #080d14;">
-    <div class="card-title">합중국 최고사령관 대국민 국방 특별 성명</div>
-    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start; margin-top: 15px;">
-      <div>
-        <img src="img/president_censored.jpg" class="distorted-img" alt="합중국 최고사령관 대국민 국방 성명">
-        <p style="font-size: 0.72rem; color: #506880; text-align: center; margin: 0; font-family: 'JetBrains Mono', monospace;">
-          [전시보안법 제3조 의거 화상 마스킹 처리됨]
+  <div class="card" style="background: #060a0f; border-color: #304860;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #6088a8; margin-bottom: 8px;">
+      FORTRESS COMMAND NODE: DEF-CENTRAL-09 | CLEARANCE: CLASS-4-SEC | WARTIME GRID: 11x11 SYNCHRONIZED
+    </div>
+    <h1 class="glitch" data-text="대륙 통합 방위 사령부 및 전선 요새망 총람">대륙 통합 방위 사령부 및 전선 요새망 총람</h1>
+    <p style="color: #90b4d0; font-size: 0.95rem; margin-bottom: 0;">
+      합중국 본토 1,301억 인구와 3대 핵심 거점을 보호하기 위해 구축된 4단계 심층 방호 벨트, 국경 고열 소각망, 지하 대피 사일로 및 자동 요격 체계의 공식 제원입니다.
+    </p>
+  </div>
+
+  <div class="defense-stat-grid">
+    <div class="defense-stat-card">
+      <div class="defense-stat-num">4,820 km</div>
+      <div class="defense-stat-label">요새 방어선 총연장</div>
+    </div>
+    <div class="defense-stat-card">
+      <div class="defense-stat-num">1,420 문</div>
+      <div class="defense-stat-label">고정 레일건 및 중포대</div>
+    </div>
+    <div class="defense-stat-card">
+      <div class="defense-stat-num">1,200 °C</div>
+      <div class="defense-stat-label">M44 소각선 기준 온도</div>
+    </div>
+    <div class="defense-stat-card">
+      <div class="defense-stat-num">99.41%</div>
+      <div class="defense-stat-label">대공 탄도 요격 성공률</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: 4대 방위 섹터 배치 현황 -->
+  <div class="card">
+    <h2 class="card-title">1. 대륙 방위 4대 구역(Zones) 배치 및 우선순위</h2>
+    <div class="zone-grid">
+      <div class="zone-card">
+        <span class="zone-badge zone-alpha">ZONE-ALPHA (최우선 방호)</span>
+        <h3 style="color: #d0e4f8; font-size: 0.95rem; margin-bottom: 6px;">중앙 행정 및 의회 지하 사령부</h3>
+        <p style="font-size: 0.82rem; color: #90a8c0;">
+          지하 120m 심도 암반 벙커에 구축된 중앙 정부 및 StaffNet 메인프레임 코어. 3중 중성자 차폐벽 및 독립 산소 순환 플랜트 가동.
         </p>
       </div>
-      <div>
-        <div class="notice-panel" style="margin-top: 0;">
-          <p style="font-weight: 700; color: #d0e4f8; margin-bottom: 8px;">
-            "합중국의 영토는 한 치의 양보도 없이 강철과 전자기의 장막으로 봉쇄되어 있습니다."
-          </p>
-          <p style="font-size: 0.85rem; color: #90b0d0; line-height: 1.7; margin-bottom: 8px;">
-            "동방의 나노 오염 물질과 제국의 차가운 기계 괴물들이 전선을 밀고 들어올지라도, 우리 대륙 방위선 앞에 도달하는 순간 1,200도의 소각 화염과 마하 7의 레일건 탄환에 흔적도 없이 분쇄될 것입니다. 합중국 시민 여러분은 StaffNet의 계산과 방위 사령부의 자동화 요새망을 절대적으로 신뢰하고 일상의 생산 활동에 매진하십시오. 모든 위험은 사전에 소각됩니다."
-          </p>
-          <p style="font-size: 0.75rem; color: #6080a0; text-align: right; margin: 0; font-family: 'JetBrains Mono', monospace;">
-            — 합중국 대통령 겸 전시최고사령부 의장 통치 공표문 (StaffNet 배포 #FED-EXEC-9981)
-          </p>
-        </div>
+
+      <div class="zone-card">
+        <span class="zone-badge zone-beta">ZONE-BETA (전략 거점)</span>
+        <h3 style="color: #d0e4f8; font-size: 0.95rem; margin-bottom: 6px;">완전무인 지하 공창 제조복합구역</h3>
+        <p style="font-size: 0.82rem; color: #90a8c0;">
+          155mm 레일건 관통체 및 FV-44 차체 사출 플랜트. 24시간 자동화 로봇 라인 및 중장갑 격벽 시스템.
+        </p>
+      </div>
+
+      <div class="zone-card">
+        <span class="zone-badge zone-gamma">ZONE-GAMMA (생존 기반)</span>
+        <h3 style="color: #d0e4f8; font-size: 0.95rem; margin-bottom: 6px;">지하 수경 농업 및 합성 단백질 플랜트</h3>
+        <p style="font-size: 0.82rem; color: #90a8c0;">
+          1,301억 시민 일일 배급을 보장하는 인공 채광 농업 돔 및 심층 지하수 담수화 설비. 오염 침투 시 즉각 격벽 폐쇄.
+        </p>
+      </div>
+
+      <div class="zone-card">
+        <span class="zone-badge zone-delta">ZONE-DELTA (소모 완충)</span>
+        <h3 style="color: #d0e4f8; font-size: 0.95rem; margin-bottom: 6px;">국경 M44 고열 소각선 및 전초 요새군</h3>
+        <p style="font-size: 0.82rem; color: #90a8c0;">
+          적성국의 지상 진격을 저지하는 고열 화염선, 지뢰원, 콘크리트 토치카 및 무인 포대 벨트.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- REAL-TIME DEFENSE METRICS                                      -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: M44 국경 고열 소각 벨트 및 RAIL_FED -->
   <div class="card">
-    <div class="card-title">대륙 방위 그리드 핵심 가동 지표 (실시간 전산 집계)</div>
-    <p style="font-size: 0.84rem; color: #809cb8; margin-bottom: 15px;">
-      StaffNet 중앙 관제 코어가 24시간 실시간 감시하는 본토 및 전초 요새선의 종합 물리 방어 계측값입니다.
+    <h2 class="card-title">2. 국경 고열 소각 벨트 및 RAIL_FED 자동화 포대</h2>
+    <p>
+      국경 1,200km에 연속 매설된 M44 소각 배관망은 지하 40m의 정유 펌프실에서 고압 나프타 화합물을 공급받아 지표면에 1,200°C 이상의 연속 화염 지옥을 형성합니다. 이는 동방 연합의 나노 복제물(그레이 구) 침투를 원천 차단하는 유일한 물리적 방벽입니다.
+    </p>
+    <p>
+      소각선 후방 5km에는 RAIL_FED 203mm 전자기 레일건 무인 포대들이 지하 레일을 통해 20분마다 위치를 변경하며 적의 중화기 거점을 분쇄합니다.
     </p>
 
-    <div class="defense-stat-grid">
-      <div class="defense-stat-card">
-        <div class="defense-stat-num">1,240 °C</div>
-        <div class="defense-stat-label">M44 소각선 상시 유지 온도</div>
-      </div>
-      <div class="defense-stat-card">
-        <div class="defense-stat-num">4,820 문</div>
-        <div class="defense-stat-label">RAIL_FED 무인 레일포 배치 수</div>
-      </div>
-      <div class="defense-stat-card">
-        <div class="defense-stat-num">99.98 %</div>
-        <div class="defense-stat-label">성층권 탄도탄 요격 성공률</div>
-      </div>
-      <div class="defense-stat-card">
-        <div class="defense-stat-num">15 ms</div>
-        <div class="defense-stat-label">침투체 탐지 후 화력 투사 지연</div>
-      </div>
-    </div>
-    
-    <p style="font-size: 0.72rem; color: #506880; margin: 0; line-height: 1.5;">
-      ※ 요격 성공률 99.98%는 완충 구역(감마·델타 구역)으로의 잔해 낙하를 포함한 지표이며, 완충 구역 내 발생 피해는 전시방위특례법 제8조에 따라 국가 보상 대상에서 제외됩니다.
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- 5 MAJOR DEFENSE LINES                                          -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <h2>합중국 대륙 방어 5대 절대 저지선 체계</h2>
-  <p style="font-size: 0.88rem; color: #90a8c0; margin-bottom: 20px;">
-    적성국의 생화학 오염, 자율 증식 나노 물질(Grey Goo), 대규모 기동 인형병기를 분쇄하기 위해 구축된 심층 요새화 방어선입니다.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=1000&q=80" class="distorted-img" alt="합중국 전선 중형 요새포대 및 자동 관제탑">
-
-  <!-- Line 1 -->
-  <div class="card">
-    <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>1. M44 중형 고열 소각 방어선 (Thermal Incineration Perimeter)</span>
-      <span class="tag">CODE: PERIM-M44</span>
-    </div>
-    <p style="font-size: 0.85rem; color: #90a8c0; line-height: 1.6;">
-      동방 연합의 자율 증식형 생체 나노플루이드(Grey Goo) 침식을 저지하기 위해 전선 1,800km에 걸쳐 지하 유류 공급관 및 고온 플라즈마 버너를 매설한 절대 소각 장막입니다. 지표면 온도를 항시 1,200°C 이상으로 유지하여 유기물과 탄소계 나노 결합체를 분자 단위로 열분해합니다.
-    </p>
     <table class="spec-table">
-      <tr><th>설치 구간</th><td>전선 제1~제5 전구 전면 완충 지대 (총 연장 1,840km)</td></tr>
-      <tr><th>연소 매개체</th><td>합성 고점도 나프탈렌-테르밋 혼합 연료 및 지열 플라즈마 아크</td></tr>
-      <tr><th>가동 방식</th><td>StaffNet 열화상 감지 시 자동 분사 (인간 개입 없음)</td></tr>
-      <tr><th>소각 유효율</th><td>탄소 기반 나노머신 99.99% 사멸, 인형병기 유압 라인 즉시 폭발</td></tr>
-      <tr><th>퇴각 규정</th><td>아군 후퇴 부대 접근 시에도 화염 차단 해제 불허 (오염 차단 우선 원칙)</td></tr>
+      <thead>
+        <tr>
+          <th>방호 체계</th>
+          <th>배치 수량</th>
+          <th>유효 방어 반경</th>
+          <th>가동 메커니즘</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>M44 고열 소각 배관망</td>
+          <td>총연장 1,200 km</td>
+          <td>전선 종심 800 m 화염 차단</td>
+          <td>지하 고압 나프타-합성유 연속 분사</td>
+        </tr>
+        <tr>
+          <td>RAIL_FED 203mm 레일포대</td>
+          <td>480문 (지하 레일 기동)</td>
+          <td>사거리 95 km (초속 Mach 8.2)</td>
+          <td>StaffNet 탄도 컴퓨터 원격 조준</td>
+        </tr>
+        <tr>
+          <td>CONCRETE-TITAN 요새 벙커</td>
+          <td>1,840 개소</td>
+          <td>상호 중첩 화망 구축</td>
+          <td>두께 4.5m 특수 고밀도 중장갑 콘크리트</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
-  <!-- Line 2 -->
+  <!-- SECTION 3: 지하 방공 및 민방위 수용 시설 -->
   <div class="card">
-    <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>2. 대서양·태평양 연안 무인 RAIL_FED 전자기 포대 벨트</span>
-      <span class="tag">CODE: RAIL-BELT-COAST</span>
-    </div>
-    <p style="font-size: 0.85rem; color: #90a8c0; line-height: 1.6;">
-      해상 및 공중을 통한 적성국의 대규모 상륙 침투를 무력화하기 위한 해안선 고정형 초전도 레일포 복합체입니다. 제국의 전자기포와 달리 합중국의 양자 코일 기술로 제작되어 포신 교체 없이 수천 발의 극초음속 관통체를 연속 발사합니다.
+    <h2 class="card-title">3. 지하 대피 사일로 네트워크 및 생명유지 규격</h2>
+    <p>
+      합중국의 1,301억 시민은 공습경보 발령 시 거주 구역 하부의 '표준 방공 사일로(Civil Shelter)'로 15분 이내에 강제 대피합니다. 모든 사일로는 완전 밀폐 후 90일간 자급 가능한 산소 재생기와 단백질 블록 배급기를 갖추고 있습니다.
     </p>
+
     <table class="spec-table">
-      <tr><th>주요 구경</th><td>155mm 표준 관통포 및 280mm 전략 초장거리 전자기포</td></tr>
-      <tr><th>포구 탄속</th><td>2,600 m/s (Mach 7.8) — 텅스텐-감손우라늄 복합 관통체</td></tr>
-      <tr><th>유효 사거리</th><td>수평 탄도 380km, 고각 성층권 요격 140km</td></tr>
-      <tr><th>관제 체계</th><td>StaffNet 궤도 정찰위성 아르고스-IX 표적 데이터 0.05초 단위 직결</td></tr>
-      <tr><th>탄약 보급</th><td>지하 무인 모노레일을 통한 24시간 자동 장전 크레인 가동</td></tr>
+      <thead>
+        <tr>
+          <th>사일로 규격</th>
+          <th>수용 인원</th>
+          <th>차폐 등급</th>
+          <th>비상 물자 비축량</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CLASS-A (행정 간부용)</td>
+          <td>5,000 명</td>
+          <td>직격 핵탄두 / 생화학 100% 차단</td>
+          <td>신선 식량 180일분 + 개인 의료실</td>
+        </tr>
+        <tr>
+          <td>CLASS-B (공창 기술자용)</td>
+          <td>50,000 명</td>
+          <td>중성자선 / 나노 침투 차단</td>
+          <td>표준 단백질 120일분 + 산소 순환기</td>
+        </tr>
+        <tr>
+          <td>CLASS-C (일반 시민 표준형)</td>
+          <td>500,000 명</td>
+          <td>방사능 낙진 / 독가스 차단</td>
+          <td>압축 단백질 30일분 + no_kia 안정제</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning-panel">
+      [사일로 방위 통제령 제19조]: 사일로 외부 방사선량이 허용치를 초과하거나 생화학 오염 의심자가 유입되었을 경우, 중앙 관제 시스템은 사일로 외벽 격벽을 외부에서 용접 밀봉하고 내부 산소 공급을 50%로 감축 통제함.
+    </div>
+  </div>
+
+  <!-- SECTION 4: 아이언 커튼 방공망 -->
+  <div class="card">
+    <h2 class="card-title">4. 광역 방공 및 요격망 「아이언 커튼 (Iron Curtain Mk.VI)」</h2>
+    <p>
+      초고고도 성층권 정찰위성, 암피온급 기함의 위상배열 레이더, 그리고 지상 SAM-900 요격 미사일 기지가 실시간 연동되어 적의 탄도탄, 순항미사일 및 폭격기를 3단계로 다층 요격합니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>요격 계층</th>
+          <th>주요 요격 수단</th>
+          <th>요격 고도 및 사거리</th>
+          <th>대응 표적</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>제1층 (성층권/외기권)</td>
+          <td>GAUSS-ORBIT 궤도 요격체</td>
+          <td>고도 80 ~ 150 km</td>
+          <td>대륙간 탄도탄 및 궤도 폭격체</td>
+        </tr>
+        <tr>
+          <td>제2층 (중고도 광역)</td>
+          <td>SAM-900 하이페리온 미사일</td>
+          <td>고도 10 ~ 40 km (사거리 240km)</td>
+          <td>적 대형 폭격기, 순항미사일 편대</td>
+        </tr>
+        <tr>
+          <td>제3층 (기지 근접 방호)</td>
+          <td>PHALANX-35 펄스 대공포</td>
+          <td>고도 0.1 ~ 3 km (분당 8,000발)</td>
+          <td>초음속 대함미사일, 자폭 드론 스웜</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
-  <!-- Line 3 -->
-  <div class="card">
-    <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>3. 수도권 3중 펄스 대공 돔 및 성층권 요격 사일로망</span>
-      <span class="tag">CODE: AEGIS-DOME-CAPITAL</span>
-    </div>
-    <p style="font-size: 0.85rem; color: #90a8c0; line-height: 1.6;">
-      합중국 중앙 행정지구 및 핵심 전산 코어를 보호하는 다층 대공 미사일 및 고출력 마이크로웨이브(HPM) 방어 체계입니다. 적의 장거리 극초음속 순항미사일과 자살 드론 군집을 3중으로 요격하여 중심부 낙하를 원천 차단합니다.
-    </p>
-    <table class="spec-table">
-      <tr><th>1차 외곽 방호</th><td>Titan-X 성층권 대탄도 미사일 사일로망 (사거리 600km)</td></tr>
-      <tr><th>2차 중거리 방호</th><td>M904 팰렁스-레일 대공 복합 포대 (사거리 45km)</td></tr>
-      <tr><th>3차 근접 방호</th><td>고출력 전자기 펄스(EMP) 방출 타워 및 자동 개틀링 터렛</td></tr>
-      <tr><th>전력 공급</th><td>지하 8호 전용 원자로 4기 직결 (총 출력 8.4 GW)</td></tr>
-    </table>
-  </div>
-
-  <!-- Line 4 -->
-  <div class="card">
-    <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>4. 제7전구 대인형병기 전자기 파쇄 지뢰원 및 초음파 격벽</span>
-      <span class="tag">CODE: MECH-KILL-ZONE</span>
-    </div>
-    <p style="font-size: 0.85rem; color: #90a8c0; line-height: 1.6;">
-      극동 제국의 49식 중인형병기 및 강습 기계보병을 격멸하기 위해 설계된 기계 킬존(Kill Zone)입니다. 지중 고주파 진동 발생 장치로 적 유압 프레임을 파열시키고, 지향성 지반 붕괴 지뢰로 적 기갑 편대를 지하 사일로 갱도로 추락시킵니다.
-    </p>
-    <table class="spec-table">
-      <tr><th>킬존 면적</th><td>남부 전선 종심 80km × 횡폭 240km</td></tr>
-      <tr><th>주요 매설물</th><td>지향성 성형작약 대전차 지뢰, EMP 공진 지뢰, 초음파 파쇄 진동자</td></tr>
-      <tr><th>유압 파괴 효과</th><td>인형병기 유압 씰 94.2% 파열 유도 (기동 정지율 98.7%)</td></tr>
-      <tr><th>청소 프로토콜</th><td>정지된 인형병기는 무인 소각차가 진입하여 고철 및 오일 수거</td></tr>
-    </table>
-  </div>
-
-  <!-- Line 5 -->
-  <div class="card">
-    <div class="card-title" style="display: flex; justify-content: space-between; align-items: center;">
-      <span>5. 심도 1,200m StaffNet 코어 및 RVP 보존 사일로 차폐 복합체</span>
-      <span class="tag">CODE: SILO-CORE-DEEP</span>
-    </div>
-    <p style="font-size: 0.85rem; color: #90a8c0; line-height: 1.6;">
-      합중국 국방 연산의 심장부인 신경망 참모본부(StaffNet) 양자 연산 노드 및 340만 개의 잔존가치보존(RVP) 저온 수조가 밀집된 지하 방호 요새입니다. 전술핵 직격에도 견딜 수 있는 중합체 강화 콘크리트와 티타늄 합금 이중 격벽으로 밀폐되어 있습니다.
-    </p>
-    <table class="spec-table">
-      <tr><th>심도 및 방호 규격</th><td>지하 1,200m (50 메가톤 지표 핵폭발 직격 방호 승인)</td></tr>
-      <tr><th>공기 정화 체계</th><td>밀폐형 산소 재생기 및 생화학 미립자 8단계 촉매 분해 필터</td></tr>
-      <tr><th>보존 수조 시설</th><td>RVP A~F 사일로 (no_kia 보존액 순환 및 신경망 링크 항시 가동)</td></tr>
-      <tr><th>비상 격리 규정</th><td>지상 오염 농도 초과 시 180초 이내 지상 출입구 영구 용접 차단</td></tr>
-    </table>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- AUTOMATED SENTRY SPECIFICATIONS                                -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <h2>무인 거점 자동화 요새 병기 제원표</h2>
-  <p style="font-size: 0.88rem; color: #90a8c0; margin-bottom: 20px;">
-    본토 요새망에 배치된 무인 센트리 및 거점 화력 지원 장비의 상세 제원입니다.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1579273166152-d725a4e2b755?w=1000&q=80" class="distorted-img" alt="요새 방어 관제실 및 레이더 센서 배열">
-
-  <table class="spec-table">
-    <thead>
-      <tr>
-        <th>장비명</th>
-        <th>구경 / 주무장</th>
-        <th>유효 사거리</th>
-        <th>반응 지연</th>
-        <th>특수 기능</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>RAIL_FED-Mk4 고정포</strong></td>
-        <td>155mm 전자기 코일건</td>
-        <td>380 km</td>
-        <td>12 ms</td>
-        <td>초전도 무마모 레일, 4,500발 연속 사격 보증</td>
-      </tr>
-      <tr>
-        <td><strong>Sentry-90 센트리 터렛</strong></td>
-        <td>30mm 6열 개틀링</td>
-        <td>3,200 m</td>
-        <td>5 ms</td>
-        <td>적아식별(IFF) 레이더, 열화우라늄 탄약 자동 보급</td>
-      </tr>
-      <tr>
-        <td><strong>M44 테르밋 화염 투사기</strong></td>
-        <td>고압 액화 나프탈렌</td>
-        <td>450 m</td>
-        <td>2 ms</td>
-        <td>1,400°C 지속 분사, 나노플루이드 열분해</td>
-      </tr>
-      <tr>
-        <td><strong>Cerberus-IV EMP 타워</strong></td>
-        <td>광대역 고주파 펄스기</td>
-        <td>8,000 m</td>
-        <td>1 ms</td>
-        <td>기계 인형병기 제어 칩 및 유압 밸브 전자소자 소훼</td>
-      </tr>
-      <tr>
-        <td><strong>Argus-Surface 지반 진동포</strong></td>
-        <td>저주파 지중 충격파 발생기</td>
-        <td>1,500 m</td>
-        <td>20 ms</td>
-        <td>지하 침투 굴착기 및 터널 내 적 병력 압쇄</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- CIVILIAN DEFENSE ZONING                                        -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <h2>민간 거주 구역별 방위 등급 및 비상 수칙</h2>
-  <p style="font-size: 0.88rem; color: #90a8c0; margin-bottom: 20px;">
-    국방안보법 제22조에 의거하여 합중국 전 영토는 전술적 중요도 및 방호 우선순위에 따라 4개 등급으로 분류 관리됩니다.
-  </p>
-
-  <div class="zone-grid">
-    <div class="zone-card">
-      <span class="zone-badge zone-alpha">ALPHA ZONE : 완전 방호 구역</span>
-      <h3 style="font-size: 1.05rem; color: #d0e4f8; margin: 8px 0;">중앙 전산 코어 및 핵심 병기창</h3>
-      <p style="font-size: 0.82rem; color: #90a8c0; line-height: 1.6;">
-        StaffNet 주 서버, 의회 특별 방공호, 155mm 관통체 제조단지가 위치한 구역입니다. 3중 방공망과 핵 차폐 격벽으로 100% 방호되며, 허가되지 않은 일반 시민의 접근 시 사전 경고 없이 자동 사살됩니다.
-      </p>
-    </div>
-
-    <div class="zone-card">
-      <span class="zone-badge zone-beta">BETA ZONE : 표준 거주 구역</span>
-      <h3 style="font-size: 1.05rem; color: #d0e4f8; margin: 8px 0;">시민 표준 주거 블록 및 식량 배급소</h3>
-      <p style="font-size: 0.82rem; color: #90a8c0; line-height: 1.6;">
-        징집 등록 시민 및 생산 노동자가 상주하는 일반 거주지입니다. 공습 경보 발령 시 8분 이내에 지정된 표준 지하 방공호로 진입해야 하며, 미진입 인원은 외부 밀폐 프로토콜에 따라 격리됩니다.
-      </p>
-    </div>
-
-    <div class="zone-card">
-      <span class="zone-badge zone-gamma">GAMMA ZONE : 전술 완충 구역</span>
-      <h3 style="font-size: 1.05rem; color: #d0e4f8; margin: 8px 0;">전선 후방 완충대 및 보급 거점</h3>
-      <p style="font-size: 0.82rem; color: #90a8c0; line-height: 1.6;">
-        방어선 전방에 위치한 소모성 완충 지대입니다. 적성 세력 침투 또는 나노 오염 발생 시 StaffNet의 판단에 따라 사전 통보 없이 자동 소각 버너 및 레일건 일제 사격이 집행될 수 있습니다.
-      </p>
-    </div>
-
-    <div class="zone-card">
-      <span class="zone-badge zone-delta">DELTA ZONE : 절대 소멸 구역</span>
-      <h3 style="font-size: 1.05rem; color: #d0e4f8; margin: 8px 0;">최전선 M44 소각선 전방 교전 지대</h3>
-      <p style="font-size: 0.82rem; color: #90a8c0; line-height: 1.6;">
-        모든 유기 생명체의 출입이 영구 금지된 화염과 파편의 지대입니다. 본 구역에 진입하는 모든 개체는 아군 식별 신호와 무관하게 적성 오염체로 간주되어 자동 분쇄 처리됩니다.
-      </p>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- LEGAL EXEMPTION AND SMALL PRINT                                -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <div class="warning-panel">
-    <p style="font-weight: 700; color: #f08080; margin-bottom: 6px;">[국방안보법 제48조: 자동 방어 시스템 가동 면책 조례]</p>
-    <p style="font-size: 0.78rem; color: #d0a0a0; margin: 0; line-height: 1.6;">
-      신경망 참모본부(StaffNet)의 탄도 연산 및 자동 소각 장막 가동 중 발생하는 민간인 부수 피해, 오인 사격, 완충 구역 내 주거 블록 손괴는 국가 전시 비상사태 하의 '불가피한 자산 감모'로 규정되며, 어떠한 사법적 청구권이나 손해 배상 청구도 성립하지 않습니다. 아군 부대의 전선 이탈 또는 후퇴 시 방어선 센트리는 오염 확산 방지를 위해 후퇴 대열을 즉시 차단 사격할 권한을 보유합니다.
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════════════════════════════ -->
-  <!-- ADVERTISEMENT BANNER                                           -->
-  <!-- ══════════════════════════════════════════════════════════════ -->
   <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
 
 </main>
 
-<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<footer>
+  <p>FEDERATION DEPARTMENT OF DEFENSE — CONTINENTAL DEFENSE COMMAND</p>
+  <p>ALL ACTIVITIES MONITORED AND LOGGED UNDER WARTIME DIRECTIVE #14. UNAUTHORIZED ACCESS PUNISHABLE BY DETENTION.</p>
+</footer>
+
 <script src="app.js"></script>
 </body>
 </html>

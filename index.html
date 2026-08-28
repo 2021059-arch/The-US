@@ -95,6 +95,35 @@
       color: #80c0ff;
       font-weight: 700;
     }
+    .metric-panel {
+      background: #070b10;
+      border: 1px solid #1a2838;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .metric-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #6088a8;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #14202c;
+      font-size: 0.85rem;
+    }
+    .data-label {
+      color: #7a94aa;
+    }
+    .data-value {
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8d4f0;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -261,22 +290,55 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  현장 시각 기록 (Unsplash Gritty Atmosphere)                 -->
+  <!--  국가 핵심 인프라 및 자원 배분 실시간 지표 패널             -->
   <!-- ============================================================ -->
   <div class="two-col-grid" style="margin-bottom: 20px;">
-    <div class="card" style="margin-bottom: 0;">
-      <div class="card-title">통합 관제 노드 및 전자전 센터</div>
-      <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="합중국 국방부 중앙 통제 센터" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.8rem; color: #88a0b0; margin-bottom: 0;">
-        StaffNet 주 연산 노드에 연결된 지하 60m 벙커 통제반. 전 전선 15ms 전술 최적해 분배 및 요격 레이더망 실시간 동기화 수행 중.
-      </p>
+    <div class="metric-panel">
+      <div class="metric-header">INFRASTRUCTURE STATUS // CORE TELEMETRY</div>
+      <div class="data-row">
+        <span class="data-label">전자기 레일건 주전력 축전망</span>
+        <span class="data-value">120,000 MJ (100.0%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">심도 300m 지열 발전 터빈 가동률</span>
+        <span class="data-value">480,000 MW (정상)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">지하 진공 물류 튜브망 가동 상태</span>
+        <span class="data-value">28,400 km (지연 0s)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">전선 탄약 공급 대기열 지연 시간</span>
+        <span class="data-value">0.000 ms</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">영공 자율 초계 편대 격자 밀도</span>
+        <span class="data-value">100.0% (사각지대 0)</span>
+      </div>
     </div>
-    <div class="card" style="margin-bottom: 0;">
-      <div class="card-title">심도 180m 무인 지하 군수 플랜트</div>
-      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80" alt="심도 180m 무인 자동화 탄약 플랜트" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.8rem; color: #88a0b0; margin-bottom: 0;">
-        대륙 전역 457개 암반 지하 단지 중 제118 시설. 레일건용 고밀도 중석 탄자 및 전열화학 장약 24시간 무중단 자동 절삭 라인.
-      </p>
+
+    <div class="metric-panel">
+      <div class="metric-header">POPULATION & STRATEGIC RATIONING // NATIONWIDE</div>
+      <div class="data-row">
+        <span class="data-label">합중국 등록 총인구 (센서스)</span>
+        <span class="data-value">130,100,000,000명</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">합성 압축 단백질 블록 주간 배급률</span>
+        <span class="data-value">109.0% (초과 달성)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">no_kia 전 시민 누적 투약 완료율</span>
+        <span class="data-value">99.72% (의무 완수)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">구룡 14,000개 주거 블록 전력 공급</span>
+        <span class="data-value">24시간 상시 (20W)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">시민 인지 편차 제어 지수</span>
+        <span class="data-value">99.98% (안정)</span>
+      </div>
     </div>
   </div>
 
@@ -414,17 +476,16 @@
     </div>
     <div class="two-col-grid">
       <div>
-        <img src="https://images.unsplash.com/photo-1579165466991-467135ad3110?w=800&q=80" alt="국방부 생체공학연구소 의약품 보관 시설" class="distorted-img" style="height: 220px;">
-        <p style="font-size: 0.75rem; color: #506575;">
-          [설비 식별: BIO-LAB-04] 국방부 생체공학연구소 no_kia 정제 및 앰플 자동 충진 라인.
-        </p>
-      </div>
-      <div>
         <h3 style="font-size: 1.05rem; color: #d0e0f0; margin-bottom: 8px;">합중국 시민의 생물학적 보존 및 세포 부패 원천 억제</h3>
         <p style="font-size: 0.85rem; line-height: 1.6; color: #a0b4c8;">
           국방부 생체공학연구소가 개발한 no_kia(Non-Kinetic Immortality Agent)는 세포 아포토시스 경로를 차단하고 혐기성 세균 효소 분해를 불활성화하여 인체 조직의 부패와 괴사를 영구히 정지시키는 제식 생체 안정제입니다.
         </p>
-        <table class="spec-table" style="margin: 8px 0;">
+        <p style="font-size: 0.82rem; color: #8898a8; margin-bottom: 0;">
+          미접종 시민은 구역별 배급소 및 징병 신체검사소에 즉시 출두하여 투약을 완료하십시오. 미투약 상태의 신분은 식량 배급 자격이 정지되며 보존 대상자(RVP)로 직권 전환됩니다.
+        </p>
+      </div>
+      <div>
+        <table class="spec-table" style="margin: 0;">
           <tbody>
             <tr>
               <th>대상 인구</th>
@@ -438,11 +499,20 @@
               <th>보존 수명</th>
               <td>반영구 (열화율 0.01%/년)</td>
             </tr>
+            <tr>
+              <th>통각 억제율</th>
+              <td class="highlight-val">85.0% 감쇄</td>
+              <th>미각 소실률</th>
+              <td>투약 72시간 내 100%</td>
+            </tr>
+            <tr>
+              <th>기억 안정성</th>
+              <td>단기 일화 기억 분절</td>
+              <th>법적 전사 분류</th>
+              <td class="highlight-val">전사 원천 불인정</td>
+            </tr>
           </tbody>
         </table>
-        <p style="font-size: 0.82rem; color: #8898a8; margin-bottom: 0;">
-          미접종 시민은 구역별 배급소 및 징병 신체검사소에 즉시 출두하여 투약을 완료하십시오. 미투약 상태의 신분은 식량 배급 자격이 정지되며 보존 대상자(RVP)로 직권 전환됩니다.
-        </p>
       </div>
     </div>
     <p class="footnote warning-text">

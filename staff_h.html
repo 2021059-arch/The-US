@@ -6,7 +6,7 @@
   <title>합중국 신경망 참모본부 — 중앙 연산 지휘 통제 포털</title>
   <meta name="description" content="합중국 국방부 신경망 참모본부(StaffNet) 중앙 지휘 연산 체계 — 최고통수권 직결 프로토콜, 예하 참모부 게놈 현황, 1,301억 인구 자원 최적화 지표">
   <!-- STAFFNET SYSTEM ID: FED-HQ-CORE-0001 | CLEARANCE: EYES-ONLY-STAFF | KERNEL: v12.08.4-EVO -->
-  <!-- WARNING: 국가비상안보법 제1조에 의거, 본 노드의 모든 신경망 가중치 덤프 열람 시도는 국가반역죄로 즉시 격리 처리됩니다 -->
+  <!-- [경고] 국가비상안보법 제1조에 의거, 본 노드의 모든 신경망 가중치 덤프 열람 시도는 국가반역죄로 즉시 격리 처리됩니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
     .hq-grid {
@@ -52,6 +52,21 @@
       padding: 2px 6px;
       margin-left: 8px;
     }
+    .quote-box {
+      border-left: 3px solid #305070;
+      background: #06090d;
+      padding: 15px 20px;
+      margin: 15px 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #b0c4de;
+    }
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -61,9 +76,12 @@
   <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
   <ul>
     <li><a href="index.html">메인</a></li>
-    <li><a href="staff_h.html" class="active">참모본부</a></li>
-    <li><a href="tactical.html">작전 교리</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html" class="active">참모본부</a></li>
+    <li><a href="defense.html">본토 방위</a></li>
+    <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html">작전 교리</a></li>
+    <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
     <li><a href="weapon_infantry.html">보병 장비</a></li>
     <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
@@ -83,7 +101,7 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      [STAFFNET CORE] 세대 진화 #GEN-1208 완료 ▌ 전구 연산 주기 14.8ms 상시 유지 ▌ 제7전구 예하 참모부 #SN-SUB-07 은닉 계수 98.4% ▌ 1,301억 인구 칼로리 균형 지수 109.14% ▌ 탄도 관통체 재고 동기화율 100.00% ▌ 적성국 49식 보행 진동 감지 센서 314개소 활성 ▌
+      [STAFFNET CORE] 세대 진화 #GEN-1208 완료 | 전구 연산 주기 14.8ms 상시 유지 | 제7전구 예하 참모부 #SN-SUB-07 은닉 계수 98.4% | 1,301억 인구 칼로리 균형 지수 109.14% | 탄도 관통체 재고 동기화율 100.00% | 적성국 49식 보행 진동 감지 센서 314개소 활성 | no_kia 제3차 의무 투약 순응률 99.8% 달성 |
     </div>
   </div>
 
@@ -93,7 +111,7 @@
     </div>
     <h1 class="glitch" data-text="신경망 참모본부 중앙 지휘 연산소">신경망 참모본부 중앙 지휘 연산소</h1>
     <p style="color: #90b4d0; font-size: 0.95rem; margin-bottom: 0;">
-      합중국 전역의 1,301억 인구 자원 관리, 7대 전선 실시간 지형 해석, 탄도 궤적 산출 및 예하 참모부 게놈 진화를 총괄하는 국가 최상위 연산 본부입니다.
+      합중국 전역의 1,301억 인구 자원 관리, 7대 전선 실시간 지형 해석, 탄도 궤적 산출 및 184개 예하 참모부 게놈 진화를 총괄하는 국가 최상위 지휘 연산 본부입니다.
     </p>
   </div>
 
@@ -101,12 +119,11 @@
     <div>
       <div class="card">
         <h2 class="card-title">1. 신경망 참모본부(StaffNet) 연산 아키텍처</h2>
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" class="distorted-img" alt="중앙 신경망 메인프레임 코어">
         <p>
-          합중국 국방 신경망 참모본부(StaffNet)는 지연 시간이 긴 범용 대규모 언어 모델(LLM)을 전면 배제하고, 실시간 전선 판단에 특화된 <strong>51,011개 파라미터 기반 전용 신경망 복합체</strong>를 운영합니다. 판단 주기 15ms 이내에 전 지구적 격자 정보를 해석하고 최적 작전 경로를 도출합니다.
+          합중국 국방 신경망 참모본부(StaffNet)는 지연 시간이 긴 범용 대규모 언어 모델을 전면 배제하고, 실시간 전선 판단에 특화된 <strong>51,011개 파라미터 기반 전용 신경망 복합체</strong>를 운영합니다. 판단 주기 15ms 이내에 전 지구적 11x11 전장 격자 정보를 해석하고 최적 작전 경로를 도출합니다.
         </p>
         <p>
-          지형 인식 CNN은 후보 구역 둘레의 11×11 전장 격자를 10개 독립 채널(소유권, 표고, 보급 잔여량, 병력 밀도, 진지 요새화율, 방사능 낙진 계수, 유효 화망 등)로 분석하며, 작전 트랜스포머는 셀프 어텐션(Self-Attention) 메커니즘을 통해 "이쪽을 압박할 때 적의 저쪽이 비는" 다차원 기동 확률을 동시 계산합니다.
+          지형 인식 CNN은 후보 구역 둘레의 11x11 격자를 10개 독립 채널(소유권, 표고, 보급 잔여량, 병력 밀도, 진지 요새화율, 방사능 낙진 계수, 유효 화망, 지하 갱도 심도, 통신 간섭률, 지중 진동치)로 분석하며, 작전 트랜스포머는 셀프 어텐션(Self-Attention) 메커니즘을 통해 "이쪽을 압박할 때 적의 저쪽이 비는" 다차원 기동 확률을 동시 계산합니다.
         </p>
 
         <table class="spec-table">
@@ -122,39 +139,39 @@
             <tr>
               <td>지형 인식 CNN</td>
               <td>14,240 Params</td>
-              <td>11×11×10 지형·보급·화력 다차원 텐서</td>
+              <td>11x11x10 지형·보급·화력 다차원 텐서 해석</td>
               <td>2.1 ms</td>
             </tr>
             <tr>
               <td>작전 트랜스포머</td>
               <td>28,400 Params</td>
-              <td>후보 기동군 셀프 어텐션 매트릭스</td>
+              <td>후보 기동군 셀프 어텐션 매트릭스 및 전술 교환비 산출</td>
               <td>7.4 ms</td>
             </tr>
             <tr>
               <td>6-Head 결정부</td>
               <td>8,371 Params</td>
-              <td>작전점수·부대배정·조우판단·표적·교리8종</td>
+              <td>작전점수·부대배정·조우판단·표적우선순위·8대교리선택</td>
               <td>4.3 ms</td>
             </tr>
             <tr>
               <td>통합 코어 합산</td>
               <td><strong>51,011 Params</strong></td>
-              <td>전구 종합 최적 행동 벡터 산출</td>
+              <td>전구 종합 최적 행동 벡터 산출 (15ms 제약)</td>
               <td><strong>13.8 ms</strong></td>
             </tr>
           </tbody>
         </table>
 
         <div class="warning-text">
-          [참모본부 감사 지침 #77]: 파라미터 돌연변이(Genome Mutation Rate)가 0.08%를 초과할 경우 즉시 예비 보존 시드로 롤백되며, 해당 연산 노드에 할당된 모든 통신선은 물리적으로 차단됩니다.
+          [참모본부 감사 지침 #77]: 파라미터 돌연변이(Genome Mutation Rate)가 0.08%를 초과할 경우 즉시 예비 보존 시드로 롤백되며, 해당 연산 노드에 할당된 모든 유선 통신선은 물리적으로 폭파 절단됩니다.
         </div>
       </div>
 
       <div class="card">
         <h2 class="card-title">2. 최고통수권 직결 및 대통령 집무실 프로토콜</h2>
         <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
-          <div style="flex: 1; min-width: 220px;">
+          <div style="flex: 1; min-width: 200px;">
             <img src="img/president_censored.jpg" class="distorted-img" alt="합중국 제48대 대통령 공식 전산 초상">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #607080; text-align: center;">
               제48대 합중국 대통령 알렉산더 J. 밴크로프트<br>[STAFFNET BIOMETRIC SYNC: 99.98%]
@@ -162,13 +179,13 @@
           </div>
           <div style="flex: 2; min-width: 280px;">
             <p>
-              합중국 헌법 제3조 및 국가통수령에 따라 대통령은 신경망 참모본부의 최고 통수권자로서 중앙 코어와 실시간 생체 인터페이스(Biometric Link #00)로 연결되어 있습니다. 대통령의 전략적 의사 결정은 신경망 참모본부의 6대 연산 헤드와 상호 대조되어 집행됩니다.
+              합중국 헌법 제3조 및 국가통수령에 따라 대통령은 신경망 참모본부의 최고 통수권자로서 중앙 코어와 실시간 생체 인터페이스(Biometric Link #00)로 연결되어 있습니다. 대통령의 전략적 의사 결정은 신경망 참모본부의 6대 연산 헤드와 상호 대조되어 실시간 집행됩니다.
             </p>
             <p>
-              대통령 집무실(제1지하 사령부)의 직통 단말기는 전시 특별 국방예산 편성권, 대륙간 탄도 관통자 일제 타격권, 그리고 전선 총동원령 승인 코드를 상시 유지합니다.
+              대통령 집무실(제1지하 사령부 벙커)의 직통 단말기는 전시 특별 국방예산 편성권, 대륙간 레일건 일제 타격권, 그리고 1,301억 전 시민 총동원령 승인 코드를 상시 유지합니다.
             </p>
-            <p class="footnote" style="font-size: 0.72rem; color: #506878;">
-              ※ 비공식 감사 주석 [CONFIDENTIAL-C]: 대통령의 일일 생체 신호(맥박, 뇌파, 호르몬 농도)는 StaffNet 최적화 매트릭스에 의해 실시간 조정되며, 공표되는 모든 담화문은 어텐션 가중치 분석을 거친 템플릿입니다.
+            <p class="footnote">
+              * 비공식 감사 주석 [CONFIDENTIAL-C]: 대통령의 일일 생체 신호(맥박, 뇌파, 호르몬 농도)는 StaffNet 최적화 매트릭스에 의해 실시간 조정되며, 공표되는 모든 담화문은 어텐션 가중치 분석을 거친 템플릿입니다.
             </p>
           </div>
         </div>
@@ -186,20 +203,26 @@
             <tr>
               <td>국가 총동원령 (LEVY-ALL)</td>
               <td>PRESIDENTIAL-0</td>
-              <td>1,301억 시민 생체 전산망</td>
+              <td>1,301억 시민 생체 전산망 및 강제 소환 명령체계</td>
               <td>즉시 (0.00초)</td>
             </tr>
             <tr>
               <td>암피온급 공중기함 전략 전개</td>
               <td>STAFF-ALPHA</td>
-              <td>공군 전략기동사령부</td>
+              <td>공군 전략기동사령부 궤도/대기권 관제망</td>
               <td>120초</td>
             </tr>
             <tr>
               <td>M44 고열 소각선 방아쇠 인가</td>
               <td>DEFENSE-RED</td>
-              <td>지상 고열방어 포대군</td>
+              <td>국경 고열소각 방어 포대군 (1,200°C 상시 유지)</td>
               <td>15초</td>
+            </tr>
+            <tr>
+              <td>RVP 사일로 자산화 가동</td>
+              <td>STAFF-LOGISTICS</td>
+              <td>전선 사상자 및 부적격자 유기물질 환원 플랜트</td>
+              <td>상시 자동 (0.00초)</td>
             </tr>
           </tbody>
         </table>
@@ -207,12 +230,11 @@
 
       <div class="card">
         <h2 class="card-title">3. 물리적 예하 참모부(Sub-Staff Nodes) 운용</h2>
-        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80" class="distorted-img" alt="지하 벙커 예하 참모부 노드">
         <p>
-          중앙 참모본부 하위에는 각 전선에 분산 배치된 <strong>물리적 예하 참모부</strong>들이 상시 가동 중입니다. 각 예하 참모부는 약 3,000 파라미터의 경량 신경망을 탑재하고 6~7개 정규 사단을 위임받아 독립적으로 전술 판단을 내립니다.
+          중앙 참모본부 하위에는 각 전선에 분산 배치된 <strong>184개소의 물리적 예하 참모부</strong>들이 상시 가동 중입니다. 각 예하 참모부는 약 3,000 파라미터의 경량 신경망을 탑재하고 6~7개 정규 사단을 위임받아 독립적으로 전술 판단을 내립니다.
         </p>
         <p>
-          예하 참모부는 지형에 따라 숲과 암반 지대에 은닉(Stealth Coefficient)하며, 무전 송출량이 증가할수록 적의 전파 감청에 노출(Exposure)됩니다. 적의 정밀 폭격으로 참모부 벙커가 파괴될 경우 탑재된 게놈(Genome)이 완전 초기화되며, 예하 부대는 지휘권을 상실하고 통제 불능 상태에 빠지게 됩니다.
+          예하 참모부는 지형에 따라 숲과 암반 지하 벙커에 은닉(Stealth Coefficient)하며, 무전 송출량이 증가할수록 적의 전파 감청에 노출(Exposure)됩니다. 적의 정밀 폭격으로 참모부 벙커가 파괴될 경우 탑재된 게놈(Genome)이 완전 초기화되며, 예하 부대는 지휘권을 상실하고 통제 불능 상태에 빠지게 됩니다.
         </p>
 
         <table class="spec-table">
@@ -233,7 +255,7 @@
               <td>94.2%</td>
               <td>12.8%</td>
               <td>7개 기계화사단</td>
-              <td>고수 및 우회기동</td>
+              <td>진지 고수 및 우회기동</td>
             </tr>
             <tr>
               <td>SN-NODE-04</td>
@@ -241,7 +263,7 @@
               <td>78.5%</td>
               <td>44.1%</td>
               <td>6개 중화기사단</td>
-              <td>정면압박 및 포위</td>
+              <td>정면압박 및 포위섬멸</td>
             </tr>
             <tr>
               <td>SN-NODE-07</td>
@@ -249,7 +271,7 @@
               <td>98.4%</td>
               <td>8.2%</td>
               <td>8개 해안경비여단</td>
-              <td>침투 및 습격</td>
+              <td>심부침투 및 참모부 습격</td>
             </tr>
             <tr>
               <td>SN-NODE-12</td>
@@ -257,7 +279,15 @@
               <td>86.0%</td>
               <td>28.9%</td>
               <td>5개 강화보병사단</td>
-              <td>재편성 및 후퇴</td>
+              <td>긴급 재편성 및 전략적 후퇴</td>
+            </tr>
+            <tr>
+              <td>SN-NODE-99</td>
+              <td>극동 제국 대응군</td>
+              <td>91.7%</td>
+              <td>19.4%</td>
+              <td>9개 외골격사단</td>
+              <td>관절 파쇄 및 회랑 분단</td>
             </tr>
           </tbody>
         </table>
@@ -295,6 +325,10 @@
           <span class="metric-name">낙진 자연 감쇄율</span>
           <span class="metric-val">0.40% / 일</span>
         </div>
+        <div class="metric-row">
+          <span class="metric-name">no_kia 투약 순응률</span>
+          <span class="metric-val">99.82%</span>
+        </div>
       </div>
 
       <div class="card">
@@ -306,24 +340,26 @@
           "식량 생산 여유분은 9%에 불과하다. 경작지 훼손 시 즉시 해당 구역을 배급망에서 차단하여 전체 붕괴를 방지한다."<br>
           <span style="color: #607890;">— StaffNet 맬서스 최적화 알고리즘 v4.2</span>
         </div>
-        <div class="tag">인구통제</div> <div class="tag">배급알고리즘</div> <div class="tag">징집최적화</div>
+        <div class="tag">인구통제</div> <div class="tag">배급알고리즘</div> <div class="tag">징집최적화</div> <div class="tag">자원환원</div>
       </div>
 
       <div class="card">
-        <div class="card-title">신속 링크</div>
+        <div class="card-title">신속 행정 링크</div>
         <ul style="list-style: none; font-size: 0.85rem; line-height: 1.8;">
           <li>- <a href="tactical.html">작전 교리 및 8대전술 총람</a></li>
+          <li>- <a href="defense.html">본토 방위 요새선 및 소각망</a></li>
+          <li>- <a href="intel.html">전략 정보 및 감청 녹취</a></li>
           <li>- <a href="arsenal.html">병기 총람 및 공창 현황</a></li>
           <li>- <a href="weapon_special.html">암피온급 공중기함 통제망</a></li>
           <li>- <a href="weapon_infantry.html">강화외골격 및 보병 제원</a></li>
-          <li>- <a href="classified.html">내부 감사 및 기밀 문서</a></li>
+          <li>- <a href="recruit.html">전시 징집 및 인적자원 동원</a></li>
         </ul>
       </div>
 
       <div class="card" style="border-color: #502020; background: #0c0606;">
         <div class="card-title" style="color: #f07070; border-bottom-color: #502020;">참모본부 보안 수칙</div>
         <p style="font-size: 0.78rem; color: #b08080;">
-          본 포털의 모든 조회 이력은 IP, 생체 ID, 접속 콘솔 단말 번호와 함께 연방 정보부(FBI-SEC)에 실시간 기록됩니다. 인가되지 않은 파라미터 변조는 즉결 총살 대상입니다.
+          본 포털의 모든 조회 이력은 IP, 생체 ID, 접속 콘솔 단말 번호와 함께 연방 보안감사국에 실시간 기록됩니다. 인가되지 않은 파라미터 변조는 즉결 격리 및 사일로 환원 대상입니다.
         </p>
       </div>
     </div>

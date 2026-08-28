@@ -9,10 +9,6 @@
   <!-- AUDIT NOTICE: 본 문서는 국방부 보병병기국 자산 관리 표준 규정에 따라 인가된 공식 제원 문서입니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
-    .section-divider {
-      border-top: 1px solid #203548;
-      margin: 30px 0;
-    }
     .warning-box {
       background: #140808;
       border: 1px solid #502020;
@@ -22,13 +18,11 @@
       margin: 15px 0;
       font-family: 'JetBrains Mono', monospace;
     }
-    .img-caption {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: #607890;
-      margin-top: -10px;
-      margin-bottom: 15px;
-      text-align: right;
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -39,9 +33,12 @@
   <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
   <ul>
     <li><a href="index.html">메인</a></li>
-    <li><a href="staff_h.html">참모본부</a></li>
-    <li><a href="tactical.html">작전 교리</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html">참모본부</a></li>
+    <li><a href="defense.html">본토 방위</a></li>
+    <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html">작전 교리</a></li>
+    <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
     <li><a href="weapon_infantry.html" class="active">보병 장비</a></li>
     <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
@@ -61,7 +58,7 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      [보병군수국] EXO-01 하이드라 차세대 유압유(ISO VG-46F) 전선 보급률 94.2% 달성 ▌ FED_AR-12 전용 12.7mm AP-I 탄약 일일 생산량 8,400만 발 돌파 ▌ 징집병 대상 AUG_BLOOD 1차 투약 순응률 99.1% 공시 ▌ SENTINEL-IV 피아식별 지연시간 0.002초로 단축 완료 ▌
+      [보병군수국] EXO-01 하이드라 차세대 유압유(ISO VG-46F) 전선 보급률 94.2% 달성 | FED_AR-12 전용 12.7mm AP-I 탄약 일일 생산량 8,400만 발 돌파 | 징집병 대상 AUG_BLOOD 1차 투약 순응률 99.1% 공시 | SENTINEL-IV 피아식별 지연시간 0.002초로 단축 완료 |
     </div>
   </div>
 
@@ -78,8 +75,6 @@
   <!-- SECTION 1: 교리 도입 -->
   <div class="card">
     <h2 class="card-title">1. 보병 운용 교리: 단일 전투원 화력 거점화 원칙</h2>
-    <img src="https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=800&q=80" class="distorted-img" alt="합중국 정규 강화보병 분대 전개">
-    <div class="img-caption">PLATE 1.1: 제14강화보병사단 제3대대 전선 전개 전경 (STAFFNET 광학 수집)</div>
     <p>
       합중국 보병 교리는 동방제국의 끝없는 인민 파상 공세와 연방의 극저온 중화력 분쇄전에 맞서 <strong>'단일 전투원의 중화기 플랫폼화'</strong>를 핵심 목표로 수립되었습니다. 1,301억 인구 중 징집된 병사는 고밀도 유압 외골격과 광학 조준망, 생체 강화 혈액을 통해 단독으로 1개 보병 소대급의 화력을 지속 투사할 수 있도록 표준화됩니다.
     </p>
@@ -91,8 +86,6 @@
   <!-- SECTION 2: EXO-01 하이드라 강화외골격 -->
   <div class="card">
     <h2 class="card-title">2. 강화외골격 체계 「EXO-01 하이드라 (Hydra Mk.IV)」</h2>
-    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80" class="distorted-img" alt="EXO-01 유압 외골격 프레임">
-    <div class="img-caption">PLATE 1.2: EXO-01 하이드라 유압 액추에이터 및 동축 골격 조립선</div>
     <p>
       EXO-01 하이드라는 전선 보병에게 12.7mm 중기관총급 개인화기 운용 능력과 240kg 이상의 장비 무반동 운반 능력을 부여하는 전신 유압 외골격입니다. 티타늄-바나듐 경량 합금 골조와 고압 합성 유압 회로로 구성되어 있어 험지 돌파 시 사수의 관절 피로도를 85% 이상 상쇄합니다.
     </p>
@@ -131,13 +124,13 @@
         </tr>
         <tr>
           <td>반동 감쇄율</td>
-          <td>92.4% 감쇄 (12.7×99mm 연사 기준)</td>
+          <td>92.4% 감쇄 (12.7x99mm 연사 기준)</td>
           <td>스탠딩 자세 완전 연사 명중 보정 지원</td>
         </tr>
         <tr>
           <td>장갑 방호력</td>
           <td>복합 세라믹 나노 플레이트 (STANAG 4569 Lv.3)</td>
-          <td>7.62×54mmR 철갑탄 영거리 방호</td>
+          <td>7.62x54mmR 철갑탄 영거리 방호</td>
         </tr>
       </tbody>
     </table>
@@ -150,10 +143,8 @@
   <!-- SECTION 3: FED_AR-12 전투소총 -->
   <div class="card">
     <h2 class="card-title">3. 대구경 제식 전투소총 「FED_AR-12 뱅가드 (Vanguard)」</h2>
-    <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&q=80" class="distorted-img" alt="FED_AR-12 전투소총 사격">
-    <div class="img-caption">PLATE 1.3: FED_AR-12 12.7mm 제식 소총 사격 훈련</div>
     <p>
-      FED_AR-12는 동방제국의 49식 생체 인형병기의 두꺼운 관절부 및 연방의 중장갑 보병 방패를 단발에 파괴하기 위해 개발된 <strong>12.7×99mm 대구경 풀사이즈 제식 돌격화기</strong>입니다. 강력한 반동은 EXO-01 하이드라 외골격의 유압 댐퍼와 총구 제퇴기를 통해 사수에게 무리 없이 분산 흡수됩니다.
+      FED_AR-12는 동방제국의 49식 생체 인형병기의 두꺼운 관절부 및 연방의 중장갑 보병 방패를 단발에 파괴하기 위해 개발된 <strong>12.7x99mm 대구경 풀사이즈 제식 돌격화기</strong>입니다. 강력한 반동은 EXO-01 하이드라 외골격의 유압 댐퍼와 총구 제퇴기를 통해 사수에게 무리 없이 분산 흡수됩니다.
     </p>
     <p>
       StaffNet 사격통제 모듈(FCS-MINI)이 기본 통합되어 있어 전자기 레티클 상에 적의 이동 속도와 바람, 중력 낙차를 0.01초 단위로 계산한 보정 탄착점을 시각화합니다.
@@ -170,7 +161,7 @@
       <tbody>
         <tr>
           <td>사용 탄약</td>
-          <td>12.7×99mm FED-AP/I (철갑소이탄)</td>
+          <td>12.7x99mm FED-AP/I (철갑소이탄)</td>
           <td>텅스텐-카바이드 코어 관통자 채용</td>
         </tr>
         <tr>
@@ -200,158 +191,144 @@
         </tr>
         <tr>
           <td>유효 사거리</td>
-          <td>1,400 m (점표적) / 2,000 m (지역표적)</td>
-          <td>StaffNet 탄도 추적 칩 내장 탄약 연동</td>
+          <td>점표적 900 m / 면표적 1,600 m</td>
+          <td>FCS-MINI 탄도 컴퓨터 연동 시 명중률 88%</td>
         </tr>
         <tr>
-          <td>급탄 방식</td>
-          <td>30발 복열 탈착식 탄창 / 90발 드럼</td>
-          <td>탄약 잔량 전자식 카운터 디스플레이</td>
+          <td>탄창 용량</td>
+          <td>25발 복열 박스 탄창 / 60발 드럼 탄창</td>
+          <td>잔탄수 광학 HUD 실시간 표기</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- SECTION 4: FED_SG-88 중전투산탄총 -->
+  <!-- SECTION 4: FED_SG-88 중산탄총 -->
   <div class="card">
-    <h2 class="card-title">4. 전자격발식 중전투산탄총 「FED_SG-88 사이클롭스 (Cyclops)」</h2>
+    <h2 class="card-title">4. 근접 거점 돌파 중산탄총 「FED_SG-88 브리처 (Breacher)」</h2>
     <p>
-      FED_SG-88 사이클롭스는 적성국의 지하 갱도 침투조 및 근접 시가전 구역 소탕을 위해 배치된 8게이지 대구경 전자격발식 자동산탄총입니다. 고밀도 텅스텐 산탄환 또는 45mm 성형작약 슬러그탄을 초당 4발의 속도로 투사하여 폐허 내 엄폐물 뒤의 적을 벽째로 분쇄합니다.
+      지하 참호, 도시 폐허 및 제국 인형병기 밀집 거점 돌파를 위해 개발된 <strong>8게이지 초중산탄총</strong>입니다. 테르밋 소이 산탄 및 전동 플레셰트 탄환을 투사하여 30미터 이내의 모든 유기체 및 경장갑 관절을 순간적으로 융해 분쇄합니다.
     </p>
 
     <table class="spec-table">
       <thead>
         <tr>
-          <th>제원 항목</th>
-          <th>표준 수치</th>
-          <th>전술적 용도</th>
+          <th>구분</th>
+          <th>기술 사양</th>
+          <th>특수 기능</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>구경 및 약실</td>
-          <td>8 Gauge (21.2mm) Electronic-Primed</td>
-          <td>원격 펄스 격발 신관</td>
+          <td>8 Gauge (21.2mm) x 89mm 매그넘</td>
+          <td>고압 티타늄 단조 약실</td>
         </tr>
         <tr>
-          <td>급탄 기구</td>
-          <td>16발 회전 실린더 매거진</td>
-          <td>탄종 즉시 전환 스위치 지원</td>
+          <td>급탄 방식</td>
+          <td>12발 회전식 원형 탄창</td>
+          <td>탄종 즉각 전환 다이얼 탑재</td>
         </tr>
         <tr>
-          <td>장갑 관통력</td>
-          <td>22mm RHA (슬러그탄 영거리 기준)</td>
-          <td>경장갑차량 휠 및 궤도 관통 절단</td>
+          <td>주요 탄종</td>
+          <td>FLECHETTE-88 (텅스텐 다트 36발) / THERMITE-8 (1,800°C 소이탄)</td>
+          <td>장갑 관통 후 내부 열폭풍 유도</td>
         </tr>
         <tr>
-          <td>유효 사거리</td>
-          <td>산탄: 60 m / 중슬러그: 180 m</td>
-          <td>실내 지탕 및 벙커 진입전 최적화</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- SECTION 5: SENTINEL-IV 지능형 지원 백팩 -->
-  <div class="card">
-    <h2 class="card-title">5. 자동추적 화망 지원 백팩 「SENTINEL-IV」</h2>
-    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80" class="distorted-img" alt="SENTINEL-IV 통신 및 화망 제어 백팩">
-    <div class="img-caption">PLATE 1.4: 센티넬-IV 독립 화망 조준 터렛 및 레이더 어레이</div>
-    <p>
-      SENTINEL-IV는 보병의 등 뒤에 장착되는 독립형 자율 화망 지원 모듈입니다. 상단에 360도 밀리미터파 위상배열 레이더와 2연장 7.62mm 펄스 기관포, 4셀 유도 마이크로 미사일을 장착하여 사수가 주시하지 못하는 후방 및 공중 드론 표적을 자율적으로 식별하고 요격합니다.
-    </p>
-
-    <table class="spec-table">
-      <thead>
-        <tr>
-          <th>탑재 서브시스템</th>
-          <th>작전 규격</th>
-          <th>반응 시간 및 성능</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>전방위 레이더</td>
-          <td>초소형 94GHz 위상배열 센서</td>
-          <td>반경 300m 내 초속 50m 이동체 동시 16개 추적</td>
-        </tr>
-        <tr>
-          <td>근접 방어 화기</td>
-          <td>7.62×51mm 2연장 초경량 발칸 (800발 적재)</td>
-          <td>분당 2,400발 요격 화망 형성</td>
-        </tr>
-        <tr>
-          <td>마이크로 미사일</td>
-          <td>40mm 적외선 추적 자폭 탄두 4발</td>
-          <td>적 대전차미사일(ATGM) 공중 직격 요격 (APS 기능)</td>
-        </tr>
-        <tr>
-          <td>피아식별(IFF)</td>
-          <td>StaffNet 암호화 트랜스폰더 v12</td>
-          <td>조우 판단 지연시간 0.002초</td>
+          <td>발사 속도</td>
+          <td>반자동 (분당 최대 180발)</td>
+          <td>외골격 가스압 감쇄 실린더 연동</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- SECTION 6: 생체 강화 합성 혈액 -->
+  <!-- SECTION 5: SENTINEL-IV 지능형 백팩 -->
   <div class="card">
-    <h2 class="card-title">6. 생체 증강 화학물질 및 합성 혈액 「AUG_BLOOD」</h2>
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" class="distorted-img" alt="합성 혈액 주입 생체 칩 인터페이스">
-    <div class="img-caption">PLATE 1.5: 징집병 경정맥 포트 연결 및 생체 안정성 모니터링 모듈</div>
+    <h2 class="card-title">5. 지능형 자율 전투 백팩 「SENTINEL-IV 센티널」</h2>
     <p>
-      합중국 보병은 입대 징집 즉시 체내 혈액의 35%를 과불화탄소 기반 인공 산소 운반체(PFC-F)와 급속 혈액 응고 나노 성분이 혼합된 <strong>AUG_BLOOD 표준 합성 혈액</strong>으로 치환받습니다. 이를 통해 전장에서 심각한 관통상을 입더라도 수초 내에 출혈 부위가 겔(Gel) 상태로 응고되어 전장 이탈을 막습니다.
+      보병의 배면에 장착되는 SENTINEL-IV는 소형화된 StaffNet 에지 연산 노드, 광역 IFF(피아식별) 센서, 그리고 견착식 5.56mm 마이크로 요격 터렛으로 구성된 통합 무인 지원 팩입니다.
     </p>
     <p>
-      또한 통합 투약 포트(no_kia 프로토콜)를 통해 아드레날린 유사 자극제와 젖산 분해 효소를 지속 주입함으로써 최대 96시간 동안 수면 없이 극한 전투 효율을 발휘합니다.
+      전방 270도 사각지대에서 날아오는 적의 파편, 유탄 및 자폭 드론을 마이크로 밀리미터파 레이더로 0.002초 내에 탐지하고 상부 서보 터렛으로 자동 요격합니다.
     </p>
 
     <table class="spec-table">
       <thead>
         <tr>
-          <th>생체 약리 인자</th>
-          <th>표준 반응 수치</th>
-          <th>의학적 효과</th>
+          <th>항목</th>
+          <th>제원</th>
+          <th>운용 매커니즘</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>혈관 누출 지혈 시간</td>
-          <td>3.2 초 (동맥 파열 기준)</td>
-          <td>실혈사 확률 88% 감소</td>
+          <td>탐지 반경</td>
+          <td>밀리미터파 레이더 35 m 반경</td>
+          <td>초당 2,000회 위상 스캔</td>
         </tr>
         <tr>
-          <td>무호흡 산소 유지</td>
-          <td>최대 18 분</td>
-          <td>유독가스 살포 참호 내 기동 지속력 확보</td>
+          <td>요격 무장</td>
+          <td>5.56x45mm 4연장 마이크로 터렛</td>
+          <td>300발 분리형 벨트 링크 내장</td>
         </tr>
         <tr>
-          <td>전투 피로 저항력</td>
-          <td>96 시간 연속 각성</td>
-          <td>근육 젖산 축적 90% 억제</td>
+          <td>통신 중계</td>
+          <td>예하 참모부 노드 전파 버스 직결</td>
+          <td>사수 전사 시 위치 자동 송출</td>
         </tr>
         <tr>
-          <td>중추신경 공포 억제율</td>
-          <td>94.7% (편도체 반응 차단)</td>
-          <td>포위 및 아사 작전 상황 하에서도 명령 수행 유지</td>
+          <td>예비 전력</td>
+          <td>외골격용 백업 연료전지</td>
+          <td>비상 시 주변 외골격 무선 급전 지원</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 6: 생체 화학 증강제 -->
+  <div class="card">
+    <h2 class="card-title">6. 생체 합성 혈액 증강제 「AUG_BLOOD & no_kia 전투 프로토콜」</h2>
+    <p>
+      합중국 보병은 입대 징집 즉시 체내 혈액의 40%를 불소화 합성 혈액 대용제(AUG_BLOOD)로 치환받습니다. 이는 과다 출혈 시에도 산소 운반 능력을 4시간 이상 유지시키며, 체온 저하를 막아 극저온 전선에서도 활동을 보장합니다.
+    </p>
+    <p>
+      전투 돌입 시 외골격의 자동 인젝터가 no_kia-9 진통 신경 차단제를 척수에 직접 주입하여 공포심을 제거하고 근육 한계 출력을 130%까지 강제 개방합니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>약제 코드</th>
+          <th>투약 방식</th>
+          <th>기능 및 효과</th>
+          <th>부작용 및 한계</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AUG_BLOOD-IV</td>
+          <td>체내 순환계 혈액 치환</td>
+          <td>산소 포화도 340% 증강, 급속 혈액 응고</td>
+          <td>자연 혈액 재치환 불가 (지속 복용 필수)</td>
+        </tr>
+        <tr>
+          <td>no_kia-9 COMBAT</td>
+          <td>외골격 척추 직결 주입</td>
+          <td>통각 100% 차단, 동체 시력 및 반응속도 40% 향상</td>
+          <td>약효 종료 후 극심한 신경 마비 및 발작 위험</td>
+        </tr>
+        <tr>
+          <td>STAMINA-Z</td>
+          <td>피하 자동 분사</td>
+          <td>72시간 무수면 작전 지속 보장</td>
+          <td>심근경색 발생률 3.1% 증가</td>
         </tr>
       </tbody>
     </table>
 
     <div class="warning-box">
-      [의무총감부 내부 역학조사]: 연속 투약 120시간 초과 시 망막 신경 위축 및 환각성 발작 발생률 14.8%. 해당 전투원은 작전 종료 후 신경 안정화 수용 시설로 강제 이송됨.
-    </div>
-  </div>
-
-  <div class="card">
-    <h2 class="card-title">관련 장비 및 작전 문서 연계</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-      <a href="arsenal.html" class="tag">병기 총람 메인</a>
-      <a href="weapon_vehicle.html" class="tag">기갑·중화기 목록</a>
-      <a href="weapon_special.html" class="tag">특수·자동화 병기</a>
-      <a href="tactical.html" class="tag">보병 전술 교리</a>
-      <a href="recruit.html" class="tag">신병 징집 포털</a>
-      <a href="classified.html" class="tag">내부 감사 기록</a>
+      [의무국 관리 지침]: 전투 후 생존한 병사는 14일 이내에 no_kia 안정화 제2제를 투약받아야 하며, 기한 초과 시 신경망 붕괴로 인해 군수 노동 노드로 직권 재분류 처리됨.
     </div>
   </div>
 
@@ -360,8 +337,8 @@
 </main>
 
 <footer>
-  <p>FEDERATION DEPARTMENT OF DEFENSE — INFANTRY MATERIEL BUREAU</p>
-  <p>ALL SPECIFICATIONS SUBJECT TO AMENDMENT WITHOUT CITIZEN NOTICE UNDER SECTION 14 OF WAR PROCUREMENT CODE.</p>
+  <p>FEDERATION DEPARTMENT OF DEFENSE — INFANTRY MATERIEL COMMAND</p>
+  <p>ALL ACTIVITIES MONITORED AND LOGGED UNDER WARTIME DIRECTIVE #14. UNAUTHORIZED ACCESS PUNISHABLE BY DETENTION.</p>
 </footer>
 
 <script src="app.js"></script>

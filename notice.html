@@ -69,6 +69,35 @@
       color: #d09090;
       line-height: 1.6;
     }
+    .metric-panel {
+      background: #070b10;
+      border: 1px solid #1a2838;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .metric-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #6088a8;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #14202c;
+      font-size: 0.85rem;
+    }
+    .data-label {
+      color: #7a94aa;
+    }
+    .data-value {
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8d4f0;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -128,22 +157,47 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  현장 시각 기록 2열                                          -->
+  <!--  행정 통제 및 준수 지표 요약 패널 (순수 텍스트/데이터)        -->
   <!-- ============================================================ -->
   <div class="two-col-grid" style="margin-bottom: 20px;">
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">구룡 메가 주거단지 중앙 감시 회랑</div>
-      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80" alt="고밀도 주거단지 복도 및 감시 조명" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [구역 식별: KOWLOON-BLOCK-0081] 24시간 정부 지정 조명(20W) 점등 의무 구역. 감시 카메라 및 생체 스캐너 상시 가동 중.
-      </p>
+    <div class="metric-panel">
+      <div class="metric-header">CIVILIAN COMPLIANCE & MONITORING // SECTOR 01~14000</div>
+      <div class="data-row">
+        <span class="data-label">야간 소등 규정 준수율 (Blackout)</span>
+        <span class="data-value">99.994% (위반 8건 즉결 조치)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">피하 바코드 갱신 완료율 (16세 이상)</span>
+        <span class="data-value">99.82% (진행 중)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">no_kia 정례 접종 증명서 확인율</span>
+        <span class="data-value">99.72% (미필자 배급 정지)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">금지 인지 표현 적발 및 조치 건수</span>
+        <span class="data-value">금일 42건 (사일로 이관 12건)</span>
+      </div>
     </div>
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">배급소 및 망막 식별 통제 게이트</div>
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="정부 행정 청사 및 보안 검색 게이트" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [설비 ID: GATE-RATION-114] 시민 식별 바코드 및 망막 스캔 대조를 통해 7일 21식 압축 단백질 블록 자동 지급.
-      </p>
+
+    <div class="metric-panel">
+      <div class="metric-header">RESOURCE RATIONING & QUOTA FULFILLMENT</div>
+      <div class="data-row">
+        <span class="data-label">주간 합성 단백질 블록 지급율</span>
+        <span class="data-value">100.0% (1인당 21식 완납)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">식량 풍미/질감 민원 자동 기각율</span>
+        <span class="data-value">100.0% (접수 즉시 파기)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">1급 정제수 주간 14L 자동 공급율</span>
+        <span class="data-value">100.0% (정상 수압 유지)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">암시장 전략물자 은닉 단속 실적</span>
+        <span class="data-value">적발 즉시 전원 RVP 전환</span>
+      </div>
     </div>
   </div>
 
@@ -314,6 +368,51 @@
     </table>
     <p class="footnote">
       ※ 신고 보상제: 의심스러운 인지 표현을 사용하는 이웃을 국선 번호 99로 제보한 시민에게는 추가 비타민 펠릿 14일분이 지급됩니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  훈령 5: 방공 대피 및 연방 그레이 구 제독 수칙              -->
+  <!-- ============================================================ -->
+  <div class="directive-card">
+    <div class="directive-number">[훈령 제24-18호 // 방공·화생방]</div>
+    <h2 class="card-title" style="margin-top:0;">지하 대피소 진입 절차 및 연방 나노 분자 오염 차단 규격</h2>
+    <p style="font-size:0.85rem; color:#b0c4de; line-height:1.6;">
+      연방 방면의 자기증식 나노머신(그레이 구) 살포 경보 발령 시 시민 행동 요령 및 지하 에어록 밀폐 프로토콜입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>경보 단계</th>
+          <th>사이렌 패턴</th>
+          <th>에어록 격폐 시간</th>
+          <th>시민 행동 요령</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1단계: 나노 연무 탐지</th>
+          <td>단속 단음 (5초 간격)</td>
+          <td>경보 발령 후 180초</td>
+          <td>구역별 방공 벙커 진입, 화학 방호 마스크 착용</td>
+        </tr>
+        <tr>
+          <th>2단계: 에어록 밀폐</th>
+          <td>연속 고음 (상시)</td>
+          <td>즉시 완전 밀폐</td>
+          <td>외부 잔류 인원 차단, 1,200°C 외벽 열선 가동</td>
+        </tr>
+        <tr>
+          <th>3단계: 고열 소각 제독</th>
+          <td>정적 (무음 모드)</td>
+          <td>밀폐 유지 72시간</td>
+          <td>실내 산소 정화기 가동, 단백질 블록 비상 섭취</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote warning-text">
+      ※ 에어록 폐쇄 원칙: 에어록 격폐 개시 180초 이후에는 외부에 잔류 인원이 존재하더라도 전염 방지를 위해 문이 재개방되지 않습니다.
     </p>
   </div>
 

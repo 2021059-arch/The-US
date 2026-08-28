@@ -63,6 +63,35 @@
       color: #80c0ff;
       font-weight: 700;
     }
+    .metric-panel {
+      background: #070b10;
+      border: 1px solid #1a2838;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .metric-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #6088a8;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #14202c;
+      font-size: 0.85rem;
+    }
+    .data-label {
+      color: #7a94aa;
+    }
+    .data-value {
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8d4f0;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -122,22 +151,47 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  현장 시각 기록 2열                                          -->
+  <!--  L-Node 코어 아키텍처 및 연산 지표 패널 (순수 텍스트/데이터)  -->
   <!-- ============================================================ -->
   <div class="two-col-grid" style="margin-bottom: 20px;">
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">사일로 복합체 저온 수조 열 (RVP Matrix)</div>
-      <img src="https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80" alt="지하 사일로 저온 액체 수조 복합체" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [시설 ID: SILO-COMPLEX-B] no_kia 농축액 99.98% 순환 수조 열. 890억 개체의 뇌파 동기화 및 대사율 0.03% 유지 중.
-      </p>
+    <div class="metric-panel">
+      <div class="metric-header">L-NODE ARCHITECTURE & MACRO CAPABILITIES</div>
+      <div class="data-row">
+        <span class="data-label">신경망 가중치 매트릭스 규모</span>
+        <span class="data-value">64,000,000,000 파라미터</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">거시 시뮬레이션 주기 (Step)</span>
+        <span class="data-value">3,600 초 (1.0 시간 단위)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">예측 범위 및 평형 방정식</span>
+        <span class="data-value">2026년 ~ 2050년 (24개년)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">합중국 최종 승전 산출 확률</span>
+        <span class="data-value">99.41% (수학적 필연)</span>
+      </div>
     </div>
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">심층 암반 열교환 및 냉각 타워 시설</div>
-      <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=80" alt="거대 지하 파이프라인 및 열교환 시설" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [설비 ID: GEO-COOL-04] 심도 300m 지열 발전 및 수조 냉각 터빈. 지표면 폭격에 완전 면역된 자율 밀폐 순환계.
-      </p>
+
+    <div class="metric-panel">
+      <div class="metric-header">STRATEGIC PRESERVATION & SUBTERRANEAN DEPTH</div>
+      <div class="data-row">
+        <span class="data-label">총 사일로 수조 안치 개체</span>
+        <span class="data-value">89,041,200,410구 (RVP)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">사일로 냉각 및 발전 심도</span>
+        <span class="data-value">심도 150m ~ 300m 암반</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">no_kia 99.98% 순환 펌프 상태</span>
+        <span class="data-value">무중단 가동 (열화율 0.00%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">지표면 핵폭격 면역 계수</span>
+        <span class="data-value">100.0% (완전 격리)</span>
+      </div>
     </div>
   </div>
 
@@ -310,6 +364,60 @@
     <p class="footnote">
       ※ L-Node 정책 결정: 방사능 오염은 토지의 산업 시설 조기 착공을 방해하므로 핵탄두 재생산량은 영구히 0기로 고정하며, 모든 가용 자원은 레일건 금속 탄자 및 전열화학 장약 생산으로 집중 배분됩니다. (참조: <a href="classified.html">내부 감사 문서 4</a>)
     </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 4: 심층 지하 광물 자원 및 지열 발전 잔존 매장량       -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">지하자원</span> 심도 180~500m 전략 광물 가채 매장량 및 지열 발전 지표
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      지표면 폭격 및 전선 상황에 구애받지 않는 암반 심층 자원 자급 지속성 지표입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>전략 자원 구분</th>
+          <th>확인 가채 매장량</th>
+          <th>일일 채굴·소비량</th>
+          <th>고갈 예상 시점</th>
+          <th>수급 평가</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>고순도 텅스텐 광맥 (레일건용)</th>
+          <td>438,000,000 톤</td>
+          <td>8,400 톤</td>
+          <td class="highlight-val">142년 8개월 후</td>
+          <td><span class="status-badge ok">절대 풍족</span></td>
+        </tr>
+        <tr>
+          <th>고강도 티타늄 합금 원광</th>
+          <td>620,000,000 톤</td>
+          <td>7,200 톤</td>
+          <td class="highlight-val">210년 4개월 후</td>
+          <td><span class="status-badge ok">영구 공급</span></td>
+        </tr>
+        <tr>
+          <th>초전도체용 희토류 원석</th>
+          <td>18,400,000 톤</td>
+          <td>520 톤</td>
+          <td class="highlight-val">88년 2개월 후</td>
+          <td><span class="status-badge ok">안정 수급</span></td>
+        </tr>
+        <tr>
+          <th>심도 300m 지열 발전 출력</th>
+          <td>480,000 MW 상시</td>
+          <td>390,000 MW 사용</td>
+          <td class="highlight-val">반영구 (지구 열핵)</td>
+          <td><span class="status-badge ok">잉여 +90GW</span></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- ============================================================ -->

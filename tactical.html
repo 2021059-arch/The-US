@@ -6,7 +6,7 @@
   <title>합중국 신경망 참모본부 — 작전 교리 및 전술 지침 총람</title>
   <meta name="description" content="합중국 국방부 신경망 참모본부 작전 교리 총람 — 8대 표준 전술 매트릭스, 1,301억 인구 소모율 방정식, 적성국 병기 대응 수칙 및 전구 사령부 지휘 지침">
   <!-- STAFFNET DOCTRINE REGISTRY: DOC-TAC-8810 | CLEARANCE: EYES-ONLY-STAFFNET | KERNEL: v12.08.4 -->
-  <!-- WARNING: 본 작전 교리의 임의 수정 및 외부 유출 시 국방안보법 제4조에 의거 즉각 소각 처분됩니다 -->
+  <!-- [경고] 본 작전 교리의 임의 수정 및 외부 유출 시 국방안보법 제4조에 의거 즉각 소각 처분됩니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
     .warning-box {
@@ -18,14 +18,6 @@
       margin: 15px 0;
       font-family: 'JetBrains Mono', monospace;
     }
-    .img-caption {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: #607890;
-      margin-top: -10px;
-      margin-bottom: 15px;
-      text-align: right;
-    }
     .tactical-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -36,6 +28,21 @@
         grid-template-columns: 1fr;
       }
     }
+    .quote-box {
+      border-left: 3px solid #305070;
+      background: #06090d;
+      padding: 15px 20px;
+      margin: 15px 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #b0c4de;
+    }
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -45,9 +52,12 @@
   <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
   <ul>
     <li><a href="index.html">메인</a></li>
-    <li><a href="staff_h.html">참모본부</a></li>
-    <li><a href="tactical.html" class="active">작전 교리</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html">참모본부</a></li>
+    <li><a href="defense.html">본토 방위</a></li>
+    <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html" class="active">작전 교리</a></li>
+    <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
     <li><a href="weapon_infantry.html">보병 장비</a></li>
     <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
@@ -67,7 +77,7 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      [전술통제국] 신경망 작전 트랜스포머 8대 전술 가중치 갱신 ▌ 적 참모부 감청 은닉 삼각측량 오차 ±8m 유지 ▌ 제3전구 폐허화 공병작전 수율 142% 달성 ▌ 맬서스 칼로리 밸런스 지수 109.14% 방어 성공 ▌ 포로 격리 및 자원 환원 처리율 100% 공시 ▌
+      [전술통제국] 신경망 작전 트랜스포머 8대 전술 가중치 갱신 | 적 참모부 감청 은닉 삼각측량 오차 ±8m 유지 | 제3전구 폐허화 공병작전 수율 142% 달성 | 맬서스 칼로리 밸런스 지수 109.14% 방어 성공 | 포로 격리 및 자원 환원 처리율 100% 공시 |
     </div>
   </div>
 
@@ -84,10 +94,8 @@
   <!-- SECTION 1: 8대 표준 전술 매트릭스 -->
   <div class="card">
     <h2 class="card-title">1. 신경망 참모본부 8대 표준 전술 매트릭스</h2>
-    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" class="distorted-img" alt="전술 작전 지도 및 좌표 격자망">
-    <div class="img-caption">PLATE 4.1: 전 지구 11×11 전장 격자 및 신경망 기동 벡터 시각화</div>
     <p>
-      신경망 참모본부(StaffNet)의 각 예하 노드는 약 3,000개의 파라미터를 탑재하고, 11×11 지형 텐서와 보급선, 화망 밀도를 분석하여 아래의 <strong>8가지 전술 벡터</strong> 중 최적의 행동을 15ms 주기로 선택합니다. 무모한 정면 소모전을 지양하고, 적의 취약한 빈틈을 골라 압박하는 적응형 셀프 어텐션 알고리즘을 따릅니다.
+      신경망 참모본부(StaffNet)의 각 예하 노드는 약 3,000개의 파라미터를 탑재하고, 11x11 전장 격자 텐서와 보급선, 화망 밀도를 분석하여 아래의 <strong>8가지 전술 벡터</strong> 중 최적의 행동을 15ms 주기로 선택합니다. 감정에 휩쓸린 무모한 정면 돌격을 배제하고, 적의 취약한 빈틈을 골라 압박하는 적응형 셀프 어텐션 알고리즘을 준수합니다.
     </p>
 
     <table class="spec-table">
@@ -95,7 +103,7 @@
         <tr>
           <th>전술 분류</th>
           <th>전술 코드</th>
-          <th>발동 조건 및 매커니즘</th>
+          <th>발동 조건 및 메커니즘</th>
           <th>소모율 예측치</th>
         </tr>
       </thead>
@@ -150,141 +158,99 @@
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <!-- SECTION 2: 맬서스의 덫과 소모율 방정식 -->
-  <div class="card">
-    <h2 class="card-title">2. 1,301억 인구와 맬서스의 덫: 칼로리 소모율 방정식</h2>
-    <div class="tactical-grid">
-      <div>
-        <p>
-          전 세계 인구가 6,000억에 달하고 합중국 인구가 1,301억에 이르는 현실에서, 경작지의 훼손은 곧 국가 전체의 기근을 의미합니다. 합중국 농업 생산력은 인구의 <strong>109%</strong>만을 부양할 수 있으므로, 단 9%의 생산 여유만이 존재합니다.
-        </p>
-        <p>
-          따라서 StaffNet은 포위되거나 적의 화학 공격으로 오염된 구역을 즉시 <strong>'배급망 분리 구역'</strong>으로 지정하여 전체 체계의 붕괴를 방지하는 냉혹한 최적화 알고리즘을 상시 실행합니다.
-        </p>
-      </div>
-      <div>
-        <div class="quote-box" style="background: #090e15; border-left-color: #306090; padding: 15px;">
-          <strong>[StaffNet 소모율 함수 수식]</strong><br>
-          <code>L(t) = α·(Casualties) + β·(Calorie_Deficit) - γ·(Territory_Arable)</code><br>
-          <span style="font-size: 0.75rem; color: #7090b0;">
-            토양 획득량이 손실 칼로리를 상회할 때 작전 점수는 양(+)의 값을 가지며, 병력의 손실은 징집 충원율로 즉시 보정됨.
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <table class="spec-table">
-      <thead>
-        <tr>
-          <th>작전 상태</th>
-          <th>배급 정책</th>
-          <th>징집 우선순위</th>
-          <th>행정 조치</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>정상 관구</td>
-          <td>100% 정상 단백질 블록</td>
-          <td>표준 징집률 (연령 17~45세)</td>
-          <td>정기 생체 칩 검진</td>
-        </tr>
-        <tr>
-          <td>전선 접적 구역</td>
-          <td>120% 증량 배급 (각성제 포함)</td>
-          <td>총동원 징집 (연령 15~55세)</td>
-          <td>외골격 장구류 의무 착용</td>
-        </tr>
-        <tr>
-          <td>포위·단절 구역</td>
-          <td><strong>0% (외부 수송 전면 차단)</strong></td>
-          <td>현지 자체 소모 및 방어 유지</td>
-          <td>자체 식량 잔여분 소진 시 격리</td>
-        </tr>
-      </tbody>
-    </table>
 
     <div class="warning-box">
-      [국방 감사 보고 #MALTHUS-9]: 단절 구역 내 민간인 생존율 감소는 국가 거시 통계에서 '자연 감축'으로 분류되며, 구역 탈환 즉시 새로운 징집 농업 인력으로 재배치됨.
+      [사령관 주의 사항]: 전술 선택 점수에서 TAC-HOLD-04와 TAC-RETREAT-05가 경합할 경우, 참모본부 중앙 코어의 맬서스 자원 계수가 낮은 구역부터 우선 후퇴를 승인함.
     </div>
   </div>
 
-  <!-- SECTION 3: 적성국 특수 병기 대응 수칙 -->
+  <!-- SECTION 2: 맬서스 전쟁 방정식과 자원 교환비 -->
   <div class="card">
-    <h2 class="card-title">3. 적성국 핵심 병기 및 거신 대응 교전 수칙</h2>
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" class="distorted-img" alt="합중국 전략 작전 통제실 전경">
-    <div class="img-caption">PLATE 4.2: 적성국 거대 보행 병기 및 화력 자산 분석 모니터</div>
-
-    <div class="tactical-grid">
-      <div style="background: #0b1016; padding: 15px; border: 1px solid #1a2c3e;">
-        <h3 style="color: #90c0f0; font-size: 1rem; border-bottom: 1px solid #203548; padding-bottom: 5px; margin-bottom: 10px;">
-          동방제국 — 49식 인형병기 및 야만타카
-        </h3>
-        <p style="font-size: 0.85rem;">
-          - <strong>49식 인형병기 (사급인형)</strong>: 여성형 거대 이족보행 거신. 밤에 배기구가 붉게 달아오르는 특성을 이용해 야간 열영상 조준. 무릎 유압 관절에 12.7mm AP-I 및 130mm 철갑탄 집중 사격.<br>
-          - <strong>야만타카 (생체 공장)</strong>: 잔해와 시체를 삼켜 병기를 복제하는 초대형 우상 공장. 프로젝트 토르(궤도 관통봉) 및 M44 고열 소각망으로 중심 코어 탄화 파괴.
-        </p>
-      </div>
-
-      <div style="background: #0b1016; padding: 15px; border: 1px solid #1a2c3e;">
-        <h3 style="color: #90c0f0; font-size: 1rem; border-bottom: 1px solid #203548; padding-bottom: 5px; margin-bottom: 10px;">
-          연방 — 곰(Медведь), KV99, 육상순양함
-        </h3>
-        <p style="font-size: 0.85rem;">
-          - <strong>곰 (Медведь)</strong>: 어깨 장포신 및 흉부 고속 기관포. 장거리 전자기 레일건(GAUSS-IX)으로 선제 타격.<br>
-          - <strong>KV99 (3각 6포신)</strong>: 양자컴퓨터 자동 표적 분배 100% 명중률. 연막 및 전자전 대대의 재밍 펄스로 사격통제 센서 무력화 후 측면 우회 기동.<br>
-          - <strong>300톤 육상순양함</strong>: 궤도차대 파괴 후 고정 표적화하여 공중 암피온급 플라즈마 집중 투사.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION 4: 시가전 폐허화 및 포로 관리 -->
-  <div class="card">
-    <h2 class="card-title">4. 시가전 폐허화 역설 및 포로·노획 자원화 규정</h2>
+    <h2 class="card-title">2. 1,301억 인구 소모율 연산 및 자원 교환비 방정식</h2>
     <p>
-      성한 도시는 적의 군수 공장과 상수도, 보급창 역할을 하므로 합중국 공세군은 초기 포격으로 도시를 완전히 분쇄합니다. 그러나 도시가 폐허(Ruin)가 되면 그 잔해는 방어자에게 유리한 요새가 됩니다. StaffNet은 <strong>'폐허 계수(Ruin Index)'</strong>를 실시간 계산하여 아군의 점령 비용이 방어 이득을 초과하기 전에 고열 소각선으로 구역 전체를 정리합니다.
+      합중국의 모든 군사 작전은 <strong>'인명 소모 비용 대(vs) 수복 농경지의 칼로리 생산력'</strong>의 수학적 평형점에 종속됩니다. 참모본부는 작전 구역의 토양 오염도와 수확 가능 작물 톤수를 연산하여 사단 투입 한계선을 결정합니다.
     </p>
+
+    <div class="quote-box">
+      <strong>[StaffNet 핵심 작전 공식 #MATH-WAR-09]</strong><br>
+      <code>J = (E_captured * 2,100 kcal) - (Loss_soldier * 3,800 USD) - (Ammo_cost * 1.15)</code><br>
+      <span style="font-size: 0.78rem; color: #7090b0;">※ J값이 0보다 작을 경우, 참모본부는 해당 사단에 즉각 퇴각 및 해당 전선 초토화를 강제 명령함.</span>
+    </div>
 
     <table class="spec-table">
       <thead>
         <tr>
-          <th>수거 자산 분류</th>
-          <th>처리 프로토콜</th>
-          <th>군수 전환율</th>
+          <th>작전 형태</th>
+          <th>병력 투입 기준</th>
+          <th>허용 최대 손실률</th>
+          <th>필수 수복 목표</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>노획 적 장비 (전차/외골격)</td>
-          <td>부품 비호환으로 즉시 용광로 파쇄 및 규격 강철괴 재생</td>
-          <td>자원 회수율 94.2%</td>
+          <td>1급 농경지 쟁탈전</td>
+          <td>정규 3개 기갑사단 + 5개 외골격사단</td>
+          <td>사단 병력의 62%</td>
+          <td>지하 수맥 및 표토 3,000 km²</td>
         </tr>
         <tr>
-          <td>적 포로 (투항병)</td>
-          <td>합중국 배급 부담 경감을 위해 즉시 후방 강제 노동 수용소 이송</td>
-          <td>토목 굴착 노동 대체율 100%</td>
+          <td>2급 공창 지대 방어</td>
+          <td>정규 2개 기계화사단 + 무인포대군</td>
+          <td>사단 병력의 40%</td>
+          <td>155mm 관통체 제조 라인</td>
         </tr>
         <tr>
-          <td>점령지 잔류 주민</td>
-          <td>합중국 생체 식별 칩 강제 이식 후 지하 농업 플랜트 분산 강제 이주</td>
-          <td>도주율 0.02% 미만 통제</td>
+          <td>3급 완충 황무지 소모전</td>
+          <td>징집 경보병 8개 연대</td>
+          <td>사단 병력의 85%</td>
+          <td>적 진격 72시간 지연</td>
         </tr>
       </tbody>
     </table>
   </div>
 
+  <!-- SECTION 3: 적성국 병기 대응 전술 -->
   <div class="card">
-    <h2 class="card-title">작전 및 사령부 문서 바로가기</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-      <a href="staff_h.html" class="tag">신경망 참모본부 중앙</a>
-      <a href="arsenal.html" class="tag">병기 총람 메인</a>
-      <a href="weapon_infantry.html" class="tag">보병 무기·강화체계</a>
-      <a href="weapon_vehicle.html" class="tag">기갑·중화기 목록</a>
-      <a href="weapon_special.html" class="tag">특수·자동화 병기</a>
-      <a href="propaganda.html" class="tag">적성국 군사 동향</a>
+    <h2 class="card-title">3. 적성국 특수 병기 대응 전술 교범</h2>
+    <div class="tactical-grid">
+      <div style="background: #080d14; border: 1px solid #1a2c40; padding: 15px;">
+        <h3 style="color: #f0a080; font-size: 1rem; margin-bottom: 8px;">대(對) 극동 제국 49식 보행 인형병기</h3>
+        <p style="font-size: 0.84rem; color: #a0b8d0;">
+          제국의 49식은 두꺼운 전면 장갑을 지녔으나 다리 유압 관절부와 냉각 배관이 취약합니다.
+        </p>
+        <ul style="font-size: 0.8rem; line-height: 1.7; color: #88a8c8;">
+          <li>1. FED_AR-12 철갑소이탄으로 무릎 유압 피스톤 집중 사격 (기동 불능 유도)</li>
+          <li>2. GAUSS-IX 레일건으로 흉부 반응로 직격 관통</li>
+          <li>3. 보행 진동 센서 314개소를 연계하여 매복지 유인 후 크리퍼 지뢰 흡착</li>
+        </ul>
+      </div>
+
+      <div style="background: #080d14; border: 1px solid #1a2c40; padding: 15px;">
+        <h3 style="color: #80c0f0; font-size: 1rem; margin-bottom: 8px;">대(對) 동방 연합 자가증식 나노군체 (그레이 구)</h3>
+        <p style="font-size: 0.84rem; color: #a0b8d0;">
+          연방의 나노군체는 실탄 사격으로 파괴할 수 없으며 고열 소각만이 유일한 저지책입니다.
+        </p>
+        <ul style="font-size: 0.8rem; line-height: 1.7; color: #88a8c8;">
+          <li>1. M44 고열 소각선(1,200°C)으로 유인하여 분자 구조 열분해</li>
+          <li>2. FED_SG-88 테르밋 소이탄으로 국소 확산지 긴급 소각</li>
+          <li>3. 오염 구역 14일 격리 후 LOT-99 특수 작용제 살포</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: 폐허화 및 자원 환원 공병 교리 -->
+  <div class="card">
+    <h2 class="card-title">4. 폐허화 및 자원 환원 공병 교리 (Scorched Earth & RVP)</h2>
+    <p>
+      전선 후퇴가 불가피할 경우, 참모본부 예하 제11공병연대는 퇴각 구역의 모든 지하수 관정과 토양에 14일 분해성 화학 응고제를 투입하여 적의 현지 조달을 차단합니다.
+    </p>
+    <p>
+      수습된 전사자 및 중상자는 후방 RVP(Resource Vitalization Plant) 사일로로 이송되어 인산염, 단백질 및 기계 부품으로 분리 정제되어 다음 세대 징집병의 장비와 합성 식량으로 100% 환원됩니다.
+    </p>
+
+    <div class="warning-box">
+      [참모본부 교리 감사 지침]: 전선에 방치된 장비 및 사상자는 적의 생체 인형병기 제조 재료로 악용되므로, 퇴각 부대는 반드시 테르밋 소각탄을 기폭하고 이탈해야 함.
     </div>
   </div>
 
@@ -293,8 +259,8 @@
 </main>
 
 <footer>
-  <p>FEDERATION DEPARTMENT OF DEFENSE — STRATEGIC DOCTRINE BUREAU</p>
-  <p>STAFFNET OPERATIONAL PROTOCOL CODEX #FED-DOC-TAC-8810. ALL RIGHTS RESERVED.</p>
+  <p>FEDERATION DEPARTMENT OF DEFENSE — TACTICAL DOCTRINE COMMAND</p>
+  <p>ALL ACTIVITIES MONITORED AND LOGGED UNDER WARTIME DIRECTIVE #14. UNAUTHORIZED ACCESS PUNISHABLE BY DETENTION.</p>
 </footer>
 
 <script src="app.js"></script>

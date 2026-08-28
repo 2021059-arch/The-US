@@ -77,6 +77,35 @@
     @media (max-width: 768px) {
       .two-col-grid { grid-template-columns: 1fr; }
     }
+    .metric-panel {
+      background: #070b10;
+      border: 1px solid #1a2838;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .metric-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #6088a8;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #14202c;
+      font-size: 0.85rem;
+    }
+    .data-label {
+      color: #7a94aa;
+    }
+    .data-value {
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8d4f0;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -136,22 +165,47 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  로그 분위기 이미지 2열                                      -->
+  <!--  전산 원장 실시간 시스템 현황 요약 (순수 텍스트/데이터 패널) -->
   <!-- ============================================================ -->
   <div class="two-col-grid" style="margin-bottom: 20px;">
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">StaffNet 전산 중계 서버 뱅크</div>
-      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="서버 랙 및 데이터 통신 회선" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [설비 ID: SN-RACK-088] 51,011개 파라미터 양자 연산 가중치 버스. 초당 1,420만 건의 전선 텔레메트리 패킷 병렬 처리 중.
-      </p>
+    <div class="metric-panel">
+      <div class="metric-header">STAFFNET HARDWARE & NETWORK TOPOLOGY</div>
+      <div class="data-row">
+        <span class="data-label">활성 양자 가중치 연산 노드</span>
+        <span class="data-value">16,384 코어 (100.0%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">전선 무인 화력망 직결 링크</span>
+        <span class="data-value">1,420개소 (지연 0.015ms)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">초당 실시간 패킷 처리량</span>
+        <span class="data-value">14,200,000 tx/sec</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">인간 지휘관 수동 개입률</span>
+        <span class="data-value">0.000% (완전 자동)</span>
+      </div>
     </div>
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">지하 감시 및 레이더 관제 터미널</div>
-      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="CRT 화면 및 감시 터미널" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [관제 ID: TERMINAL-SEC-12] 적 탄도체 궤적 역추적 및 마하 7.2 요격 탄도 15ms 내 자동 지시 스크린.
-      </p>
+
+    <div class="metric-panel">
+      <div class="metric-header">BIO-ASSET & TELEMETRY STREAM STATUS</div>
+      <div class="data-row">
+        <span class="data-label">전선 작전원 원격 바이탈 링크</span>
+        <span class="data-value">1,091,000기 (EXO 연동)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">RVP 저온 사일로 수조 센서망</span>
+        <span class="data-value">89,041,200,410채널</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">no_kia 신경 차단 피드백율</span>
+        <span class="data-value">100.0% (통각 0.00%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">공식 전사자(KIA) 계상 건수</span>
+        <span class="data-value">0건 (영구 고정)</span>
+      </div>
     </div>
   </div>
 

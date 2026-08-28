@@ -18,13 +18,11 @@
       margin: 15px 0;
       font-family: 'JetBrains Mono', monospace;
     }
-    .img-caption {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: #607890;
-      margin-top: -10px;
-      margin-bottom: 15px;
-      text-align: right;
+    .footnote {
+      font-size: 0.75rem;
+      color: #506575;
+      margin-top: 12px;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -35,9 +33,12 @@
   <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
   <ul>
     <li><a href="index.html">메인</a></li>
-    <li><a href="staff_h.html">참모본부</a></li>
-    <li><a href="tactical.html">작전 교리</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="staff_h.html">참모본부</a></li>
+    <li><a href="defense.html">본토 방위</a></li>
+    <li><a href="intel.html">전략 정보</a></li>
+    <li><a href="tactical.html">작전 교리</a></li>
+    <li><a href="manual.html">방호 교범</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
     <li><a href="weapon_infantry.html">보병 장비</a></li>
     <li><a href="weapon_vehicle.html">기갑·중화기</a></li>
@@ -57,7 +58,7 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      [특수병기국] 암피온급 1번함 #01 무착륙 체공 140일차 순항 유지 ▌ 전자전 대대, 적 참모부 게놈 무전 11개소 삼각측량 성공 ▌ M44 중형 고열 소각 방어선 1,200°C 정상 방열 확인 ▌ 제4특수병기연대 밀봉 열차 LOT-99 정기 3중 보안 점검 완료 ▌
+      [특수병기국] 암피온급 1번함 #01 무착륙 체공 140일차 순항 유지 | 전자전 대대, 적 참모부 게놈 무전 11개소 삼각측량 성공 | M44 중형 고열 소각 방어선 1,200°C 정상 방열 확인 | 제4특수병기연대 밀봉 열차 LOT-99 정기 3중 보안 점검 완료 |
     </div>
   </div>
 
@@ -74,8 +75,6 @@
   <!-- SECTION 1: 특수무기 교리 및 핵무기 폐기 사유 -->
   <div class="card">
     <h2 class="card-title">1. 특수 전략 자산 운용 철학: 토양 보존과 신경망 타격</h2>
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" class="distorted-img" alt="전략 타격 및 궤도 관제 네트워크">
-    <div class="img-caption">PLATE 3.1: StaffNet 전략 궤도 관제소 및 위성 데이터 링크</div>
     <p>
       합중국 참모본부는 개전 초 대륙간 탄도 핵탄두를 전량 소모한 이후, <strong>신규 핵탄두 생산을 영구 중단</strong>했습니다. 이는 인도주의적 이유가 아닌 엄격한 수지 타산의 결과입니다. 1,301억 인구를 부양하기 위한 '경작지 쟁탈전'에서 수십 년간 토양을 영구 오염시키는 핵무기는 전쟁의 근본 목적을 훼손하기 때문입니다.
     </p>
@@ -87,8 +86,6 @@
   <!-- SECTION 2: 암피온급 초거대 공중기함 -->
   <div class="card">
     <h2 class="card-title">2. 초거대 전략자율비행순양함 「암피온급 (Amphion-Class Aerial Cruiser)」</h2>
-    <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=800&q=80" class="distorted-img" alt="암피온급 공중순양함 상공 전개">
-    <div class="img-caption">PLATE 3.2: 암피온급 기함 등마루 위상배열 레이더 및 드론 사출구 전경</div>
     <p>
       암피온급은 전선의 지평선 너머에 하나의 거대한 회색 산맥처럼 모습을 드러내는 <strong>480미터급 초대형 공중 기함</strong>입니다. 각진 스텔스 다면체 장갑으로 뒤덮여 있으며, 등마루에 거대한 능동위상배열 레이더 디스크를 장착하고 고도 12,000미터 상공에서 180일간 무착륙 체공합니다.
     </p>
@@ -148,177 +145,155 @@
     </div>
   </div>
 
-  <!-- SECTION 3: 전자전 대대 -->
+  <!-- SECTION 3: SIGINT-STRIKE 전자전 대대 -->
   <div class="card">
-    <h2 class="card-title">3. 신경망 게놈 사냥꾼 「전자전 대대 (Electronic Warfare Battalion)」</h2>
-    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" class="distorted-img" alt="전자전 대대 무전 삼각측량 콘솔">
-    <div class="img-caption">PLATE 3.3: 적 참모부 무전 트래픽 스펙트럼 분석 및 위치 특정 화면</div>
+    <h2 class="card-title">3. 신경망 감청 및 참모부 타격 체계 「SIGINT-STRIKE 전자전 대대」</h2>
     <p>
-      전자전 대대는 전선에서 직접 적과 교전하는 대신, 적성국(동방제국 및 연방)의 <strong>물리적 예하 참모부 노드를 찾아내어 파괴하는 특수 사냥 부대</strong>입니다. 적 참모부가 예하 부대에 내리는 무전 명령 트래픽을 정밀 감청하여 은닉 위치를 삼각측량하고, 궤도 관통포나 정밀 미사일로 타격하여 해당 노드의 신경망 가중치(Genome)를 완전히 증발시킵니다.
+      현대 전면전의 승패는 '적의 물리적 참모부 벙커를 누가 먼저 찾아내 파괴하는가'에 달려 있습니다. 각 참모부는 예하 사단에 지령을 내릴 때마다 전파를 송출하며, 송출량이 많을수록 삼각측량 위험에 노출됩니다.
     </p>
-
-    <table class="spec-table">
-      <thead>
-        <tr>
-          <th>장비 및 시스템</th>
-          <th>계측 성능</th>
-          <th>전술 임무</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>광대역 감청 수신기</td>
-          <td>주파수 대역 0.1 MHz ~ 100 GHz</td>
-          <td>적 지휘소 미약 전파 신호 포착</td>
-        </tr>
-        <tr>
-          <td>삼각측량 정밀도</td>
-          <td>오차 반경 ±8 m (거리 400km 기준)</td>
-          <td>벙커 환기구 및 지하 케이블 매설 위치 특정</td>
-        </tr>
-        <tr>
-          <td>지향성 EMP 방사기</td>
-          <td>12.0 GW (기가와트) 마이크로웨이브 펄스</td>
-          <td>적 통신 중계기 및 연산 반도체 소자 즉시 파괴</td>
-        </tr>
-        <tr>
-          <td>게놈 리셋 유도율</td>
-          <td>성공률 88.4% (직격 타격 시 100%)</td>
-          <td>적 사단 지휘 마비 및 오폭 유도</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- SECTION 4: 제4특수병기연대 밀봉 열차 -->
-  <div class="card">
-    <h2 class="card-title">4. 화학·생물 특수무기 체계 「제4특수병기연대 밀봉 열차」</h2>
     <p>
-      핵무기와 달리 화학 작용제는 살포 후 수일~수주일 내에 자연 분해되어 토양의 농업 생산력을 복원할 수 있으므로, 합중국은 특수 화학 작용제를 엄격히 비축 운용합니다. 모든 탄약은 3중 밀봉 강철 열차로 수송되며, 상자를 개방하기 위해서는 서로 다른 소속의 장교 3명이 각자의 열쇠를 동시에 회전시켜야 합니다.
-    </p>
-
-    <table class="spec-table">
-      <thead>
-        <tr>
-          <th>작용제 코드</th>
-          <th>분류 및 화학 구조</th>
-          <th>지속 기간</th>
-          <th>토양 잔류성</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>PH-404</td>
-          <td>신경 전달물질 차단 유기인계 에어로졸</td>
-          <td>48 ~ 72 시간</td>
-          <td>자외선에 의해 7일 내 무해 물질로 완전 분해</td>
-        </tr>
-        <tr>
-          <td>AG-99</td>
-          <td>산화 촉진 식물 고엽 작용제</td>
-          <td>14 일</td>
-          <td>적 숲 은닉 진지 노출 후 30일 내 재경작 가능</td>
-        </tr>
-        <tr>
-          <td>CY-12</td>
-          <td>급속 세포막 용해성 접촉 독소</td>
-          <td>6 시간</td>
-          <td>동방제국 49식 생체 거신 피부 근육 조직 급속 분해</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="warning-box">
-      [보안 규정 SEC-331]: 상자 개방 시 상호 감시 권총을 장전한 상태로 절차를 집행하며, 1인이라도 불응하거나 이상 징후를 보일 경우 현장에서 즉시 사살함.
-    </div>
-  </div>
-
-  <!-- SECTION 5: M44 고열 소각 방어선 -->
-  <div class="card">
-    <h2 class="card-title">5. 절대 저지선 「M44 중형 고열 소각 방어망」</h2>
-    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80" class="distorted-img" alt="M44 고열 소각 방어선 열선 가동">
-    <div class="img-caption">PLATE 3.4: M44 소각 노즐 및 나파-플라즈마 분사 테스트</div>
-    <p>
-      M44 고열 소각 방어선은 연방 및 제국의 생체 오염물질과 증식성 나노 슬러지(그레이 구)의 본토 유입을 원천 차단하기 위해 구축된 <strong>상시 1,200°C 고열 방어 장벽</strong>입니다. 지하 송유관과 고압 가스 공급망에 직결되어 24시간 불타오르는 화염의 벽을 유지합니다.
-    </p>
-
-    <table class="spec-table">
-      <thead>
-        <tr>
-          <th>설비 항목</th>
-          <th>규격 데이터</th>
-          <th>방호 기능</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>작동 온도</td>
-          <td>상시 1,200 °C (비상 시 1,800 °C 증폭)</td>
-          <td>유기 단백질 및 경합금 즉시 탄화 소각</td>
-        </tr>
-        <tr>
-          <td>화염벽 높이</td>
-          <td>지상 15 m / 지하 10 m 차단벽</td>
-          <td>지하 갱도 굴착 및 도약 병기 저지</td>
-        </tr>
-        <tr>
-          <td>연료 공급선</td>
-          <td>지하 40m 심도 강철 4중 파이프라인</td>
-          <td>포격 직격 8회 연속 견딤</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- SECTION 6: 프로젝트 토르 -->
-  <div class="card">
-    <h2 class="card-title">6. 대기권 초고속 관통자 「프로젝트 토르 (Project THOR Kinetic Rod)」</h2>
-    <p>
-      프로젝트 토르는 저궤도 위성 플랫폼에서 6.1m 길이의 순수 텅스텐 관통봉을 대기권으로 자유낙하 사출하는 전략 운동에너지 타격 무기입니다. 마하 10의 속도로 낙하하여 폭약 없이 순수 질량과 위치에너지만으로 지하 100m 암반 벙커를 관통 파괴합니다.
+      SIGINT-STRIKE 대대는 고고도 정찰 비행선과 지상 다점 수신 안테나를 연계하여 적 참모부의 미세 전파를 0.05초 내에 삼각측량하고, 좌표가 확보되는 즉시 초음속 레일건 포격과 궤도 관통체를 직격 투하합니다.
     </p>
 
     <table class="spec-table">
       <thead>
         <tr>
           <th>항목</th>
-          <th>제원 수치</th>
-          <th>파괴 위력</th>
+          <th>기술 사양</th>
+          <th>전술 임무</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>관통봉 규격</td>
-          <td>길이 6.1 m / 직경 0.3 m (텅스텐 중합금)</td>
-          <td>중량 9.2 톤</td>
+          <td>수신 주파수 대역</td>
+          <td>0.1 MHz ~ 40 GHz 전 대역 동시 스캔</td>
+          <td>적 신경망 게놈 전송 패킷 실시간 복호화</td>
         </tr>
         <tr>
-          <td>착탄 속도</td>
-          <td>Mach 10 (약 3,400 m/s)</td>
-          <td>운동에너지 53 GJ (TNT 11.5톤 등가)</td>
+          <td>위치 추정 정밀도</td>
+          <td>반경 15 m 이내 (3개 수신 기지 연동 시)</td>
+          <td>벙커 환기구 및 동력선 매설 좌표 식별</td>
         </tr>
         <tr>
-          <td>관통 심도</td>
-          <td>강화 콘크리트 45 m / 천연 암반 110 m</td>
-          <td>적성국 중앙 지휘 벙커 단발 절멸</td>
+          <td>타격 연계 시간</td>
+          <td>탐지 후 초탄 착탄까지 42초</td>
+          <td>GAUSS-IX 레일건 및 궤도 타격 위성 직결</td>
         </tr>
         <tr>
-          <td>낙진 발생</td>
-          <td><strong>0.00% (방사능 낙진 완전 전무)</strong></td>
-          <td>타격 즉시 지상 점령 및 자원 수거 가능</td>
+          <td>광역 재밍 출력</td>
+          <td>2.4 MW 전자기 펄스 방사</td>
+          <td>적 사단-참모부 통신 차단 및 게놈 덤프 강제 리셋</td>
         </tr>
       </tbody>
     </table>
   </div>
 
+  <!-- SECTION 4: M44 고열 소각선 -->
   <div class="card">
-    <h2 class="card-title">병기 및 작전 문서 연계</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-      <a href="arsenal.html" class="tag">병기 총람</a>
-      <a href="weapon_infantry.html" class="tag">보병 무기 제원</a>
-      <a href="weapon_vehicle.html" class="tag">기갑 무기 제원</a>
-      <a href="staff_h.html" class="tag">참모본부 연산망</a>
-      <a href="tactical.html" class="tag">작전 교리 지침</a>
-      <a href="classified.html" class="tag">극비 전략 감사</a>
+    <h2 class="card-title">4. 국경 방어 고열 소각선 「M44 인시너레이터 포대 벨트 (M44 Thermal Belt)」</h2>
+    <p>
+      연방 방면에서 확산되는 자가증식형 생체 나노 복제물(그레이 구) 및 제국의 대규모 바이오 돌격군을 차단하기 위해 국경 1,200km에 걸쳐 구축된 <strong>상시 1,200°C 고열 화염 방벽</strong>입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>제원</th>
+          <th>설계 메커니즘</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>소각 온도</td>
+          <td>지표면 상시 1,200 °C / 최대 1,800 °C</td>
+          <td>단백질, 나노머신, 고무 및 경합금 즉각 기화</td>
+        </tr>
+        <tr>
+          <td>연료 공급선</td>
+          <td>지하 고압 나프타-합성중유 배관망 (심도 40m)</td>
+          <td>지하 파이프라인 무인 밸브 자동 제어</td>
+        </tr>
+        <tr>
+          <td>소각 반경</td>
+          <td>전선 종심 폭 800 m 연속 살포</td>
+          <td>생명체 및 나노군체 0% 통과율 보장</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5: LOT-99 급속분해 신경 가스 -->
+  <div class="card">
+    <h2 class="card-title">5. 3중 밀봉 특수화학연대 「LOT-99 급속분해 신경 작용제」</h2>
+    <p>
+      영구 방사능 오염을 유발하는 핵탄두를 대체하여 개발된 고효율 농경지 회수용 화학무기입니다. 살포 후 14일간 극도의 치사율을 유지하다가 자외선과 토양 미생물에 의해 무해한 질소 화합물로 100% 자연 분해됩니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>특성치</th>
+          <th>전술적 가치</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>독성 등급</td>
+          <td>치사량 LCt50 = 2.4 mg·min/m³</td>
+          <td>피부 접촉 및 호흡 시 3초 내 호흡근 마비</td>
+        </tr>
+        <tr>
+          <td>자연 분해 주기</td>
+          <td>정확히 14일 (336시간)</td>
+          <td>아군 농업 개척단 15일차에 무방호 진입 가능</td>
+        </tr>
+        <tr>
+          <td>투하 수단</td>
+          <td>다연장 로켓(MLRS) 탄두 및 암피온급 투하탄</td>
+          <td>1개 대대 일제 사격 시 100 km² 완전 무력화</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 6: 프로젝트 토르 궤도 타격체 -->
+  <div class="card">
+    <h2 class="card-title">6. 궤도 운동에너지 타격 자산 「프로젝트 토르 (Project Thor - KINETIC RODS)」</h2>
+    <p>
+      저궤도 군사위성군에 장착된 6.1m 길이의 고밀도 텅스텐-몰리브덴 관통봉(Kinetic Penetrator) 체계입니다. 폭약 없이 순수한 위치 에너지를 운동 에너지로 변환하여 마하 10의 속도로 지하 60m 깊이의 적 지휘 벙커를 암반째 분쇄합니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>제원</th>
+          <th>효과</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>관통봉 제원</td>
+          <td>직경 30 cm / 전장 6.1 m / 중량 9,200 kg</td>
+          <td>순수 텅스텐-탄소나노튜브 복합소재</td>
+        </tr>
+        <tr>
+          <td>착탄 속도</td>
+          <td>Mach 10.2 (약 3,450 m/s)</td>
+          <td>소형 전술핵에 필적하는 11.5 톤 TNT 등가 에너지</td>
+        </tr>
+        <tr>
+          <td>방사능 잔류</td>
+          <td>0.00% (완전 청정 운동에너지 타격)</td>
+          <td>토양 및 농경지 즉각 수복 가능</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning-box">
+      [전략무기 감사 통보]: 궤도 투하체 1발당 제조 비용은 보병 14,000명의 1년 치 식량 배급량과 동일하므로, 적 사령관 또는 1급 신경망 노드가 확인된 경우에만 대통령 직속 코드로 집행됨.
     </div>
   </div>
 
@@ -327,8 +302,8 @@
 </main>
 
 <footer>
-  <p>FEDERATION DEPARTMENT OF DEFENSE — SPECIAL WARFARE MATERIEL BUREAU</p>
-  <p>SPECIAL CLASSIFICATION PROTOCOL APPLIED. RECORD ID: #FED-SPEC-909.</p>
+  <p>FEDERATION DEPARTMENT OF DEFENSE — SPECIAL WARFARE MATERIEL</p>
+  <p>ALL ACTIVITIES MONITORED AND LOGGED UNDER WARTIME DIRECTIVE #14. UNAUTHORIZED ACCESS PUNISHABLE BY DETENTION.</p>
 </footer>
 
 <script src="app.js"></script>

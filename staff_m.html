@@ -63,6 +63,35 @@
       color: #80c0ff;
       font-weight: 700;
     }
+    .metric-panel {
+      background: #070b10;
+      border: 1px solid #1a2838;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .metric-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #6088a8;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #14202c;
+      font-size: 0.85rem;
+    }
+    .data-label {
+      color: #7a94aa;
+    }
+    .data-value {
+      font-family: 'JetBrains Mono', monospace;
+      color: #b8d4f0;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -122,22 +151,47 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  현장 시각 기록 2열                                          -->
+  <!--  M-Node 전술 관제 지표 패널 (순수 텍스트/데이터)             -->
   <!-- ============================================================ -->
   <div class="two-col-grid" style="margin-bottom: 20px;">
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">155mm 레일건 요격 포대 자동 격발기</div>
-      <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80" alt="레일건 포대 및 전자기 가속 레일" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [포대 ID: RAIL-BATTERY-094] 포구 초속 2,450 m/s 전자기 가속. 인간 승인 절차 없이 15ms 내 자동 격발 완료.
-      </p>
+    <div class="metric-panel">
+      <div class="metric-header">REAL-TIME TACTICAL CORE PERFORMANCE</div>
+      <div class="data-row">
+        <span class="data-label">표적 탐지부터 격발까지 전술 지연</span>
+        <span class="data-value">15.0 ms (인간 대비 20배 고속)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">통합 사격 통제 레일건 포대 수</span>
+        <span class="data-value">1,420개소 (가동률 98.2%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">마하 7.2 텅스텐 탄자 포구 초속</span>
+        <span class="data-value">2,450 m/s (Lorentz 가속)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">일일 자동 요격 판정 승인 건수</span>
+        <span class="data-value">14,892건 (인간 서명 생략)</span>
+      </div>
     </div>
-    <div class="card" style="margin-bottom:0;">
-      <div class="card-title">전선 무인 편대 레이더 및 전술 콘솔</div>
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="전술 레이더 및 전자 회로망 콘솔" class="distorted-img" style="height: 180px;">
-      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
-        [관제 ID: SWARM-ROUTER-01] 524,000기 무인 초계기의 3차원 공역 좌표 및 분산 사격망 실시간 동기화.
-      </p>
+
+    <div class="metric-panel">
+      <div class="metric-header">SWARM ASSET & GROUND FORCE SYNC</div>
+      <div class="data-row">
+        <span class="data-label">자율 무인 초계 편대 상시 비행</span>
+        <span class="data-value">524,000기 (사각지대 0.0%)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">전선 보병 외골격 통신 동기화</span>
+        <span class="data-value">1,091,000기 (원격 모터 대기)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">치명상 후 외골격 자동 기동 인원</span>
+        <span class="data-value">12,410명 (전선 대형 유지)</span>
+      </div>
+      <div class="data-row">
+        <span class="data-label">지하 탄약 파이프라인 수송 지연</span>
+        <span class="data-value">0.000 ms (직결 공급)</span>
+      </div>
     </div>
   </div>
 
@@ -290,6 +344,53 @@
     <p class="footnote warning-text">
       ※ 야전 통계: 원격 조종 모드로 작전을 완수한 인원은 즉시 '전투 부상(WIA)'으로 분류되어 후방 사일로 복합체(RVP)로 이송되며, 전사자(KIA)는 발생하지 않습니다.
     </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 4: 공역 및 지상 자율 편대 전투 격자망 운용 제원        -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">전투 편대망</span> 524,000기 무인 초계기 편대군 분산 전술 매트릭스
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      대륙 전역 3차원 공역 격자(Grid) 내 무인 초계기 자율 요격 및 레이더 공유 제원입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>편대군 구분</th>
+          <th>운용 기체 수</th>
+          <th>배치 고도 및 임무</th>
+          <th>자율 대응 무장</th>
+          <th>요격 성공률</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>제1~4 초계 편대군 (고고도)</th>
+          <td>168,000기</td>
+          <td>고도 18,000m 광역 전자전 및 탄도 감시</td>
+          <td>고주파 EMP 방사기 및 유도 로켓</td>
+          <td class="highlight-val">98.9%</td>
+        </tr>
+        <tr>
+          <th>제5~8 요격 편대군 (중고도)</th>
+          <td>210,000기</td>
+          <td>고도 6,000m 적 초음속 순항체 요격</td>
+          <td>30mm 전열화학 기관포 및 공대공 탄자</td>
+          <td class="highlight-val">98.1%</td>
+        </tr>
+        <tr>
+          <th>제9~12 근접 편대군 (저고도)</th>
+          <td>146,000기</td>
+          <td>고도 500m 지상 기갑/보병 근접 화력 지원</td>
+          <td>7.62mm 오토트래킹 팩 및 자폭 탄두</td>
+          <td class="highlight-val">97.6%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- ============================================================ -->
