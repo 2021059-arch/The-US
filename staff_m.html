@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StaffNet M-Node — 중주기 전술 지휘 및 실시간 화력 분배국</title>
+  <meta name="description" content="신경망 참모본부 중주기(M-Node) 전술 지휘국 — 15ms 실시간 표적 분배, 전열화학포 화력 관제 및 무인 편대 전술 제어망">
+  <!-- STAFFNET METADATA: subsystem=M_NODE_TACTICAL | latency=15ms | kernel=v12.08.4-R9 -->
+  <!-- [기밀] 본 페이지는 3등급(LEVEL 3-TACTICAL) 이상의 전술 포대 지휘관 및 자동화 사격 통제 터미널 전용입니다 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .node-header-banner {
+      background: #060a0f;
+      border: 1px solid #1c2e42;
+      padding: 24px;
+      margin-bottom: 25px;
+    }
+    .node-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #5c7894;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      gap: 8px;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #102030;
+      border: 1px solid #204060;
+      color: #60a0e0;
+      margin-right: 6px;
+    }
+    .status-badge.ok { background: #0a1f14; border-color: #1a4f30; color: #40c070; }
+    .status-badge.warn { background: #2a1a08; border-color: #5a3810; color: #e09030; }
+    .status-badge.alert { background: #2a0a0a; border-color: #5a1515; color: #f05050; }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .two-col-grid { grid-template-columns: 1fr; }
+    }
+    .tactical-box {
+      background: #04070a;
+      border-left: 3px solid #306090;
+      padding: 14px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #8aa8c8;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    .highlight-val {
+      font-family: 'JetBrains Mono', monospace;
+      color: #80c0ff;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="notice.html">행정공고</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="logs.html">작전 로그</a></li>
+    <li><a href="staff_l.html">참모 L노드</a></li>
+    <li><a href="staff_m.html" class="active">참모 M노드</a></li>
+    <li><a href="classified.html">내부 감사</a></li>
+    <li><a href="account.html" class="account-link">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div style="font-size:0.75rem; color:#506880; font-family:'JetBrains Mono',monospace; margin-bottom:1rem;">
+    <a href="index.html">포털 메인</a> &gt; <span>StaffNet 코어망</span> &gt; M-Node (중주기 전술 지휘 및 실시간 화력 분배국)
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시스템 상단 헤더                                            -->
+  <!-- ============================================================ -->
+  <div class="node-header-banner">
+    <div class="node-meta">
+      <span>SUBSYSTEM: STAFFNET-M-TACTICAL-CORE</span>
+      <span>DECISION LATENCY: 15 MILLISECONDS (0.015s)</span>
+      <span>FIREPOWER NODES: 1,420 RAILGUN BATTERIES</span>
+      <span>CLEARANCE: LEVEL 3-TACTICAL</span>
+    </div>
+    <h1 class="glitch" data-text="StaffNet M-Node (중주기 전술 지휘 및 화력 분배국)">StaffNet M-Node (중주기 전술 지휘 및 화력 분배국)</h1>
+    <p style="font-size:0.88rem; color:#90abc8; line-height:1.6; margin:0;">
+      StaffNet 중주기 연산국(M-Node)은 15밀리초(15ms)의 초고속 연산 주기로 전 전선의 적성 표적을 실시간 획득하고, 마하 7.2급 레일건 및 전열화학포 1,420개 기지의 화력을 즉각 할당하며, 524,000기의 무인 항공 편대와 109만 대의 기갑 자산을 완전 자동으로 지휘 통제합니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  실시간 전산 속보 티커                                      -->
+  <!-- ============================================================ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      [M-노드 화력] 제7전구 155mm 레일건 일제 사격 32발 탄착 완료 (적 보행병기 완파) ▌ [탄약 수급] 일일 탄약 생산 1,459만 발 vs 소비 1,420만 발 (잉여 +39만 발 확보) ▌ [항공 관제] 자율 초계 편대 524,000기 영공 방어 격자 100% 유지 ▌ [전선 텔레메트리] 외골격 자동 모터 전환 인원 1,280명 정상 전투 임무 수행 중 ▌
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  현장 시각 기록 2열                                          -->
+  <!-- ============================================================ -->
+  <div class="two-col-grid" style="margin-bottom: 20px;">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">155mm 레일건 요격 포대 자동 격발기</div>
+      <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80" alt="레일건 포대 및 전자기 가속 레일" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [포대 ID: RAIL-BATTERY-094] 포구 초속 2,450 m/s 전자기 가속. 인간 승인 절차 없이 15ms 내 자동 격발 완료.
+      </p>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">전선 무인 편대 레이더 및 전술 콘솔</div>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="전술 레이더 및 전자 회로망 콘솔" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [관제 ID: SWARM-ROUTER-01] 524,000기 무인 초계기의 3차원 공역 좌표 및 분산 사격망 실시간 동기화.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 1: 15ms 전술 최적해 산출 및 자동화 화력망              -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">초고속 지휘</span> 15ms 타격 루프 아키텍처 및 인간 개입 배제 제원
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      인간 장교의 인지 반응 지연(300ms)을 제거하고 순수 양자 신경망 가중치 연산으로 타격을 집행하는 구조입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>단계 구분</th>
+          <th>처리 서브시스템</th>
+          <th>소요 시간</th>
+          <th>세부 처리 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1. 표적 탐지·식별</th>
+          <td>위성·초계기 양자 레이더</td>
+          <td>3.2 ms</td>
+          <td>동부 제국 49식 인형병기 / 연방 그레이 구 미세 덩어리 식별</td>
+        </tr>
+        <tr>
+          <th>2. 탄도 궤적 계산</th>
+          <td>StaffNet M-Core 탄도 계산기</td>
+          <td>4.1 ms</td>
+          <td>풍속, 대기 밀도, 지형 굴곡 및 전자기 레일 가속 전력 산출</td>
+        </tr>
+        <tr>
+          <th>3. 포대 자동 할당</th>
+          <td>분산 전력 배분 그리드</td>
+          <td>3.8 ms</td>
+          <td>사거리 내 최적 레일건 포대 또는 155mm 전열화학포 자동 선택</td>
+        </tr>
+        <tr>
+          <th>4. 격발 신호 인가</th>
+          <td>광섬유 직결 트리거</td>
+          <td>3.9 ms</td>
+          <td>축전기 방전 및 텅스텐 관통체 포구 사출 (인간 서명 없음)</td>
+        </tr>
+        <tr>
+          <th>총 소요 시간</th>
+          <td class="highlight-val">StaffNet 전술 루프</td>
+          <td class="highlight-val">15.0 ms</td>
+          <td><strong>인간 참모 대비 20배 초고속 전장 대응 완료</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tactical-box">
+      [프로토콜 7: 비상 자동 격발 헌장]<br>
+      국방안보법 제12조에 의거하여 적성국의 발사체 또는 대형 보행병기가 영공 경계선 40km 내로 진입할 시, M-Node는 인간 지휘관의 확인 절차 없이 즉각 전 탄약고 일제 사격을 집행할 수 있는 독점적 권한을 보유함.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 2: 전선 일일 탄약 소모 및 지하 플랜트 수급 밸런스       -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">군수 밸런스</span> 일일 탄약 소비율 대(對) 심도 180m 플랜트 사출량
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      대륙 457개 무인 지하 공장과 전선 1,420개 포대 간의 실시간 물류 균형 지표입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>탄약 규격</th>
+          <th>일일 전선 소비량</th>
+          <th>일일 지하 사출량</th>
+          <th>일일 잉여/부족</th>
+          <th>비축 일수 (현재고)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>155mm 레일건 텅스텐 탄자</th>
+          <td>3,600,000발</td>
+          <td class="highlight-val">3,680,000발</td>
+          <td>+80,000발</td>
+          <td>284일분 비축 완비</td>
+        </tr>
+        <tr>
+          <th>30mm 전열화학포 APFSDS</th>
+          <td>10,600,000발</td>
+          <td class="highlight-val">10,910,000발</td>
+          <td>+310,000발</td>
+          <td>312일분 비축 완비</td>
+        </tr>
+        <tr>
+          <th>203mm 자주 전자기포 고폭탄</th>
+          <td>420,000발</td>
+          <td class="highlight-val">440,000발</td>
+          <td>+20,000발</td>
+          <td>190일분 비축 완비</td>
+        </tr>
+        <tr>
+          <th>no_kia 야전 응급 앰플</th>
+          <td>180,000병</td>
+          <td class="highlight-val">210,000병</td>
+          <td>+30,000병</td>
+          <td>410일분 비축 완비</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote">
+      ※ 탄약 물류: 모든 포탄은 지하 심도 180m 진공 튜브망을 통해 포대 직결 약실로 자동 공급되므로 지표면 수송 트럭에 대한 적의 공습 피해는 발생하지 않습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 3: 전선 유압 외골격 및 생체 지속성 텔레메트리          -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge alert">전선 텔레메트리</span> no_kia 투약 장병 신경 제어 및 외골격 자동 모터 기동 현황
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      심각한 신체 손상을 입은 장병이 외골격 모터와 no_kia 신경 차단을 통해 전투 지속 능력을 유지하는 야전 지표입니다.
+    </p>
+
+    <div class="two-col-grid">
+      <div>
+        <table class="spec-table">
+          <tr><th>전선 운용 외골격 수</th><td>1,091,000기 (전원 통신 동기화)</td></tr>
+          <tr><th>원격 모터 제어 인원</th><td>12,410명 (의식 상실 상태 기동)</td></tr>
+          <tr><th>통각 인지율</th><td>0.00% (no_kia 수용체 포화)</td></tr>
+          <tr><th>평균 돌격 지속 시간</th><td>치명상 발생 후 48.2시간 추가 기동</td></tr>
+          <tr><th>임무 완수 후 처리</th><td>무인 회수차량으로 사일로 저온 수조 직행</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="tactical-box" style="margin-top:0;">
+          [야전 전술 분석 보고]<br>
+          no_kia 투약 장병은 장기 파열이나 흉부 관통 시에도 공포나 고통으로 인한 작전 중단이 발생하지 않음.<br>
+          디젤 유압 외골격(EXO)의 보행 제어 소프트웨어는 병사의 뇌파 정지 시 자동으로 중앙 M-Node 원격 조종 모드로 전환되어 분대 돌격 대형을 100% 유지함.
+        </div>
+      </div>
+    </div>
+    <p class="footnote warning-text">
+      ※ 야전 통계: 원격 조종 모드로 작전을 완수한 인원은 즉시 '전투 부상(WIA)'으로 분류되어 후방 사일로 복합체(RVP)로 이송되며, 전사자(KIA)는 발생하지 않습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시스템 하단 링크                                            -->
+  <!-- ============================================================ -->
+  <div class="card" style="background:#080c10; text-align:center; padding:20px;">
+    <h3 style="color:#d0e0f0; margin-bottom:10px;">연계 연산국 포털</h3>
+    <div>
+      <a href="staff_l.html" class="tag">참모 L-Node (저주기 대전략국)</a>
+      <a href="logs.html" class="tag">작전 로그 원장</a>
+      <a href="weapons_infantry.html" class="tag">보병 장비 규격</a>
+      <a href="weapons_vehicle.html" class="tag">기갑·중화기 제원</a>
+      <a href="arsenal.html" class="tag">병기 총람</a>
+      <a href="index.html" class="tag">통합 포털 메인</a>
+    </div>
+  </div>
+
+  <!-- ADVERTISEMENT BLOCK -->
+  <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
+
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<script src="app.js"></script>
+</body>
+</html>

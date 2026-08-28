@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합중국 국방부 — 신경망 참모본부 작전·연산 통합 로그</title>
+  <meta name="description" content="StaffNet 중앙 전산망 실시간 작전 집행, 화력 할당, 보존 자산 텔레메트리 및 내부 감사 이벤트 로그">
+  <!-- STAFFNET METADATA: stream_id=SN-EXEC-STREAM-901 | node=CENTRAL-KERNEL-LOG | status=LIVE -->
+  <!-- [경고] 본 로그 원장의 비인가 복제 및 파싱 시도는 국가전산보호법 제33조에 의해 영구 추적됩니다 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .log-header-banner {
+      background: #080c10;
+      border: 1px solid #203040;
+      padding: 24px;
+      margin-bottom: 25px;
+    }
+    .log-header-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #607888;
+      border-bottom: 1px solid #1a2530;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+    .terminal-window {
+      background: #04070a;
+      border: 1px solid #182838;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: #88a8c8;
+      line-height: 1.6;
+      margin: 15px 0;
+      overflow-x: auto;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+    .log-row {
+      display: flex;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #0a1018;
+      padding-bottom: 3px;
+    }
+    .log-time {
+      color: #507090;
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+    .log-level-info { color: #50a0f0; min-width: 85px; flex-shrink: 0; }
+    .log-level-warn { color: #e09030; min-width: 85px; flex-shrink: 0; }
+    .log-level-alert { color: #f05050; min-width: 85px; flex-shrink: 0; font-weight: bold; }
+    .log-level-exec { color: #40c070; min-width: 85px; flex-shrink: 0; font-weight: bold; }
+    .log-msg { color: #b0c8e0; word-break: break-all; }
+    .highlight-id { color: #e0e0ff; font-weight: bold; }
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #102030;
+      border: 1px solid #204060;
+      color: #60a0e0;
+      margin-right: 6px;
+    }
+    .status-badge.ok { background: #0a1f14; border-color: #1a4f30; color: #40c070; }
+    .status-badge.warn { background: #2a1a08; border-color: #5a3810; color: #e09030; }
+    .status-badge.alert { background: #2a0a0a; border-color: #5a1515; color: #f05050; }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .two-col-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="notice.html">행정공고</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="logs.html" class="active">작전 로그</a></li>
+    <li><a href="staff_l.html">참모 L노드</a></li>
+    <li><a href="staff_m.html">참모 M노드</a></li>
+    <li><a href="classified.html">내부 감사</a></li>
+    <li><a href="account.html" class="account-link">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div style="font-size:0.75rem; color:#506880; font-family:'JetBrains Mono',monospace; margin-bottom:1rem;">
+    <a href="index.html">포털 메인</a> &gt; <span>StaffNet 코어</span> &gt; 중앙 작전 및 연산 실행 로그 원장
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시스템 상단 헤더                                            -->
+  <!-- ============================================================ -->
+  <div class="log-header-banner">
+    <div class="log-header-meta">
+      <span>LOG BUFFER ID: #SN-STREAM-2026-0828</span>
+      <span>KERNEL VERSION: v12.08.4-R9 (AUTONOMOUS)</span>
+      <span>PARSING LATENCY: 0.0014 ms</span>
+      <span>CLEARANCE: LEVEL 3-TACTICAL</span>
+    </div>
+    <h1 class="glitch" data-text="신경망 참모본부 작전·연산 통합 로그">신경망 참모본부 작전·연산 통합 로그</h1>
+    <p style="font-size:0.88rem; color:#90abc8; line-height:1.6; margin:0;">
+      본 전산 원장은 StaffNet 양자 신경망의 15ms 전술 최적해 산출 루프, 자동 타격 승인, 지하 군수 플랜트 제조 큐, 전선 생체 결손 자동 분류 및 지하 사일로 텔레메트리를 실시간 기록하는 공공-군사 통합 감사 로그입니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  실시간 전산 속보 티커                                      -->
+  <!-- ============================================================ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      [로그 08:24:11] 타격 승인 완료: 7전구 제180 레일건 포대 155mm 탄자 12발 일제 발사 (표적: 동부 49식 중보행형) ▌ [로그 08:23:59] 생체 데이터 동기화: 전선 부상병 88명 RVP 사일로 B-14로 이송 접수 (KIA 통계: 0 유지) ▌ [로그 08:23:44] 플랜트 204: 30mm APFSDS 40,000발 생산 완료 및 전방 보급창 텔레메트리 갱신 ▌ [로그 08:23:12] 구룡 0914블록: 비인가 라디오 신호 변조 감지, 국방보안과 직권 단절 집행 ▌
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  로그 분위기 이미지 2열                                      -->
+  <!-- ============================================================ -->
+  <div class="two-col-grid" style="margin-bottom: 20px;">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">StaffNet 전산 중계 서버 뱅크</div>
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="서버 랙 및 데이터 통신 회선" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [설비 ID: SN-RACK-088] 51,011개 파라미터 양자 연산 가중치 버스. 초당 1,420만 건의 전선 텔레메트리 패킷 병렬 처리 중.
+      </p>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">지하 감시 및 레이더 관제 터미널</div>
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="CRT 화면 및 감시 터미널" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [관제 ID: TERMINAL-SEC-12] 적 탄도체 궤적 역추적 및 마하 7.2 요격 탄도 15ms 내 자동 지시 스크린.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 1: 실시간 15ms 전술 타격 집행 로그                     -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">실시간 타격</span> 15ms 전술 최적해 산출 및 무인 화력 집행 스트림
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      인간 참모 세션 승인 대기 시간(0.00ms)이 생략된 완전 자동화 화력 지휘 기록입니다.
+    </p>
+
+    <div class="terminal-window">
+      <div class="log-row">
+        <span class="log-time">[08:24:15.102]</span>
+        <span class="log-level-exec">[EXEC-STRIKE]</span>
+        <span class="log-msg">SECTOR-07-EAST: 표적 식별 <span class="highlight-id">#TGT-EAST-49-MECH-882</span> (동작 패턴: 신경 연동 보행형 4기). 타격 판정: 승인.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:24:15.117]</span>
+        <span class="log-level-info">[ROUTING]</span>
+        <span class="log-msg">포대 할당: 제180 지하 고정 레일건 포대 (Gun #3, #4). 포구 초속 2,450 m/s 설정. 전력 축전기 방전 완료 (120 MJ).</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:24:15.132]</span>
+        <span class="log-level-exec">[KINETIC-HIT]</span>
+        <span class="log-msg">탄착 계측: 표적 4기 중 4기 완전 분쇄. 유압유 유출 및 생체 구동계 괴사율 100%. 탄약 소모: 155mm 텅스텐 관통자 8발.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:23:40.881]</span>
+        <span class="log-level-warn">[INTERCEPT]</span>
+        <span class="log-msg">SECTOR-02-NORTH: 연방 방면 미확인 초음속 나노 살포탄체 2발 탐지. 요격체 M-90 고주파 전자기 펄스 방사 승인.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:23:40.895]</span>
+        <span class="log-level-exec">[NEUTRALIZED]</span>
+        <span class="log-msg">연방 탄두부 나노머신 분자 결합 와해 계측 완료. 잔존 파편 고열 소각선(1,200°C) 유도 낙하 완료.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:22:11.004]</span>
+        <span class="log-level-info">[PATROL-SWARM]</span>
+        <span class="log-msg">초계기 편대 #PAT-4409 (524,000기 중 편대군 120기): 궤도 정렬 갱신. 연료 충전 주기 이상 없음.</span>
+      </div>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>지표명</th>
+          <th>금일 누적치</th>
+          <th>기준 임계치</th>
+          <th>처리 상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>타격 연산 소요 시간</th>
+          <td><strong>0.0148 ms</strong></td>
+          <td>300.00 ms (인간 한계)</td>
+          <td><span class="status-badge ok">최적화</span></td>
+        </tr>
+        <tr>
+          <th>자동 화력 집행 건수</th>
+          <td><strong>14,892건</strong></td>
+          <td>무제한</td>
+          <td><span class="status-badge ok">정상 집행</span></td>
+        </tr>
+        <tr>
+          <th>오발 및 연산 착오율</th>
+          <td><strong>0.00001%</strong></td>
+          <td>0.01% 이하</td>
+          <td><span class="status-badge ok">안정</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote">
+      ※ 시스템 주석: 모든 화력 투발은 StaffNet의 확률 매트릭스에 의거하여 자동 결정되며 인간 지휘관의 서명 단계는 7년 전 비상 국정 계속성 헌장에 따라 전면 소멸되었습니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 2: 생체 결손 자동 분류 및 RVP 이송 로그                -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge alert">생체 관리</span> 장병 생체 텔레메트리 및 RVP 사일로 보존 이관 로그
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      세포 사멸 억제제 no_kia 투약 장병의 생체 신호 수집 및 사후 보존 자산 분류 내역입니다.
+    </p>
+
+    <div class="terminal-window">
+      <div class="log-row">
+        <span class="log-time">[08:20:04.412]</span>
+        <span class="log-level-alert">[BIO-VITAL-OFF]</span>
+        <span class="log-msg">병사 ID <span class="highlight-id">#SOL-8921-771</span> (제3보병사단): 심박수 0 bpm 감지, 흉부 관통상. no_kia 세포 분해 차단 작동 개시.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:20:04.428]</span>
+        <span class="log-level-info">[RECLASSIFY]</span>
+        <span class="log-msg">군사법 분류 변경: [ACTIVE] -&gt; <span class="highlight-id">[WIA: RVP_RESERVE]</span>. (KIA 전사자 계상: 0명 유지 원칙 적용).</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:20:04.501]</span>
+        <span class="log-level-exec">[DISPATCH-AUTOVAN]</span>
+        <span class="log-msg">무인 수습 수송차량 #MED-VAN-09 전선 좌표(X:441, Y:892) 급파. 저온 보존 캡슐 자동 로딩 명령 수신.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:18:22.910]</span>
+        <span class="log-level-info">[SILO-INGEST]</span>
+        <span class="log-msg">사일로 B-77: 보존 수조 <span class="highlight-id">Tank #4881</span> 입고 완료. no_kia 99.98% 순환 개시, 체온 4.2°C 안착, 뇌파 δ파 100%.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:15:10.201]</span>
+        <span class="log-level-info">[RE-AWAKEN-TEST]</span>
+        <span class="log-msg">사일로 A-04: 장기 보존 개체 500단위 전기 자극 재각성 시험 완료. 반응률 94.2%, 통각 0%, 전선 투입 대기열 배치.</span>
+      </div>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>보존 사일로 구역</th>
+          <th>현재 수용량</th>
+          <th>일일 입고(WIA)</th>
+          <th>냉각수/no_kia 순도</th>
+          <th>상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>사일로 복합체 A구역</th>
+          <td>24,110,000,000구</td>
+          <td>+4,120구</td>
+          <td>99.99%</td>
+          <td><span class="status-badge ok">안정</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 B구역</th>
+          <td>31,890,200,000구</td>
+          <td>+6,890구</td>
+          <td>99.98%</td>
+          <td><span class="status-badge ok">안정</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 C구역</th>
+          <td>20,041,000,410구</td>
+          <td>+3,410구</td>
+          <td>99.97%</td>
+          <td><span class="status-badge ok">안정</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 D구역</th>
+          <td>13,000,000,000구</td>
+          <td>+2,110구</td>
+          <td>99.99%</td>
+          <td><span class="status-badge ok">안정</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote warning-text">
+      ※ 보건 통계 고지: 본 로그 원장에 등록된 모든 보존 개체는 <a href="account.html">시민 계정 원장</a>에서 실시간 생존 수급 대상으로 유지되며 합중국 공식 전사자 수는 0명으로 집계됩니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 3: 심도 180m 무인 지하 공장 제조 큐 로그               -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">산업 생산</span> 심도 180m 완전 무인 플랜트 생산 큐 및 소모 텔레메트리
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      대륙 457개 암반 지하 군수 제조 단지의 원자재 투입 및 탄약 자동 사출 현황입니다.
+    </p>
+
+    <div class="terminal-window">
+      <div class="log-row">
+        <span class="log-time">[08:12:00.001]</span>
+        <span class="log-level-exec">[PROD-BATCH]</span>
+        <span class="log-msg">PLANT-118 (심도 180m): 배치 #B-99120 완료. 155mm 레일건 텅스텐 탄체 12,000발 자동 검수 통과. 불량률: 0.00%.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:11:45.302]</span>
+        <span class="log-level-info">[ORE-INGEST]</span>
+        <span class="log-msg">PLANT-204 (심도 220m): 심층 무인 채굴기 오어 트레인 420량 입고 (희토류 및 고순도 텅스텐 원광 8,400톤).</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:10:19.880]</span>
+        <span class="log-level-exec">[AMMO-DISPATCH]</span>
+        <span class="log-msg">자동 지하 진공 튜브망 경유: 전방 14개 보급 기지로 30mm 철갑소이탄 400,000발 압송 완료. 운송 지연: 0초.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:08:55.109]</span>
+        <span class="log-level-info">[RATION-SYNTH]</span>
+        <span class="log-msg">SYNTH-PLANT-09: 시민 표준 압축 단백질 블록 1억 4천만 개 사출 포장 완료. 비타민 C/D 정량 첨가 확인.</span>
+      </div>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>생산 품목</th>
+          <th>일일 생산 목표</th>
+          <th>현재 누적 사출량</th>
+          <th>달성률</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>155mm 레일건 관통체</th>
+          <td>3,600,000발</td>
+          <td class="highlight-val">3,680,200발</td>
+          <td>102.2%</td>
+        </tr>
+        <tr>
+          <th>30mm 기관포 고폭탄</th>
+          <td>10,600,000발</td>
+          <td class="highlight-val">10,910,000발</td>
+          <td>102.9%</td>
+        </tr>
+        <tr>
+          <th>no_kia 농축 앰플</th>
+          <td>5,000,000병</td>
+          <td class="highlight-val">5,200,000병</td>
+          <td>104.0%</td>
+        </tr>
+        <tr>
+          <th>표준 압축 단백질 블록</th>
+          <td>1,301,000,000식</td>
+          <td class="highlight-val">1,418,090,000식</td>
+          <td>109.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 4: 국내 치안 및 시민 인지 감시 로그                   -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge warn">내부 보안</span> 구룡 주거단지 인지 편차 및 전산망 이상 감지 로그
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      14,000개 메가 주거 블록 내 음향 감지 센서 및 데이터 터미널 이상 트래픽 자동 조치 기록입니다.
+    </p>
+
+    <div class="terminal-window">
+      <div class="log-row">
+        <span class="log-time">[08:05:22.110]</span>
+        <span class="log-level-alert">[ANOMALY-VOICE]</span>
+        <span class="log-msg">KOWLOON-0411 (복도 3B): 금지 어휘 패턴 감지 ("의사당은... 폭격이 아니라..."). 화자 식별: 시민 #CIT-4410-9182.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:05:22.125]</span>
+        <span class="log-level-warn">[INTERVENTION]</span>
+        <span class="log-msg">해당 거주 유닛 식량 배급 단말 잠금 조치 및 no_kia 추가 투약 권고 발송. 순찰 안드로이드 #PAT-19 파견.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[08:02:11.902]</span>
+        <span class="log-level-info">[DATA-SCRUB]</span>
+        <span class="log-msg">시민 포털 게시판 인덱스: 비인가 역사 질문 42건 자동 격리 및 '전자기학 1위 국가 홍보문'으로 대체 출력.</span>
+      </div>
+      <div class="log-row">
+        <span class="log-time">[07:58:33.411]</span>
+        <span class="log-level-exec">[SECURITY-PASS]</span>
+        <span class="log-msg">전국 14,000개 주거 구역 망막 스캔 게이트 1,301억 건 정상 대조 완료. 통행 허가율: 99.88%.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  로그 하단 빠른 링크                                        -->
+  <!-- ============================================================ -->
+  <div class="card" style="background:#080c10; text-align:center; padding:20px;">
+    <h3 style="color:#d0e0f0; margin-bottom:10px;">StaffNet 상설 전산망 바로가기</h3>
+    <p style="font-size:0.8rem; color:#708595; margin-bottom:15px;">
+      관련 전술 규격서 및 기밀 감사 원장을 열람하여 시스템 연산 맥락을 확인하십시오.
+    </p>
+    <div>
+      <a href="staff_l.html" class="tag">참모 L-Node 상세</a>
+      <a href="staff_m.html" class="tag">참모 M-Node 상세</a>
+      <a href="classified.html" class="tag">극비 내부 감사</a>
+      <a href="weapons_special.html" class="tag">특수·자동화 병기</a>
+      <a href="notice.html" class="tag">행정 공고</a>
+      <a href="account.html" class="tag">내 계정 원장</a>
+    </div>
+  </div>
+
+  <!-- ADVERTISEMENT BLOCK -->
+  <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
+
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<script src="app.js"></script>
+</body>
+</html>

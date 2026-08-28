@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StaffNet L-Node — 저주기 대전략 및 지하 사일로 통합 연산국</title>
+  <meta name="description" content="신경망 참모본부 저주기(L-Node) 대전략 연산 시스템 — 장기 전쟁 예측 모델, 890억 사일로 수조 관제 및 자원 배분 총람">
+  <!-- STAFFNET METADATA: subsystem=L_NODE_STRAT | cycle_step=3600s | kernel=v12.08.4-R9 -->
+  <!-- [기밀] 본 페이지는 4등급(LEVEL 4-STRAT) 이상의 전산 터미널에만 인가되는 전략 거시 통제 원장입니다 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .node-header-banner {
+      background: #060a0f;
+      border: 1px solid #1c2e42;
+      padding: 24px;
+      margin-bottom: 25px;
+    }
+    .node-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #5c7894;
+      border-bottom: 1px solid #142232;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      gap: 8px;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #102030;
+      border: 1px solid #204060;
+      color: #60a0e0;
+      margin-right: 6px;
+    }
+    .status-badge.ok { background: #0a1f14; border-color: #1a4f30; color: #40c070; }
+    .status-badge.warn { background: #2a1a08; border-color: #5a3810; color: #e09030; }
+    .status-badge.alert { background: #2a0a0a; border-color: #5a1515; color: #f05050; }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .two-col-grid { grid-template-columns: 1fr; }
+    }
+    .macro-memo {
+      background: #05080c;
+      border-left: 3px solid #306090;
+      padding: 14px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #8aa8c8;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+    .highlight-val {
+      font-family: 'JetBrains Mono', monospace;
+      color: #80c0ff;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+
+<nav>
+  <div class="logo">FEDERATION GOV — DEPT OF DEFENSE</div>
+  <ul>
+    <li><a href="index.html">메인</a></li>
+    <li><a href="news.html">의회·국정</a></li>
+    <li><a href="notice.html">행정공고</a></li>
+    <li><a href="arsenal.html">병기 총람</a></li>
+    <li><a href="weapons_infantry.html">보병 장비</a></li>
+    <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
+    <li><a href="weapons_naval.html">해군·공군</a></li>
+    <li><a href="weapons_special.html">특수·자동화</a></li>
+    <li><a href="propaganda.html">적성국 동향</a></li>
+    <li><a href="life.html">시민 안내</a></li>
+    <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="logs.html">작전 로그</a></li>
+    <li><a href="staff_l.html" class="active">참모 L노드</a></li>
+    <li><a href="staff_m.html">참모 M노드</a></li>
+    <li><a href="classified.html">내부 감사</a></li>
+    <li><a href="account.html" class="account-link">내 계정</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div style="font-size:0.75rem; color:#506880; font-family:'JetBrains Mono',monospace; margin-bottom:1rem;">
+    <a href="index.html">포털 메인</a> &gt; <span>StaffNet 코어망</span> &gt; L-Node (저주기 대전략 및 장기 사일로 연산국)
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시스템 상단 헤더                                            -->
+  <!-- ============================================================ -->
+  <div class="node-header-banner">
+    <div class="node-meta">
+      <span>SUBSYSTEM: STAFFNET-L-CORE-MACRO</span>
+      <span>COMPUTATION CYCLE: 3,600 SECONDS (1 HOUR STEP)</span>
+      <span>STRATEGIC PROJECTION: 2026 ~ 2050</span>
+      <span>CLEARANCE: LEVEL 4-STRAT</span>
+    </div>
+    <h1 class="glitch" data-text="StaffNet L-Node (저주기 대전략 및 자원 사일로 연산국)">StaffNet L-Node (저주기 대전략 및 자원 사일로 연산국)</h1>
+    <p style="font-size:0.88rem; color:#90abc8; line-height:1.6; margin:0;">
+      StaffNet 저주기 연산국(L-Node)은 1시간 단위의 거시 시뮬레이션을 통해 3국 간의 장기 소모전 궤적을 연산하고, 890억 개체의 대륙 지하 사일로(RVP) 저온 수조 유지 텔레메트리, 심도 180m 무인 플랜트 457개소의 원자재 고갈 시점 예측 및 방사능 낙진 자연 감쇠율을 종합 통제합니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  실시간 전산 속보 티커                                      -->
+  <!-- ============================================================ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      [L-노드 연산] 2040년 승전 확률 매트릭스 99.41% 산출 완료 ▌ [사일로 관제] 복합체 A~D구역 총 89,041,200,410구 저온 바이탈(4.2°C) 오차 0.00% ▌ [자원 모델] 지하 텅스텐 광맥 잔존 채굴 가능 기간 142년 8개월 ▌ [낙진 계측] 1주차 핵투발 지역 방사능 감쇠율 일일 0.4% 정상 유지 중 ▌
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  현장 시각 기록 2열                                          -->
+  <!-- ============================================================ -->
+  <div class="two-col-grid" style="margin-bottom: 20px;">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">사일로 복합체 저온 수조 열 (RVP Matrix)</div>
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80" alt="지하 사일로 저온 액체 수조 복합체" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [시설 ID: SILO-COMPLEX-B] no_kia 농축액 99.98% 순환 수조 열. 890억 개체의 뇌파 동기화 및 대사율 0.03% 유지 중.
+      </p>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-title">심층 암반 열교환 및 냉각 타워 시설</div>
+      <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=80" alt="거대 지하 파이프라인 및 열교환 시설" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.78rem; color: #708595; margin-bottom: 0;">
+        [설비 ID: GEO-COOL-04] 심도 300m 지열 발전 및 수조 냉각 터빈. 지표면 폭격에 완전 면역된 자율 밀폐 순환계.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 1: 거시 전쟁 궤적 및 승전 확률 예측 모델               -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">대전략 모델</span> 2026 ~ 2050 장기 전쟁 소모전 평형 방정식 및 승전 확률
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      인간 생명 손실률, 금속 광물 소진율, 적성국의 바이오 기계 열화 속도를 수치화한 L-Node 거시 해법입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>국가 구분</th>
+          <th>산업 자급 수명</th>
+          <th>인적 자원 고갈 예측</th>
+          <th>한계 도달 예상 시점</th>
+          <th>전략 판정</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>합중국 (Federation)</th>
+          <td class="highlight-val">142년 이상 (심도 180m)</td>
+          <td class="highlight-val">무한 (no_kia 보존 및 RVP 재활용)</td>
+          <td class="highlight-val">고갈점 없음</td>
+          <td><span class="status-badge ok">영구 유지</span></td>
+        </tr>
+        <tr>
+          <th>동부 제국 (East)</th>
+          <td>18.4년 (수동 광산 의존)</td>
+          <td>9.2년 (인형병기 생체 수급 한계)</td>
+          <td>2035년 상반기</td>
+          <td><span class="status-badge warn">생체 붕괴</span></td>
+        </tr>
+        <tr>
+          <th>서부 연방 (Union)</th>
+          <td>12.1년 (나노 부식 제어 불가)</td>
+          <td>4.8년 (그레이 구 자기소모)</td>
+          <td>2031년 하반기</td>
+          <td><span class="status-badge alert">원자 와해</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="macro-memo">
+      [L-Node 전략 분석관 메모]<br>
+      합중국의 승리는 전선에서의 전술적 전진이 아닌 '소모전 평형 공식'에 의해 수학적으로 확정되어 있음.<br>
+      제국은 인형병기 생체 접합부의 면역 거부로 인해 9년 내 자멸할 것이며, 연방은 자기증식 나노머신의 엔트로피 폭주로 인해 5년 내 자체 소멸할 것임.<br>
+      합중국은 890억 사일로 수조와 457개 무인 플랜트를 유지하는 것만으로 최종 승리(확률 99.41%)를 달성함.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 2: 890억 RVP 사일로 복합체 관제 텔레메트리             -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge ok">사일로 텔레메트리</span> 대륙 지하 사일로(RVP) A~D구역 상태 총람
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      대륙 암반 심도 150~300m에 안치된 89,041,200,410개체의 바이탈 및 약제 순환 지표입니다.
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>복합체 명칭</th>
+          <th>수용 개체수</th>
+          <th>수조 체온</th>
+          <th>평균 심박수</th>
+          <th>산소 소비율</th>
+          <th>약제 순도</th>
+          <th>가동 상태</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>사일로 복합체 A (동부)</th>
+          <td>24,110,000,000구</td>
+          <td>4.20 °C</td>
+          <td>11 bpm</td>
+          <td>0.03%</td>
+          <td>99.99%</td>
+          <td><span class="status-badge ok">최적</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 B (중부)</th>
+          <td>31,890,200,000구</td>
+          <td>4.18 °C</td>
+          <td>9 bpm</td>
+          <td>0.02%</td>
+          <td>99.98%</td>
+          <td><span class="status-badge ok">최적</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 C (서부)</th>
+          <td>20,041,000,410구</td>
+          <td>4.22 °C</td>
+          <td>14 bpm</td>
+          <td>0.04%</td>
+          <td>99.97%</td>
+          <td><span class="status-badge ok">최적</span></td>
+        </tr>
+        <tr>
+          <th>사일로 복합체 D (북부)</th>
+          <td>13,000,000,000구</td>
+          <td>4.15 °C</td>
+          <td>8 bpm</td>
+          <td>0.02%</td>
+          <td>99.99%</td>
+          <td><span class="status-badge ok">최적</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote warning-text">
+      ※ 보존 인력 관리 규정: 사일로 내 개체는 법률상 '거주 중'인 시민으로 계속 산정되며, 개별 개체의 수조 식별 번호는 <a href="account.html">내 계정 포털</a>에서 실시간 연동 조회됩니다.
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  섹션 3: 핵투발 후 방사능 낙진 자연 감쇠 모델               -->
+  <!-- ============================================================ -->
+  <div class="card">
+    <div class="card-title">
+      <span class="status-badge">오염 감쇠</span> 개전 1주차 ICBM 1,840기 탄착지 낙진 자연 감쇠 추이
+    </div>
+    <p style="font-size:0.85rem; color:#88a0b0;">
+      개전 초기 발사된 1,840기 전략핵의 지표면 잔류 방사능 감쇠율 계측치 (일일 0.4% 자연 감쇠)
+    </p>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>타격 권역</th>
+          <th>초기 방사선량 (개전 1일차)</th>
+          <th>현재 잔류 방사선량</th>
+          <th>감쇠율 (일일)</th>
+          <th>지표 산업 전환 예정일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>제국 동부 배양 거점 타격대</th>
+          <td>14,800 mSv/h</td>
+          <td>120 mSv/h</td>
+          <td class="highlight-val">0.400% / day</td>
+          <td>2031년 04월 (지하 플랜트 확장 예정)</td>
+        </tr>
+        <tr>
+          <th>연방 중부 집결 거점 타격대</th>
+          <td>18,200 mSv/h</td>
+          <td>185 mSv/h</td>
+          <td class="highlight-val">0.400% / day</td>
+          <td>2031년 11월 (고열 방어선 전진 기지)</td>
+        </tr>
+        <tr>
+          <th>접경 궤도 유도 기지 방어권</th>
+          <td>8,400 mSv/h</td>
+          <td>42 mSv/h</td>
+          <td class="highlight-val">0.400% / day</td>
+          <td>2028년 09월 (레일건 3차 기지 증설)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footnote">
+      ※ L-Node 정책 결정: 방사능 오염은 토지의 산업 시설 조기 착공을 방해하므로 핵탄두 재생산량은 영구히 0기로 고정하며, 모든 가용 자원은 레일건 금속 탄자 및 전열화학 장약 생산으로 집중 배분됩니다. (참조: <a href="classified.html">내부 감사 문서 4</a>)
+    </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  시스템 하단 링크                                            -->
+  <!-- ============================================================ -->
+  <div class="card" style="background:#080c10; text-align:center; padding:20px;">
+    <h3 style="color:#d0e0f0; margin-bottom:10px;">연계 연산국 포털</h3>
+    <div>
+      <a href="staff_m.html" class="tag">참모 M-Node (중주기 전술 화력국)</a>
+      <a href="logs.html" class="tag">작전 로그 원장</a>
+      <a href="classified.html" class="tag">극비 내부 감사</a>
+      <a href="weapons_special.html" class="tag">특수·자동화 병기</a>
+      <a href="index.html" class="tag">통합 포털 메인</a>
+    </div>
+  </div>
+
+  <!-- ADVERTISEMENT BLOCK -->
+  <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
+
+</main>
+
+<footer>합중국 국방부 통합 포털 · 본 사이트의 모든 내용은 신경망 참모본부(StaffNet)에 의해 자동 생성·승인·발행됩니다 · 무단 접근 즉결심판</footer>
+<script src="app.js"></script>
+</body>
+</html>

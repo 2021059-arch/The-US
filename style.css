@@ -40,3 +40,6 @@ main{max-width:1200px;margin:0 auto;padding:30px 20px}
 .ad-close{background:none;border:none;color:#607080;cursor:pointer}
 
 footer{text-align:center;padding:30px;font-size:0.75rem;color:#405060;border-top:1px solid #203040;margin-top:50px}
+
+.ad-banner { background: #1a1a1a; border: 1px solid #444; color: #aaa; padding: 10px; margin-top: 15px; text-align: center; font-style: italic; font-size: 0.9em; } .ad-banner-text { font-weight: bold; }
+

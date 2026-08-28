@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>합중국 국방부 대시민 통합 전산망</title>
-  <meta name="description" content="합중국 국방부 대시민 통합 전산 포털 — 행정 공보, 전황 브리핑, 병기 총람 및 시민 행정 서비스">
-  <!-- STAFFNET SYSTEM ID: FED-NODE-001 | CLEARANCE: PUBLIC-ADMIN | KERNEL: v12.08.4 -->
-  <!-- WARNING: 전산망 접속 기록 및 생체 식별 코드는 국방안보법 제14조에 의거하여 실시간 저장됩니다 -->
+  <title>합중국 국방부 대시민 통합 전산망 — STAFFNET CENTRAL PORTAL</title>
+  <meta name="description" content="합중국 국방부 대시민 통합 전산 포털 — 행정 공보, 전황 브리핑, 병기 총람 및 참모본부 직통 행정 서비스">
+  <!-- STAFFNET SYSTEM ID: FED-NODE-001 | CLEARANCE: GENERAL PUBLIC-ADMIN | CORE: v12.08.4-R9 -->
+  <!-- [경고] 전산망 접속 기록 및 생체 식별 코드는 국가안보법 제14조에 의거하여 실시간 중앙 영구 원장에 저장됩니다 -->
   <link rel="stylesheet" href="style.css">
   <style>
     .hero-banner {
@@ -14,6 +14,7 @@
       background: #080c10;
       padding: 24px;
       margin-bottom: 25px;
+      position: relative;
     }
     .hero-meta {
       display: flex;
@@ -25,6 +26,7 @@
       border-bottom: 1px solid #1a2530;
       padding-bottom: 8px;
       margin-bottom: 15px;
+      gap: 8px;
     }
     .hero-title {
       font-size: 1.8rem;
@@ -93,23 +95,6 @@
       color: #80c0ff;
       font-weight: 700;
     }
-    .news-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 8px 0;
-      border-bottom: 1px solid #141e28;
-      font-size: 0.85rem;
-    }
-    .news-row:last-child {
-      border-bottom: none;
-    }
-    .news-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: #506878;
-      min-width: 80px;
-    }
   </style>
 </head>
 <body>
@@ -120,6 +105,7 @@
   <ul>
     <li><a href="index.html" class="active">메인</a></li>
     <li><a href="news.html">의회·국정</a></li>
+    <li><a href="notice.html">행정공고</a></li>
     <li><a href="arsenal.html">병기 총람</a></li>
     <li><a href="weapons_infantry.html">보병 장비</a></li>
     <li><a href="weapons_vehicle.html">기갑·중화기</a></li>
@@ -128,6 +114,10 @@
     <li><a href="propaganda.html">적성국 동향</a></li>
     <li><a href="life.html">시민 안내</a></li>
     <li><a href="recruit.html">입대·징집</a></li>
+    <li><a href="logs.html">작전 로그</a></li>
+    <li><a href="staff_l.html">참모 L노드</a></li>
+    <li><a href="staff_m.html">참모 M노드</a></li>
+    <li><a href="classified.html">내부 감사</a></li>
     <li><a href="account.html" class="account-link">내 계정</a></li>
   </ul>
 </nav>
@@ -147,7 +137,7 @@
     <h1 class="hero-title glitch" data-text="합중국 국방부 대시민 통합 전산망">합중국 국방부 대시민 통합 전산망</h1>
     <p class="hero-desc">FEDERATION DEPARTMENT OF DEFENSE — INTEGRATED CITIZEN ADMINISTRATIVE PORTAL (BUILD 12.08.4)</p>
     <p style="font-size: 0.8rem; color: #506575; margin-top: 5px; margin-bottom: 0;">
-      본 포털은 신경망 참모본부(StaffNet)의 통합 데이터 버스에 직결되어 있으며, 국가 안보 지침 제74조에 의거하여 전 시민에게 공식 행정 정보 및 전황 지표를 실시간 공표합니다.
+      본 포털은 신경망 참모본부(StaffNet)의 통합 데이터 버스에 직결되어 있으며, 국가 안보 지침 제74조에 의거하여 전 시민에게 공식 행정 정보, 전황 지표 및 자원 수급 현황을 실시간 공표합니다.
     </p>
   </div>
 
@@ -161,7 +151,7 @@
   </div>
 
   <!-- ============================================================ -->
-  <!--  국정 최고 브리핑: 대통령 정례 담화                          -->
+  <!--  국정 최고 브리핑: 대통령 정례 담화 (검열/합성 초상 수록)      -->
   <!-- ============================================================ -->
   <div class="card">
     <div class="card-title">
@@ -169,15 +159,15 @@
     </div>
     <div class="two-col-grid">
       <div>
-        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="합중국 국방부 중앙 통제 센터" class="distorted-img" style="height: 220px;">
+        <img src="img/president_censored.jpg" class="distorted-img" alt="Censored President" style="height: 240px; object-position: center top;">
         <p style="font-size: 0.75rem; color: #506575; margin-bottom: 0;">
-          [기록물 아카이브 #DOC-8812] 합중국 제1행정 코어 방송 터미널. 전산망 중앙 데이터 버스를 통해 동시 송출.
+          [기록물 아카이브 #DOC-8812] 합중국 제1행정 코어 정례 담화 영상 렌더링 프레임. 전산망 중앙 데이터 버스를 통해 1,301억 시민 단말에 동시 송출.
         </p>
       </div>
       <div>
         <div class="quote-box">
           "친애하는 1,301억 합중국 시민 여러분.<br><br>
-          합중국의 전자기학 기술력은 단독 1위를 확고히 유지하고 있으며, 마하 7.2급 전열화학포 및 레일건 방어망은 가동률 98.2%로 조국의 영공을 완벽히 방호하고 있습니다.<br><br>
+          합중국의 전자기학 기술력은 전 세계 단독 1위를 확고히 유지하고 있으며, 마하 7.2급 전열화학포 및 레일건 방어망은 가동률 98.2%로 조국의 영공을 완벽히 방호하고 있습니다.<br><br>
           영공에는 524,000기의 초계기가 상시 비행을 수행 중이며, 심도 180m 이하 457개 완전 무인 지하 제조단지는 원자재 투입부터 탄약 양산까지 일체의 지연 없이 가동되고 있습니다.<br><br>
           세포 사멸 억제제 no_kia의 전면 도입을 통해 장병의 생물학적 사망을 원천 차단하였으며, 식량 자급률 109%를 기반으로 시민의 항구적 존속을 보장합니다."
         </div>
@@ -250,10 +240,10 @@
         </tr>
         <tr>
           <th>RVP 전략 보존 수조</th>
-          <td class="highlight-val">4,812,040구</td>
+          <td class="highlight-val">89,041,200,410구</td>
           <td>미운용 (폐기)</td>
           <td>미운용 (원자 분해)</td>
-          <td>대사 정지 및 냉각 보존 상태 인원</td>
+          <td>대사 정지 및 no_kia 저온 보존 상태 인원</td>
         </tr>
         <tr>
           <th>공식 전사자(KIA) 통계</th>
@@ -266,8 +256,28 @@
     </table>
 
     <p class="footnote warning-text">
-      ※ 지표 산정 기준: 전사자(KIA) 통계 0명은 국방보건법 제14조에 따른 법적 분류 기준입니다. 사지 결손, 뇌간 정지, 혼수 상태 전환 장병은 '전투 부상(WIA)' 또는 'RVP 보존 전환'으로 분류되므로 통계적 사망에 계상되지 않습니다. 실측 세부 전술 데이터는 비공개 아카이브에 수록되어 있습니다.
+      ※ 지표 산정 기준: 전사자(KIA) 통계 0명은 국방보건법 제14조에 따른 법적 분류 기준입니다. 사지 결손, 뇌간 정지, 혼수 상태 전환 장병은 '전투 부상(WIA)' 또는 'RVP 보존 전환'으로 분류되므로 통계적 사망에 계상되지 않습니다. 실측 세부 전술 데이터는 <a href="classified.html">내부 감사철</a> 및 <a href="logs.html">작전 로그</a>에 수록되어 있습니다.
     </p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  현장 시각 기록 (Unsplash Gritty Atmosphere)                 -->
+  <!-- ============================================================ -->
+  <div class="two-col-grid" style="margin-bottom: 20px;">
+    <div class="card" style="margin-bottom: 0;">
+      <div class="card-title">통합 관제 노드 및 전자전 센터</div>
+      <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80" alt="합중국 국방부 중앙 통제 센터" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.8rem; color: #88a0b0; margin-bottom: 0;">
+        StaffNet 주 연산 노드에 연결된 지하 60m 벙커 통제반. 전 전선 15ms 전술 최적해 분배 및 요격 레이더망 실시간 동기화 수행 중.
+      </p>
+    </div>
+    <div class="card" style="margin-bottom: 0;">
+      <div class="card-title">심도 180m 무인 지하 군수 플랜트</div>
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80" alt="심도 180m 무인 자동화 탄약 플랜트" class="distorted-img" style="height: 180px;">
+      <p style="font-size: 0.8rem; color: #88a0b0; margin-bottom: 0;">
+        대륙 전역 457개 암반 지하 단지 중 제118 시설. 레일건용 고밀도 중석 탄자 및 전열화학 장약 24시간 무중단 자동 절삭 라인.
+      </p>
+    </div>
   </div>
 
   <!-- ============================================================ -->
@@ -302,7 +312,20 @@
       </div>
     </a>
 
-    <!-- 카드 3: 보병 장비 -->
+    <!-- 카드 3: 행정공고 -->
+    <a href="notice.html" style="text-decoration: none;">
+      <div class="card" style="height: 100%;">
+        <div class="card-title">행정공고 (Directives)</div>
+        <p style="font-size: 0.85rem; color: #88a0b0;">
+          계엄 훈령 개정, 생체 식별 갱신 일정, 야간 소등 및 통행금지, 단백질 블록 쿼터 배급표 및 금지 인지 표현 목록.
+        </p>
+        <span class="tag">전시 계엄</span>
+        <span class="tag">배급 지침</span>
+        <span class="tag">통제 훈령</span>
+      </div>
+    </a>
+
+    <!-- 카드 4: 보병 장비 -->
     <a href="weapons_infantry.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
         <div class="card-title">보병 장비 (Infantry)</div>
@@ -315,12 +338,12 @@
       </div>
     </a>
 
-    <!-- 카드 4: 기갑·중화기 -->
+    <!-- 카드 5: 기갑·중화기 -->
     <a href="weapons_vehicle.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
         <div class="card-title">기갑·중화기 (Armor)</div>
         <p style="font-size: 0.85rem; color: #88a0b0;">
-          155mm 전열화학포 주력전차, 8×8 중장갑 궤도차량, 203mm 자주 전자기포 및 대구경 방어 요격 시스템의 전투 제원.
+          155mm 전열화학포 주력전차, 8x8 중장갑 궤도차량, 203mm 자주 전자기포 및 대구경 방어 요격 시스템의 전투 제원.
         </p>
         <span class="tag">전차중량 68t</span>
         <span class="tag">포구초속 2,450m/s</span>
@@ -328,7 +351,7 @@
       </div>
     </a>
 
-    <!-- 카드 5: 해군·공군 -->
+    <!-- 카드 6: 해군·공군 -->
     <a href="weapons_naval.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
         <div class="card-title">해군·공군 (Navy & Air)</div>
@@ -341,7 +364,7 @@
       </div>
     </a>
 
-    <!-- 카드 6: 특수·자동화 -->
+    <!-- 카드 7: 특수·자동화 -->
     <a href="weapons_special.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
         <div class="card-title">특수·자동화 (Special)</div>
@@ -354,42 +377,29 @@
       </div>
     </a>
 
-    <!-- 카드 7: 적성국 동향 -->
-    <a href="propaganda.html" style="text-decoration: none;">
+    <!-- 카드 8: 작전 로그 -->
+    <a href="logs.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
-        <div class="card-title">적성국 동향 (Threat Intel)</div>
+        <div class="card-title">작전 로그 (Operations Log)</div>
         <p style="font-size: 0.85rem; color: #88a0b0;">
-          제국 49식 인형병기 생체 신경계 접합 구조 분석 및 연방 자기증식 나노머신(그레이 구) 오염 확산 저지 작전 보고서.
+          StaffNet 실시간 타격 집행, 자원 배분 큐, 전선 결손 판정, 보존 수조 바이탈 원격 센서 및 비인가 접속 감지 기록.
         </p>
-        <span class="tag">Class-A 위협</span>
-        <span class="tag">신경 접합 분석</span>
-        <span class="tag">소각 방어선</span>
+        <span class="tag">실시간 덤프</span>
+        <span class="tag">사일로 텔레메트리</span>
+        <span class="tag">보안 로그</span>
       </div>
     </a>
 
-    <!-- 카드 8: 시민 안내 -->
-    <a href="life.html" style="text-decoration: none;">
+    <!-- 카드 9: 참모 L/M 노드 -->
+    <a href="staff_l.html" style="text-decoration: none;">
       <div class="card" style="height: 100%;">
-        <div class="card-title">시민 생활 안내 (Civil Life)</div>
+        <div class="card-title">참모본부 L·M 노드 (StaffNet Core)</div>
         <p style="font-size: 0.85rem; color: #88a0b0;">
-          구룡채성 14,000개 블록 표준 주거 규정, 압축 단백질 블록 7일 정기 배급 기준, 정기 방공 훈련 및 통행 지침.
+          저주기 대전략 보존 연산국(L-Node) 및 중주기 전술 화력 지휘국(M-Node)의 실시간 상태와 알고리즘 제원.
         </p>
-        <span class="tag">구룡채성 규정</span>
-        <span class="tag">배급 달성 109%</span>
-        <span class="tag">방공 수칙</span>
-      </div>
-    </a>
-
-    <!-- 카드 9: 입대·징집 -->
-    <a href="recruit.html" style="text-decoration: none;">
-      <div class="card" style="height: 100%;">
-        <div class="card-title">입대·징집 (Recruitment)</div>
-        <p style="font-size: 0.85rem; color: #88a0b0;">
-          수정 병역법 제12조에 따른 16세 이상 전 시민 동원 기준, 신체 시술 적합성 검사, 복무 분류 및 사후 보존 규정.
-        </p>
-        <span class="tag">징집 연령 16세</span>
-        <span class="tag">신체 검사</span>
-        <span class="tag">자동 영장</span>
+        <span class="tag">L-Node 890억 수조</span>
+        <span class="tag">M-Node 15ms</span>
+        <span class="tag">화력망</span>
       </div>
     </a>
 
@@ -438,72 +448,6 @@
     <p class="footnote warning-text">
       ※ 약리 임상 고지: no_kia 1차 투약 시 수반되는 급성 역행성 기억 분절(단기 일화 기억 상실) 및 미각 소실(72시간 이내 100%), 동통 인지 85% 감쇄는 해마-편도체 회로 안정화에 따른 표준 반응입니다. 1차 투약 완료 후 추가적 기억 소실은 보고되지 않습니다. 약제 투약 거부 행위는 국방안보법 제19조에 의거하여 즉각적인 물리적 보존 절차(RVP 이관)가 집행됩니다.
     </p>
-  </div>
-
-  <!-- ============================================================ -->
-  <!--  시민 행정 종합 공지사항                                    -->
-  <!-- ============================================================ -->
-  <h2>전시 행정 종합 공지</h2>
-  <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));">
-
-    <!-- 공지 1: 구룡채성 관리 규정 -->
-    <div class="card">
-      <div class="card-title">구룡채성 표준 주거 단지 관리 규정</div>
-      <p style="font-size: 0.85rem; color: #90a0b0;">
-        전국 14,000개 고밀도 복합 집단계획 거주 구역 주민 지침:
-      </p>
-      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
-        <li>1~4층 암전 구역 내 정부 배급 20W 형광 조명 상시 점등 의무화</li>
-        <li>폭 60cm 미만 공용 복도 내 사물 적치 및 통행 방해 금지</li>
-        <li>중앙 공기 정화 덕트 임의 폐쇄 시 전시 시설 훼손 혐의 적용</li>
-        <li>옥상 방공 시설 구역 접근은 사령부 인가증 소지자에 한함</li>
-      </ul>
-      <p class="footnote">상세 주거 지침: <a href="life.html">시민 생활 안내</a></p>
-    </div>
-
-    <!-- 공지 2: 식량 배급 기준표 -->
-    <div class="card">
-      <div class="card-title">식량 배급 표준 쿼터 및 수령 절차</div>
-      <p style="font-size: 0.85rem; color: #90a0b0;">
-        완전 자동화 합성 플랜트 기반 7일 단위 정기 배급 기준:
-      </p>
-      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
-        <li>배급 품목: 표준 압축 단백질 블록 21식 (1일 3식 기준)</li>
-        <li>필수 음용수: 1급 여과 정제수 14L (1일 2L)</li>
-        <li>종합 비타민 및 미네랄 펠릿 7정 (1일 1정)</li>
-        <li>배급소 방문 시 바코드 식별증 및 망막 스캔 지참 필수</li>
-      </ul>
-      <p class="footnote warning-text">※ 배급 블록의 풍미 및 식감에 관한 민원은 처리 대상에 포함되지 않습니다.</p>
-    </div>
-
-    <!-- 공지 3: 통신망 관제 현황 -->
-    <div class="card">
-      <div class="card-title">제4위성 지상 관제노드 유실 통보</div>
-      <p style="font-size: 0.85rem; color: #90a0b0;">
-        적 순항미사일 파편 탄착에 따른 관할 4-A~4-F 구역 조치:
-      </p>
-      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
-        <li>해당 구역 무선 데이터망 차단 및 국방 유선망으로 전환 완료</li>
-        <li>대체 위성 궤도 정렬 완료 시까지 확성 방송망 동시 가동</li>
-        <li>유선망 경유 징집 통지서는 종이 영장과 동일한 법적 구속력 보유</li>
-      </ul>
-      <p class="footnote">합중국 27개 위성 수신 노드 중 26개 정상 운용 중.</p>
-    </div>
-
-    <!-- 공지 4: 방공 훈련 및 방호 -->
-    <div class="card">
-      <div class="card-title">정례 지하 방공 훈련 및 수용 절차</div>
-      <p style="font-size: 0.85rem; color: #90a0b0;">
-        금주 목요일 14:00~14:30 전 구역 동시 실시:
-      </p>
-      <ul style="font-size: 0.8rem; color: #b0c0d0; padding-left: 18px; line-height: 1.6;">
-        <li>사이렌 발령 3분 이내 심도 60m 대피소 진입 완료 요망</li>
-        <li>대피소 격벽 폐쇄 후 외부 잔류 인원은 적성 행위자로 간주</li>
-        <li>대피소 내부 no_kia 자동 분무 키트 비치 완료</li>
-      </ul>
-      <p class="footnote">훈련 경보와 실제 공습 경보는 동일 프로토콜로 작동합니다.</p>
-    </div>
-
   </div>
 
   <!-- ============================================================ -->
@@ -565,9 +509,12 @@
       본 포털에 게시된 모든 데이터는 신경망 참모본부의 공식 행정 처분이며, 이에 대한 허위사실 유포, 데이터 변조 시도, 헌정 질서 비판 행위는 즉결심판 및 RVP 보존 전환 처분의 대상이 됩니다.
     </p>
     <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #704040; margin-bottom: 0;">
-      CURRENT CLIENT BIOMETRIC ID LOGGED · ROUTING PATH RECORDED IN PERMANENT ARCHIVE
+      CURRENT CLIENT BIOMETRIC ID LOGGED | ROUTING PATH RECORDED IN PERMANENT ARCHIVE
     </p>
   </div>
+
+  <!-- ADVERTISEMENT BLOCK -->
+  <div class="ad-banner"><span class="ad-banner-text">AD: [Loading...]</span></div>
 
 </main>
 
